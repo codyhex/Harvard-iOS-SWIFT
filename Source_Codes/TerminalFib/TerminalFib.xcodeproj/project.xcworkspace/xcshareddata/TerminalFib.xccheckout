@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>060240D9-E68B-4396-8B49-BE75EBA07AD5</string>
+	<string>19A918AA-ECBE-4E48-B8B2-7468A6971C54</string>
 	<key>IDESourceControlProjectName</key>
-	<string>playground</string>
+	<string>TerminalFib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7F7DA4EE637BFAA0F381B83D60C3D576257DC07C</key>
-		<string>http://git.classyswift.com/s65.git</string>
+		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
+		<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>S65.playground/playground.xcworkspace</string>
+	<string>Source_Codes/TerminalFib/TerminalFib.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7F7DA4EE637BFAA0F381B83D60C3D576257DC07C</key>
-		<string>../..</string>
+		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://git.classyswift.com/s65.git</string>
+	<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7F7DA4EE637BFAA0F381B83D60C3D576257DC07C</string>
+	<string>1BFF9E848A968935B7EB87E1F263AC0C96034584</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7F7DA4EE637BFAA0F381B83D60C3D576257DC07C</string>
+			<string>1BFF9E848A968935B7EB87E1F263AC0C96034584</string>
 			<key>IDESourceControlWCCName</key>
-			<string>s65</string>
+			<string>Harvard_CSCI_65</string>
 		</dict>
 	</array>
 </dict>

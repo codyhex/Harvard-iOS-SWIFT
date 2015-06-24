@@ -1,9 +1,3 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
-
-var str = "Hello, playground"
-
 /*:
 ## CSCI S-65: Mobile Applications using Swift and iOS
 ### Lecture 1 22 June 2015
