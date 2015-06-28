@@ -104,17 +104,19 @@ smallest
 
 //: Introducing protocols, and the subscript operator, predefined to be []
 protocol IntCache: class { // Must ensure it's a reference type so can assign into it; subtle!!
-    subscript(index: Int) -> Int? { get set }
+    subscript(index: Int) -> Int? { get set } // @ this is the abstract method declare for any function that performs the protocol. "get/set" are the methods that required.
 }
 
 //: And time to get into structs and classes
 struct AgedEntry { let age: Int; let value: Int }
 
+// @ class is pass by reference
 class LimitedIntCache: IntCache, Printable {
     let maxSize: Int
     var cache: [Int: AgedEntry]
     var currentEntryAge: Int
     
+    // @ constructor
     init(maxSize: Int) {
         self.maxSize = maxSize
         currentEntryAge = 0
