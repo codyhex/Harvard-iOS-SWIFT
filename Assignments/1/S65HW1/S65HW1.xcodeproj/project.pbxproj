@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5B41B40FC2900B4A58A /* main.swift */; };
 		AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */; };
+		AA80AF521B41ADC7005AD226 /* intArrayToEnglishWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +28,7 @@
 		AA3AF5B11B40FC2900B4A58A /* S65HW1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = S65HW1; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3AF5B41B40FC2900B4A58A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
-		AA3AF5BD1B41003F00B4A58A /* MyMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMap.swift; sourceTree = "<group>"; };
+		AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intArrayToEnglishWords.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +63,7 @@
 			children = (
 				AA3AF5B41B40FC2900B4A58A /* main.swift */,
 				AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */,
-				AA3AF5BD1B41003F00B4A58A /* MyMap.swift */,
+				AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */,
 			);
 			path = S65HW1;
 			sourceTree = "<group>";
@@ -125,6 +126,7 @@
 			files = (
 				AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */,
 				AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */,
+				AA80AF521B41ADC7005AD226 /* intArrayToEnglishWords.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
