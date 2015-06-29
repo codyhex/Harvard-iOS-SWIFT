@@ -39,4 +39,4 @@ func quoteLine(line: String, withQuoteChar qc: Character = ">", lineTerminator l
     return "\(qc) \(line)\(lc)"
 }
 
-print(quoteLine("I agree", lineTerminator: "\n\n"))
+print(quoteLine("I agree", withQuoteChar: "*",lineTerminator: "\n\n"))

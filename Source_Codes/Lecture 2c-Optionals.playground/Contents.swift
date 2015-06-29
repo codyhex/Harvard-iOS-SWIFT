@@ -86,7 +86,8 @@ var i: Int? // A Box specialized to contain Ints
 var ohNo: Int?? // A box specialzed to contain boxes that contain Ints
 
 //: Very idiomatic use of Optionals: Dictionaries (a.k.a. Hash tables)
-var myTable = [ "Austin": "Wedsnesday", "Van": "Tuesday", "Alex": "Thursday"]
+var myTable: [String: String]
+myTable = [ "Austin": "Wednesday", "Van": "Tuesday", "Alex": "Thursday"]
 //: Since a key *might* not be in a dictionary, the return type is always Optional:
 var forcedS: String = myTable["Austin"]!
 if let safeS = myTable["Austin"] {

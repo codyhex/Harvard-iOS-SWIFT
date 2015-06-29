@@ -1,7 +1,5 @@
 //: The Fibonacci sequence is a rite of passage in any new language. These classical functions are one of the few places we'll allow short variable names
 
-var nCalls = 0
-
 func fib(n: Int) -> Int {
     if n < 2 {
         return n
@@ -12,6 +10,7 @@ func fib(n: Int) -> Int {
 }
 fib(3) // Fine
 fib(7) // OK
+fib(1)
 // fib(18) // Forget it. Watch the wheel go around and around.
 
 //: Let's use TUPLES to do some performance tracking
@@ -50,7 +49,7 @@ func memoizedCountingFib(operand: Int) -> (result: Int, calls: Int) {
     }
 }
 
-memoizedCountingFib(10)
+memoizedCountingFib(15)
 
 memoized.removeAll()
 typealias IntCombiner = (Int, Int) -> Int
@@ -69,7 +68,7 @@ func memoizedCountingFib(operand: Int, withCombiner combine: IntCombiner) -> (re
         return (result: memoized[operand]!, calls: fib1.calls + fib2.calls + 1)
     }
 }
-memoizedCountingFib(10) { ($0 * 2) + $1 }
+memoizedCountingFib(10, withCombiner: { ($0 * 2) + $1 })
 
 
 // This cache might get very large; let's limit it and program it WIHTOUT changing the syntax of its use as a fundamental type
@@ -104,19 +103,17 @@ smallest
 
 //: Introducing protocols, and the subscript operator, predefined to be []
 protocol IntCache: class { // Must ensure it's a reference type so can assign into it; subtle!!
-    subscript(index: Int) -> Int? { get set } // @ this is the abstract method declare for any function that performs the protocol. "get/set" are the methods that required.
+    subscript(index: Int) -> Int? { get set }
 }
 
 //: And time to get into structs and classes
 struct AgedEntry { let age: Int; let value: Int }
 
-// @ class is pass by reference
 class LimitedIntCache: IntCache, Printable {
     let maxSize: Int
     var cache: [Int: AgedEntry]
     var currentEntryAge: Int
     
-    // @ constructor
     init(maxSize: Int) {
         self.maxSize = maxSize
         currentEntryAge = 0
