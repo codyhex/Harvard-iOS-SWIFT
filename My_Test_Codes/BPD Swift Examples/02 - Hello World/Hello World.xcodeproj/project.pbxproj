@@ -405,6 +405,7 @@
 				B6838A3119C4A6D200D49FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6838A3219C4A6D200D49FEF /* Build configuration list for PBXNativeTarget "Hello WorldTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				B6838A3419C4A6D200D49FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
