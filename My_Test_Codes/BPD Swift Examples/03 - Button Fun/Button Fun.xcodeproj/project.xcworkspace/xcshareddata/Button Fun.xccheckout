@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C1F0F004-39D6-4AE5-BA1B-AE92794DC0A8</string>
+	<string>0CC9DCE4-F925-46C2-90F4-7E611F7922CA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>S65HW1</string>
+	<string>Button Fun</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
 		<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assignments/1/S65HW1/S65HW1.xcodeproj</string>
+	<string>My_Test_Codes/BPD Swift Examples/03 - Button Fun/Button Fun.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>

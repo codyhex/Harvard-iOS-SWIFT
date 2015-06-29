@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5B41B40FC2900B4A58A /* main.swift */; };
 		AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */; };
-		AA3AF5BF1B41081500B4A58A /* MyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BD1B41003F00B4A58A /* MyMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,7 +125,6 @@
 			files = (
 				AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */,
 				AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */,
-				AA3AF5BF1B41081500B4A58A /* MyMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +242,7 @@
 				AA3AF5BA1B40FC2900B4A58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

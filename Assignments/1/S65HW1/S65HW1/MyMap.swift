@@ -8,18 +8,20 @@
 
 import Foundation
 
-//var inputArray: [Int] = [Int]()
-//
-//
-//inputArray.append(2)
-//inputArray.append(4)
-
-
 func MyMap(inputArray: [Int] = [Int]()) {
 
     
     map(inputArray, {
         (sourceValue: Int) -> Int in
+        
+        
+        // check range
+        if sourceValue < 0 or sourceValue > 99 {
+            return nil
+        }
+        else if sourceValue >=0 and sourceValue <= 9 {
+            return test
+        }
         
         let returnVal = sourceValue * sourceValue;
         return returnVal;
