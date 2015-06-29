@@ -1,10 +1,35 @@
-The    5th Fibonacci number is          5 iterations:        9
+The   20th Fibonacci number is       6765 iterations:       39
+The   19th Fibonacci number is       4181 iterations:        1
+The   18th Fibonacci number is       2584 iterations:        1
+The   17th Fibonacci number is       1597 iterations:        1
+The   16th Fibonacci number is        987 iterations:        1
+The   15th Fibonacci number is        610 iterations:        1
+The   14th Fibonacci number is        377 iterations:        1
+The   13rd Fibonacci number is        233 iterations:        1
+The   12nd Fibonacci number is        144 iterations:        1
+The   11st Fibonacci number is         89 iterations:        1
+The   10th Fibonacci number is         55 iterations:       19
+The    9th Fibonacci number is         34 iterations:        1
+The    8th Fibonacci number is         21 iterations:        1
+The    7th Fibonacci number is         13 iterations:        1
+The    6th Fibonacci number is          8 iterations:        1
+The    5th Fibonacci number is          5 iterations:        1
 The    4th Fibonacci number is          3 iterations:        1
 The    3rd Fibonacci number is          2 iterations:        1
 The    2nd Fibonacci number is          1 iterations:        1
 The    1st Fibonacci number is          1 iterations:        1
 
 
-
 Peng He a0436d390eea996ebc447def73013f6fa75817c0
+
+Btw, when you run upper limit with 1000, program dies.
+
+I think is due to the Int type size over float.
+
+———————————
+Exc_bad_instruction:
+
+// We are now delegating the caching functionality to the class object that obeys the IntCacheable protocol
+// Note the default parameter value is inlined code! (A closure block)
+func countingFib(operand: Int, withStorage storage: IntCacheable, withCombiner combine: IntCombiner = { $0 + $1 } ) -> (result: Int, calls: Int) {
 
