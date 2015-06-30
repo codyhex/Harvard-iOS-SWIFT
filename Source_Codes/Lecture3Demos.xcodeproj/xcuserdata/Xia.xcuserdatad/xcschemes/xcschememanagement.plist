@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TerminalFib.xcscheme</key>
+		<key>Lecture3Demos.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>65E57BB01AE4826900F08BEB</key>
+		<key>6584052A1B3F50E0001E7178</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FABFAD131B421D7900345340</key>
 		<dict>
 			<key>primary</key>
 			<true/>

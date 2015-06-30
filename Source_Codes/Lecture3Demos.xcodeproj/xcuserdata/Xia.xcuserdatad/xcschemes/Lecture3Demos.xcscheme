@@ -14,10 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65E57BB01AE4826900F08BEB"
-               BuildableName = "TerminalFib"
-               BlueprintName = "TerminalFib"
-               ReferencedContainer = "container:TerminalFib.xcodeproj">
+               BlueprintIdentifier = "6584052A1B3F50E0001E7178"
+               BuildableName = "Lecture3Demos.app"
+               BlueprintName = "Lecture3Demos"
+               ReferencedContainer = "container:Lecture3Demos.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FABFAD131B421D7900345340"
+               BuildableName = "Lecture3DemosTests.xctest"
+               BlueprintName = "Lecture3DemosTests"
+               ReferencedContainer = "container:Lecture3Demos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +42,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FABFAD131B421D7900345340"
+               BuildableName = "Lecture3DemosTests.xctest"
+               BlueprintName = "Lecture3DemosTests"
+               ReferencedContainer = "container:Lecture3Demos.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65E57BB01AE4826900F08BEB"
-            BuildableName = "TerminalFib"
-            BlueprintName = "TerminalFib"
-            ReferencedContainer = "container:TerminalFib.xcodeproj">
+            BlueprintIdentifier = "6584052A1B3F50E0001E7178"
+            BuildableName = "Lecture3Demos.app"
+            BlueprintName = "Lecture3Demos"
+            ReferencedContainer = "container:Lecture3Demos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65E57BB01AE4826900F08BEB"
-            BuildableName = "TerminalFib"
-            BlueprintName = "TerminalFib"
-            ReferencedContainer = "container:TerminalFib.xcodeproj">
+            BlueprintIdentifier = "6584052A1B3F50E0001E7178"
+            BuildableName = "Lecture3Demos.app"
+            BlueprintName = "Lecture3Demos"
+            ReferencedContainer = "container:Lecture3Demos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65E57BB01AE4826900F08BEB"
-            BuildableName = "TerminalFib"
-            BlueprintName = "TerminalFib"
-            ReferencedContainer = "container:TerminalFib.xcodeproj">
+            BlueprintIdentifier = "6584052A1B3F50E0001E7178"
+            BuildableName = "Lecture3Demos.app"
+            BlueprintName = "Lecture3Demos"
+            ReferencedContainer = "container:Lecture3Demos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

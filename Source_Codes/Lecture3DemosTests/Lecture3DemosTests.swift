@@ -2,7 +2,7 @@
 //  Lecture3DemosTests.swift
 //  Lecture3DemosTests
 //
-//  Created by Daniel Bromberg on 6/27/15.
+//  Created by Alex Blokker on 6/29/15.
 //  Copyright (c) 2015 S65. All rights reserved.
 //
 

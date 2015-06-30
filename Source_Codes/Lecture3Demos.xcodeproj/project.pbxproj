@@ -7,22 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		653573571B40E5FA00BBB315 /* HardCodedCellGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584055A1B3F9D5C001E7178 /* HardCodedCellGridView.swift */; };
 		658405311B3F50E0001E7178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658405301B3F50E0001E7178 /* AppDelegate.swift */; };
 		658405361B3F50E0001E7178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658405341B3F50E0001E7178 /* Main.storyboard */; };
 		658405381B3F50E0001E7178 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658405371B3F50E0001E7178 /* Images.xcassets */; };
 		6584053B1B3F50E0001E7178 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658405391B3F50E0001E7178 /* LaunchScreen.xib */; };
-		658405471B3F50E0001E7178 /* Lecture3DemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658405461B3F50E0001E7178 /* Lecture3DemosTests.swift */; };
 		658405551B3F7790001E7178 /* CellGridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658405541B3F7790001E7178 /* CellGridModel.swift */; };
 		658405571B3F8F3F001E7178 /* CellGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658405561B3F8F3F001E7178 /* CellGridViewController.swift */; };
 		6584055B1B3F9D5C001E7178 /* HardCodedCellGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584055A1B3F9D5C001E7178 /* HardCodedCellGridView.swift */; };
 		6584055D1B3F9D63001E7178 /* ModelBasedCellGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584055C1B3F9D63001E7178 /* ModelBasedCellGridView.swift */; };
 		6584055F1B3F9D6B001E7178 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584055E1B3F9D6B001E7178 /* TimerViewController.swift */; };
 		65C36E9C1B40E53700B1416E /* LiveCellGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C36E9B1B40E53700B1416E /* LiveCellGridViewController.swift */; };
+		FABFAD191B421D7900345340 /* Lecture3DemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFAD181B421D7900345340 /* Lecture3DemosTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		658405411B3F50E0001E7178 /* PBXContainerItemProxy */ = {
+		FABFAD1A1B421D7900345340 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 658405231B3F50E0001E7178 /* Project object */;
 			proxyType = 1;
@@ -38,15 +37,15 @@
 		658405351B3F50E0001E7178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		658405371B3F50E0001E7178 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6584053A1B3F50E0001E7178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		658405401B3F50E0001E7178 /* Lecture3DemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lecture3DemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		658405451B3F50E0001E7178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		658405461B3F50E0001E7178 /* Lecture3DemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture3DemosTests.swift; sourceTree = "<group>"; };
 		658405541B3F7790001E7178 /* CellGridModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellGridModel.swift; sourceTree = "<group>"; };
 		658405561B3F8F3F001E7178 /* CellGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellGridViewController.swift; sourceTree = "<group>"; };
 		6584055A1B3F9D5C001E7178 /* HardCodedCellGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardCodedCellGridView.swift; sourceTree = "<group>"; };
 		6584055C1B3F9D63001E7178 /* ModelBasedCellGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBasedCellGridView.swift; sourceTree = "<group>"; };
 		6584055E1B3F9D6B001E7178 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		65C36E9B1B40E53700B1416E /* LiveCellGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCellGridViewController.swift; sourceTree = "<group>"; };
+		FABFAD141B421D7900345340 /* Lecture3DemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lecture3DemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABFAD171B421D7900345340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABFAD181B421D7900345340 /* Lecture3DemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture3DemosTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +56,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6584053D1B3F50E0001E7178 /* Frameworks */ = {
+		FABFAD111B421D7900345340 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				6584052D1B3F50E0001E7178 /* Lecture3Demos */,
-				658405431B3F50E0001E7178 /* Lecture3DemosTests */,
+				FABFAD151B421D7900345340 /* Lecture3DemosTests */,
 				6584052C1B3F50E0001E7178 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				6584052B1B3F50E0001E7178 /* Lecture3Demos.app */,
-				658405401B3F50E0001E7178 /* Lecture3DemosTests.xctest */,
+				FABFAD141B421D7900345340 /* Lecture3DemosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +99,6 @@
 				6584052E1B3F50E0001E7178 /* Supporting Files */,
 				658405541B3F7790001E7178 /* CellGridModel.swift */,
 			);
-			name = Lecture3Demos;
 			path = Lecture3Demos;
 			sourceTree = "<group>";
 		};
@@ -112,20 +110,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		658405431B3F50E0001E7178 /* Lecture3DemosTests */ = {
+		FABFAD151B421D7900345340 /* Lecture3DemosTests */ = {
 			isa = PBXGroup;
 			children = (
-				658405461B3F50E0001E7178 /* Lecture3DemosTests.swift */,
-				658405441B3F50E0001E7178 /* Supporting Files */,
+				FABFAD181B421D7900345340 /* Lecture3DemosTests.swift */,
+				FABFAD161B421D7900345340 /* Supporting Files */,
 			);
-			name = Lecture3DemosTests;
 			path = Lecture3DemosTests;
 			sourceTree = "<group>";
 		};
-		658405441B3F50E0001E7178 /* Supporting Files */ = {
+		FABFAD161B421D7900345340 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				658405451B3F50E0001E7178 /* Info.plist */,
+				FABFAD171B421D7900345340 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,22 +147,22 @@
 			productReference = 6584052B1B3F50E0001E7178 /* Lecture3Demos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6584053F1B3F50E0001E7178 /* Lecture3DemosTests */ = {
+		FABFAD131B421D7900345340 /* Lecture3DemosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6584054D1B3F50E0001E7178 /* Build configuration list for PBXNativeTarget "Lecture3DemosTests" */;
+			buildConfigurationList = FABFAD1C1B421D7900345340 /* Build configuration list for PBXNativeTarget "Lecture3DemosTests" */;
 			buildPhases = (
-				6584053C1B3F50E0001E7178 /* Sources */,
-				6584053D1B3F50E0001E7178 /* Frameworks */,
-				6584053E1B3F50E0001E7178 /* Resources */,
+				FABFAD101B421D7900345340 /* Sources */,
+				FABFAD111B421D7900345340 /* Frameworks */,
+				FABFAD121B421D7900345340 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				658405421B3F50E0001E7178 /* PBXTargetDependency */,
+				FABFAD1B1B421D7900345340 /* PBXTargetDependency */,
 			);
 			name = Lecture3DemosTests;
 			productName = Lecture3DemosTests;
-			productReference = 658405401B3F50E0001E7178 /* Lecture3DemosTests.xctest */;
+			productReference = FABFAD141B421D7900345340 /* Lecture3DemosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +178,7 @@
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = NK39MWSLZJ;
 					};
-					6584053F1B3F50E0001E7178 = {
+					FABFAD131B421D7900345340 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 6584052A1B3F50E0001E7178;
 					};
@@ -201,7 +198,7 @@
 			projectRoot = "";
 			targets = (
 				6584052A1B3F50E0001E7178 /* Lecture3Demos */,
-				6584053F1B3F50E0001E7178 /* Lecture3DemosTests */,
+				FABFAD131B421D7900345340 /* Lecture3DemosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6584053E1B3F50E0001E7178 /* Resources */ = {
+		FABFAD121B421D7900345340 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,22 +238,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6584053C1B3F50E0001E7178 /* Sources */ = {
+		FABFAD101B421D7900345340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658405471B3F50E0001E7178 /* Lecture3DemosTests.swift in Sources */,
-				653573571B40E5FA00BBB315 /* HardCodedCellGridView.swift in Sources */,
+				FABFAD191B421D7900345340 /* Lecture3DemosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		658405421B3F50E0001E7178 /* PBXTargetDependency */ = {
+		FABFAD1B1B421D7900345340 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6584052A1B3F50E0001E7178 /* Lecture3Demos */;
-			targetProxy = 658405411B3F50E0001E7178 /* PBXContainerItemProxy */;
+			targetProxy = FABFAD1A1B421D7900345340 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,7 +381,7 @@
 			};
 			name = Release;
 		};
-		6584054E1B3F50E0001E7178 /* Debug */ = {
+		FABFAD1D1B421D7900345340 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -399,12 +395,12 @@
 				);
 				INFOPLIST_FILE = Lecture3DemosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Lecture3DemosTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture3Demos.app/Lecture3Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture3Demos.app/Lecture3Demos";
 			};
 			name = Debug;
 		};
-		6584054F1B3F50E0001E7178 /* Release */ = {
+		FABFAD1E1B421D7900345340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -414,8 +410,8 @@
 				);
 				INFOPLIST_FILE = Lecture3DemosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Lecture3DemosTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture3Demo.app/Lecture3Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture3Demos.app/Lecture3Demos";
 			};
 			name = Release;
 		};
@@ -440,14 +436,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6584054D1B3F50E0001E7178 /* Build configuration list for PBXNativeTarget "Lecture3DemosTests" */ = {
+		FABFAD1C1B421D7900345340 /* Build configuration list for PBXNativeTarget "Lecture3DemosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6584054E1B3F50E0001E7178 /* Debug */,
-				6584054F1B3F50E0001E7178 /* Release */,
+				FABFAD1D1B421D7900345340 /* Debug */,
+				FABFAD1E1B421D7900345340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
