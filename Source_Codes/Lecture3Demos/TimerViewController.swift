@@ -39,6 +39,7 @@ class TimerViewController: UIViewController {
         logIt("Timer created at \(NSDate()) when App activated")
     }
     
+    // Strictly speaking, all timers are automatically suspended when an App resigns control of the screen. This is just here to show we can capture the event, and there are other practical reasons to do so.
     func handleAppResigned() {
         logIt("App just resigned")
         if let t = timer {
@@ -57,6 +58,9 @@ class TimerViewController: UIViewController {
     }
     
     func logIt(msg: String) {
+        // All UI manipulations must happen on the 'main' thread.
+        // Notifications and Timer events don't necessarily happen on the
+        // main thread, so documentation must be checked carefully.
         timerLog.insertText("\(msg)\n") // insertText() also triggers an automatic redraw
         // Log to the console as well in case there's any problems with the UI
         println("\(NSDate()) \(msg)")

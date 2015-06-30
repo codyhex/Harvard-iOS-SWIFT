@@ -21,15 +21,17 @@ class HardCodedCellGridView: UIView {
     func drawCell(#x: Int, y: Int) {
         let cellRect = CGRect(x: CGFloat(x) * cellDim.x, y: CGFloat(y) * cellDim.y, width: cellDim.x, height: cellDim.y)
         let cellPath = UIBezierPath(rect: cellRect)
-        UIColor.redColor().set()
+        UIColor.blueColor().set() // Sets this color in the current drawing context
         cellPath.fill()
     }
 
+    // drawRect is called for you whenever iOS decides view needs to be rendered
     override func drawRect(rect: CGRect) {
         drawCell(x: 5, y: 5)
         drawCell(x: 6, y: 6)
         drawCell(x: 6, y: 7)
         drawCell(x: 5, y: 7)
         drawCell(x: 4, y: 7)
+        drawCell(x: 10, y: 10)
     }
 }

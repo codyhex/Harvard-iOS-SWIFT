@@ -9,7 +9,7 @@ import Foundation // NSTimer
 import UIKit
 
 class LiveCellGridViewController: CellGridViewController {
-    let intervalSeconds = 1.5
+    let intervalSeconds = 0.5
     
     private var timer: NSTimer?
 
@@ -31,6 +31,10 @@ class LiveCellGridViewController: CellGridViewController {
     func handleTimer(timer: NSTimer) {
         if let m = model {
             m.nextGeneration()
+            // Responsibility is on the implementor to call setNeedsDisplay() whenever
+            // a significant change to the underlying model has occurred.
+            // This is a *request* that is scheduled to happen sometime later.
+            // (But soon; we want the App to be responsive and interactive)
             cellGridView.setNeedsDisplay()
         }
     }

@@ -20,6 +20,8 @@ class CellGridModel {
         }
         grid = [[CellState]](count: size, repeatedValue: [CellState](count: size, repeatedValue: .Empty))
         makeGlider()
+        grid[12][12] = .Born
+        grid[15][13] = .Died
     }
     
     private func makeGlider() {
@@ -105,6 +107,7 @@ class CellGridModel {
                 newGrid[col][row] = newState((col, row))
             }
         }
+        // What happens here to the old two-dim array?
         grid = newGrid
         generation++
     }

@@ -20,19 +20,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My first CSCI S65 App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBB-YJ-PIq">
                                 <rect key="frame" x="214" y="28" width="173" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YZ-WM-RlD">
                                 <rect key="frame" x="16" y="57" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting to say Hello..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-Qp-01M">
                                 <rect key="frame" x="217" y="289" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOz-Bb-2wA">
@@ -52,6 +52,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fj-e3-Ogq">
+                                <rect key="frame" x="276" y="380" width="30" height="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4PC-P5-RVe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1t-7n-7E5">
+                                <rect key="frame" x="310" y="442" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,15 +77,19 @@
                             <constraint firstAttribute="centerX" secondItem="PBB-YJ-PIq" secondAttribute="centerX" id="BeG-sC-uZ4"/>
                             <constraint firstItem="UTv-Qp-01M" firstAttribute="centerX" secondItem="PBB-YJ-PIq" secondAttribute="centerX" id="Fjo-Zq-agr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UTv-Qp-01M" secondAttribute="bottom" constant="290" id="Fvf-Cu-HDZ"/>
+                            <constraint firstItem="8Fj-e3-Ogq" firstAttribute="top" secondItem="UTv-Qp-01M" secondAttribute="bottom" constant="70" id="Fvq-vZ-iGY"/>
                             <constraint firstItem="1YZ-WM-RlD" firstAttribute="top" secondItem="PBB-YJ-PIq" secondAttribute="top" constant="28" id="Iom-M1-u6X"/>
                             <constraint firstItem="UTv-Qp-01M" firstAttribute="top" secondItem="hOz-Bb-2wA" secondAttribute="bottom" constant="8" symbolic="YES" id="Rg8-dD-ACa"/>
                             <constraint firstItem="PBB-YJ-PIq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TnN-AO-Fzm"/>
                             <constraint firstAttribute="centerY" secondItem="UTv-Qp-01M" secondAttribute="centerY" constant="0.5" id="Uv0-i4-cqO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n1t-7n-7E5" secondAttribute="bottom" constant="137" id="Xef-GP-JGN"/>
                             <constraint firstItem="E8y-Jh-mXa" firstAttribute="leading" secondItem="1YZ-WM-RlD" secondAttribute="trailing" constant="8" symbolic="YES" id="c3H-Y8-gxm"/>
                             <constraint firstItem="1YZ-WM-RlD" firstAttribute="bottom" secondItem="PBB-YJ-PIq" secondAttribute="bottom" constant="28" id="gQq-BC-5P9"/>
+                            <constraint firstAttribute="trailing" secondItem="n1t-7n-7E5" secondAttribute="trailing" constant="280" id="gwd-oo-DFC"/>
                             <constraint firstItem="1YZ-WM-RlD" firstAttribute="top" secondItem="PBB-YJ-PIq" secondAttribute="bottom" constant="8" id="hCm-GD-XV9"/>
                             <constraint firstItem="E8y-Jh-mXa" firstAttribute="top" secondItem="1YZ-WM-RlD" secondAttribute="top" id="iOQ-jy-ayx"/>
                             <constraint firstItem="PBB-YJ-PIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="pYv-2z-vn0"/>
+                            <constraint firstItem="8Fj-e3-Ogq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="276" id="qU0-Q6-bbQ"/>
                             <constraint firstItem="PBB-YJ-PIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tVb-yj-w8Z"/>
                         </constraints>
                         <variation key="default">
@@ -86,6 +105,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentValue" destination="n1t-7n-7E5" id="K8k-af-EMW"/>
                         <outlet property="greetingLabel" destination="UTv-Qp-01M" id="R36-we-CDe"/>
                         <outlet property="nameTextField" destination="E8y-Jh-mXa" id="sZR-41-CS5"/>
                     </connections>
