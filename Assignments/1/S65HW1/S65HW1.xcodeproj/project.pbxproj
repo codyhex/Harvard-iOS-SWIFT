@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5B41B40FC2900B4A58A /* main.swift */; };
 		AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */; };
+		AA5FC4AB1B437EAA00985F83 /* sumOfItemCosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FC4AA1B437EAA00985F83 /* sumOfItemCosts.swift */; };
 		AA80AF521B41ADC7005AD226 /* intArrayToEnglishWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		AA3AF5B41B40FC2900B4A58A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intArrayToEnglishWords.swift; sourceTree = "<group>"; };
+		AA5FC4AA1B437EAA00985F83 /* sumOfItemCosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sumOfItemCosts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AA3AF5B41B40FC2900B4A58A /* main.swift */,
+				AA5FC4AA1B437EAA00985F83 /* sumOfItemCosts.swift */,
 				AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */,
 				AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */,
 			);
@@ -124,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5FC4AB1B437EAA00985F83 /* sumOfItemCosts.swift in Sources */,
 				AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */,
 				AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */,
 				AA80AF521B41ADC7005AD226 /* intArrayToEnglishWords.swift in Sources */,

@@ -16,9 +16,9 @@ println("Exercise #.3 ")
 
 intArrayToEnglishWords(numbers: [7, 2, -13, 300, 6, 26])
 
+println("Exercise #.4 ")
 
-
-
+sumOfItemCosts(inputDic: ["Ham": 345, "Cheese": 115])
 
 
 
