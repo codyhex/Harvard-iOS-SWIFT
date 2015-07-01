@@ -26,4 +26,9 @@ primesOf([3, 1, -3, 27, 29, 3, 7, 2, 7, 83, 91])
 
 primesOf_2([3, 1, -3, 27, 29, 3, 7, 2, 7, 83, 91])
 
+println("Exercise #.6 ")
+
+totalInclTipWithItems(inputDic: (inputDic: ["Ham": 345, "Cheese": 115])
+, ServiceLevel.good)
+
 

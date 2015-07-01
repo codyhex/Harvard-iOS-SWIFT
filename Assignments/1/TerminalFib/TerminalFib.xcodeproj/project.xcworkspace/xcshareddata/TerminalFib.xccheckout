@@ -14,11 +14,11 @@
 		<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Source_Codes/TerminalFib/TerminalFib.xcodeproj</string>
+	<string>Assignments/1/TerminalFib/TerminalFib.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
-		<string>../../../..</string>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>

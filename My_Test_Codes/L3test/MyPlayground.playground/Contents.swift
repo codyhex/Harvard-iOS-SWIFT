@@ -26,6 +26,17 @@ var sum2 = itemCosts.reduce(0, combine: +)
 func songInformation(myFavoriteSong : Dictionary<String,String> = ["title": "Raju", "artist": "John McLaughlin", "album": "The Boston Record"]) {
 }
 
-songInformation("apple": "big")
+enum ServiceLevel:Double {
+    case poor = 0.1
+    case good = 0.15
+    case excellent = 0.2
+}
+
+var Service = ServiceLevel.good
+
+var a = 10.0 * Service.rawValue
+
+println("\(a)")
+
 
 
