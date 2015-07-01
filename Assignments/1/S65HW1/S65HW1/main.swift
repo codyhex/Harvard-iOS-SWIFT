@@ -20,6 +20,10 @@ println("Exercise #.4 ")
 
 sumOfItemCosts(inputDic: ["Ham": 345, "Cheese": 115])
 
+println("Exercise #.5 ")
 
+primesOf([3, 1, -3, 27, 29, 3, 7, 2, 7, 83, 91])
+
+primesOf_2([3, 1, -3, 27, 29, 3, 7, 2, 7, 83, 91])
 
 
