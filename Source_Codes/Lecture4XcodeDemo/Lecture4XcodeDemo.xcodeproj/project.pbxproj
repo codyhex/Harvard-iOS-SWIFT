@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		653013D41B4478540027DB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653013D31B4478540027DB6E /* AppDelegate.swift */; };
-		653013D61B4478540027DB6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653013D51B4478540027DB6E /* ViewController.swift */; };
 		653013D91B4478540027DB6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653013D71B4478540027DB6E /* Main.storyboard */; };
 		653013DB1B4478540027DB6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653013DA1B4478540027DB6E /* Images.xcassets */; };
 		653013DE1B4478540027DB6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653013DC1B4478540027DB6E /* LaunchScreen.xib */; };
 		653013EA1B4478540027DB6E /* Lecture4XcodeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653013E91B4478540027DB6E /* Lecture4XcodeDemoTests.swift */; };
+		653013F71B4478E90027DB6E /* Lecture4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653013F61B4478E90027DB6E /* Lecture4ViewController.swift */; };
+		653013F81B4478E90027DB6E /* Lecture4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653013F61B4478E90027DB6E /* Lecture4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,13 @@
 		653013CE1B4478540027DB6E /* Lecture4XcodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lecture4XcodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653013D21B4478540027DB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653013D31B4478540027DB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		653013D51B4478540027DB6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		653013D81B4478540027DB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		653013DA1B4478540027DB6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		653013DD1B4478540027DB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		653013E31B4478540027DB6E /* Lecture4XcodeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lecture4XcodeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653013E81B4478540027DB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653013E91B4478540027DB6E /* Lecture4XcodeDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture4XcodeDemoTests.swift; sourceTree = "<group>"; };
+		653013F61B4478E90027DB6E /* Lecture4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lecture4ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 		653013C51B4478540027DB6E = {
 			isa = PBXGroup;
 			children = (
+				653013F61B4478E90027DB6E /* Lecture4ViewController.swift */,
 				653013D01B4478540027DB6E /* Lecture4XcodeDemo */,
 				653013E61B4478540027DB6E /* Lecture4XcodeDemoTests */,
 				653013CF1B4478540027DB6E /* Products */,
@@ -78,10 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				653013D31B4478540027DB6E /* AppDelegate.swift */,
-				653013D51B4478540027DB6E /* ViewController.swift */,
 				653013D71B4478540027DB6E /* Main.storyboard */,
-				653013DA1B4478540027DB6E /* Images.xcassets */,
-				653013DC1B4478540027DB6E /* LaunchScreen.xib */,
 				653013D11B4478540027DB6E /* Supporting Files */,
 			);
 			path = Lecture4XcodeDemo;
@@ -90,6 +89,8 @@
 		653013D11B4478540027DB6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				653013DA1B4478540027DB6E /* Images.xcassets */,
+				653013DC1B4478540027DB6E /* LaunchScreen.xib */,
 				653013D21B4478540027DB6E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				653013D61B4478540027DB6E /* ViewController.swift in Sources */,
+				653013F71B4478E90027DB6E /* Lecture4ViewController.swift in Sources */,
 				653013D41B4478540027DB6E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653013F81B4478E90027DB6E /* Lecture4ViewController.swift in Sources */,
 				653013EA1B4478540027DB6E /* Lecture4XcodeDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
