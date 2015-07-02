@@ -31,4 +31,8 @@ println("Exercise #.6 ")
 totalInclTipWithItems(inputDic: (inputDic: ["Ham": 345, "Cheese": 115])
 , ServiceLevel.good)
 
+println("Exercise #.7 ")
 
+var test = sumCosts(inputDic: ["Ham": 345, "Cheese": 115])
+
+println("\(test)")

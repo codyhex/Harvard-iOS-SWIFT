@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5B41B40FC2900B4A58A /* main.swift */; };
 		AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */; };
+		AA58826B1B45CDB900AB3253 /* BillStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58826A1B45CDB900AB3253 /* BillStruct.swift */; };
 		AA5FC4AB1B437EAA00985F83 /* sumOfItemCosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FC4AA1B437EAA00985F83 /* sumOfItemCosts.swift */; };
 		AA5FC4AD1B439F1500985F83 /* primesOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FC4AC1B439F1500985F83 /* primesOf.swift */; };
 		AA80AF521B41ADC7005AD226 /* intArrayToEnglishWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */; };
@@ -33,6 +34,7 @@
 		AA3AF5B41B40FC2900B4A58A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intArrayToEnglishWords.swift; sourceTree = "<group>"; };
+		AA58826A1B45CDB900AB3253 /* BillStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillStruct.swift; sourceTree = "<group>"; };
 		AA5FC4AA1B437EAA00985F83 /* sumOfItemCosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sumOfItemCosts.swift; sourceTree = "<group>"; };
 		AA5FC4AC1B439F1500985F83 /* primesOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = primesOf.swift; sourceTree = "<group>"; };
 		AA8F6A531B44712E00C39987 /* RestaurantBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantBill.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				AA5FC4AC1B439F1500985F83 /* primesOf.swift */,
 				AA8F6A531B44712E00C39987 /* RestaurantBill.swift */,
 				AA8F6A551B44747400C39987 /* totalInclTipWithItems.swift */,
+				AA58826A1B45CDB900AB3253 /* BillStruct.swift */,
 				AA3AF5BB1B40FC4C00B4A58A /* HelloWorld.swift */,
 				AA3AF5BD1B41003F00B4A58A /* intArrayToEnglishWords.swift */,
 			);
@@ -139,6 +142,7 @@
 				AA5FC4AB1B437EAA00985F83 /* sumOfItemCosts.swift in Sources */,
 				AA5FC4AD1B439F1500985F83 /* primesOf.swift in Sources */,
 				AA3AF5B51B40FC2900B4A58A /* main.swift in Sources */,
+				AA58826B1B45CDB900AB3253 /* BillStruct.swift in Sources */,
 				AA8F6A561B44747400C39987 /* totalInclTipWithItems.swift in Sources */,
 				AA8F6A541B44712E00C39987 /* RestaurantBill.swift in Sources */,
 				AA3AF5BC1B40FC4C00B4A58A /* HelloWorld.swift in Sources */,
