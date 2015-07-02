@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA58826D1B45E65A00AB3253 /* RestaurantBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58826C1B45E65A00AB3253 /* RestaurantBill.swift */; };
 		AA670F2C1B445E1200520D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA670F2B1B445E1200520D26 /* AppDelegate.swift */; };
 		AA670F2E1B445E1200520D26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA670F2D1B445E1200520D26 /* ViewController.swift */; };
 		AA670F311B445E1200520D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA670F2F1B445E1200520D26 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA58826C1B45E65A00AB3253 /* RestaurantBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantBill.swift; sourceTree = "<group>"; };
 		AA670F261B445E1200520D26 /* MyRestaurantBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRestaurantBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA670F2A1B445E1200520D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA670F2B1B445E1200520D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				AA670F2B1B445E1200520D26 /* AppDelegate.swift */,
 				AA670F2D1B445E1200520D26 /* ViewController.swift */,
 				AA670F2F1B445E1200520D26 /* Main.storyboard */,
+				AA58826C1B45E65A00AB3253 /* RestaurantBill.swift */,
 				AA670F321B445E1200520D26 /* Images.xcassets */,
 				AA670F341B445E1200520D26 /* LaunchScreen.xib */,
 				AA670F291B445E1200520D26 /* Supporting Files */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA58826D1B45E65A00AB3253 /* RestaurantBill.swift in Sources */,
 				AA670F2E1B445E1200520D26 /* ViewController.swift in Sources */,
 				AA670F2C1B445E1200520D26 /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				AA670F471B445E1200520D26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA670F481B445E1200520D26 /* Build configuration list for PBXNativeTarget "MyRestaurantBillTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				AA670F4A1B445E1200520D26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

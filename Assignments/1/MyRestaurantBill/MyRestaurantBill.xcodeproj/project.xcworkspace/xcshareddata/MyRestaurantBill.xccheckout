@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>147DB8F7-383F-4EE7-8D77-C868AB42B3DA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>MyRestaurantBill</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
 		<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assignments/1/MyRestaurantBill/MyRestaurantBill.xcodeproj/project.xcworkspace</string>
+	<string>Assignments/1/MyRestaurantBill/MyRestaurantBill.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
