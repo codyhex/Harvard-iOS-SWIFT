@@ -24,7 +24,7 @@ struct BillStruct: Printable {
         // calculate the total here
         return (baseFoodCost + tax + tip)
     }
-    
+    // when you print the struct instance if it is printable and we have to give a defintion about what to print. This is a computed String bascially.
     var description: String {
         return "baseFoodCost: \(baseFoodCost), tax: \(tax), tip: \(tip), total: \(total)"
     }
@@ -44,7 +44,7 @@ func sumCosts(#inputDic: Dictionary<String,Int>) -> BillStruct {
     var sum = itemCosts.reduce(0, combine: +)
     
     var billInstance = BillStruct(baseFoodCost: sum)
-    
+    // return the instance
     return billInstance
 }
 
