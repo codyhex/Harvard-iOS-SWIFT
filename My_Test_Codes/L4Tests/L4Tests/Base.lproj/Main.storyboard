@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="L4Tests" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytu-EQ-IXb">
+                                <rect key="frame" x="113" y="270" width="153" height="30"/>
+                                <state key="normal" title="A Fun Button To Press">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="funButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FO-Bb-zkc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's see this label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-od-hDS">
+                                <rect key="frame" x="118" y="308" width="142.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OAO-YI-Mdf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sc-Hh-JDI">
+                                <rect key="frame" x="-111" y="348" width="600" height="162"/>
+                            </pickerView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="-50" maximumValue="27" stepValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="tJH-m5-tqu">
+                                <rect key="frame" x="142" y="201" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="AQd-4v-NgQ"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VuY-od-hDS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="3bG-27-Ouw"/>
+                            <constraint firstItem="ytu-EQ-IXb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-15" id="JFd-tm-Nu2"/>
+                            <constraint firstItem="ytu-EQ-IXb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="TED-jC-2lE"/>
+                            <constraint firstItem="ytu-EQ-IXb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="U7y-Zf-gcg"/>
+                            <constraint firstItem="VuY-od-hDS" firstAttribute="centerX" secondItem="ytu-EQ-IXb" secondAttribute="centerX" id="W0C-89-ZI7"/>
+                            <constraint firstItem="ytu-EQ-IXb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="265" id="vbm-L0-Rjm"/>
+                            <constraint firstItem="VuY-od-hDS" firstAttribute="top" secondItem="ytu-EQ-IXb" secondAttribute="bottom" constant="8" id="wtn-pn-YMa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U7y-Zf-gcg"/>
+                                <exclude reference="vbm-L0-Rjm"/>
+                                <exclude reference="W0C-89-ZI7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bigStepper" destination="tJH-m5-tqu" id="SVi-rC-1we"/>
+                        <outlet property="letsSeeLabel" destination="VuY-od-hDS" id="zJW-k7-kS6"/>
+                        <outlet property="picker" destination="1Sc-Hh-JDI" id="O4I-Gb-2l1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -36,7 +36,7 @@ extension String {
     // uses optional chaining to handle case of numberFromString returning
     // nil, in which case the 'doubleValue' access is canceled
     func toDouble() -> Double? {
-        return NSNumberFormatter().numberFromString(self)?.doubleValue
+        return NSNumberFormatter().numberFromString(self)?.doubleValue //🈶值的话返回double，没有返回nil
     }
     
     func toIntFromDouble() -> Int? {
