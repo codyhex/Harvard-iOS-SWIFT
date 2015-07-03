@@ -31,6 +31,7 @@ class Item: Printable {
 }
 
 class RestaurantBill: Printable {
+//    immutable struct issue, can't solve, use class instead.
     
 //    struct Item: Printable {
 //        let name : String
@@ -41,8 +42,6 @@ class RestaurantBill: Printable {
 //            return "Item Description: \(name) \nQuantity: \(quantity)\nBase Total: \(price * Double(quantity))"
 //        }
 //    }
-    
-
     
     var serviceLevel: ServiceLevel
     var baseTotal: Int {
@@ -60,24 +59,22 @@ class RestaurantBill: Printable {
     }
     
     init() {
-//        description = ""
         serviceLevel = ServiceLevel.good
         baseTotal = 0
         finalTotal = 0
-//        billItems = nil
     }
     
     func calculateBaseTotal() {
         
-        var itemCosts = [Double]()
+        var itemCosts: Double = 0
         
         // collect the cost of each item in an array
         for itemNum in billItems {
             // loop the Dict by key
-            itemCosts.append(itemNum.price * Double(itemNum.quantity))
+            itemCosts += (itemNum.price * Double(itemNum.quantity))
         }
         // the "+" can be used as func in swift, use reduce to get sum
-        baseTotal = Int(round(itemCosts.reduce(0, combine: +)))
+        baseTotal = Int(round(itemCosts))
        
     }
     
@@ -95,18 +92,37 @@ class RestaurantBill: Printable {
             billItems.append(item)
         }
         else {
+            var index: Int = 0
+            var flag: Bool = false
+            // search the whole array to see if the item has already been here
             for itemNum in billItems {
-                if item.name == itemNum.name {
-                    itemNum.quantity = item.quantity
-                    itemNum.price = item.price
+                if itemNum.name == item.name {
+                    // found !
+                    flag = true
+                    // very important, once I find the item I should break out the searching
+                    break
                 }
-                else {
-                    billItems.append(item)
+                // no matched item name
+                flag = false
+            }
+            // update quantity if found
+            if flag == true {
+                // have item
+                for itemNum in billItems {
+                    if itemNum.name == item.name {
+                        itemNum.quantity = item.quantity
+                        itemNum.price = item.price
+                        break
+                    }
                 }
-                
+            }
+            // add item name to the array it not found
+            else {
+                // no item
+                billItems.append(item)
             }
         }
-        
+        // update base total
         calculateBaseTotal()
         
         return true

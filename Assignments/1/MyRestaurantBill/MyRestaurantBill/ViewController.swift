@@ -32,13 +32,19 @@ class ViewController: UIViewController,  UITextFieldDelegate {
     }
 
     @IBAction func item1PriceInputEntered(sender: AnyObject) {
-        item1Price = Double(item1PriceInput.text.toInt()!)
-        
+        // if user click on the text field and leave with a blank, the text field will be nil
+        if let priceTemp = item1PriceInput.text.toInt() {
+            item1Price = Double(priceTemp)
+        } else {
+            item1Price = 0
+        }
     }
     
     
     @IBAction func item1QuantityIncreaseButton(sender: AnyObject) {
+        
         ++item1Num
+        
         item1Quantity.text = "\(item1Num)"
         
         myBill.addLineItem("Pizza", quantity: item1Num, price: item1Price)
@@ -51,7 +57,9 @@ class ViewController: UIViewController,  UITextFieldDelegate {
     }
     
     @IBAction func item1QuantityDecreaseButton(sender: AnyObject) {
-        --item1Num
+        // do not allow order under zero
+        if item1Num > 0 { --item1Num } else {return}
+        
         item1Quantity.text = "\(item1Num)"
         
         myBill.addLineItem("Pizza", quantity: item1Num, price: item1Price)
@@ -74,8 +82,12 @@ class ViewController: UIViewController,  UITextFieldDelegate {
     }
     
     @IBAction func item2PriceInputEntered(sender: AnyObject) {
-        item2Price = Double(item2PriceInput.text.toInt()!)
-        
+        // if user click on the text field and leave with a blank, the text field will be nil
+        if let priceTemp = item2PriceInput.text.toInt() {
+            item2Price = Double(priceTemp)
+        } else {
+            item2Price = 0
+        }
     }
     
     
@@ -93,7 +105,9 @@ class ViewController: UIViewController,  UITextFieldDelegate {
     }
     
     @IBAction func item2QuantityDecreaseButton(sender: AnyObject) {
-        --item2Num
+        
+        if item2Num > 0 { --item2Num } else {return}
+        
         item2Quantity.text = "\(item2Num)"
         
         myBill.addLineItem("Burger", quantity: item2Num, price: item2Price)
@@ -115,7 +129,12 @@ class ViewController: UIViewController,  UITextFieldDelegate {
     }
     
     @IBAction func item3PriceInputEntered(sender: AnyObject) {
-        item3Price = Double(item3PriceInput.text.toInt()!)
+        // if user click on the text field and leave with a blank, the text field will be nil
+        if let priceTemp = item3PriceInput.text.toInt() {
+            item3Price = Double(priceTemp)
+        } else {
+            item3Price = 0
+        }
         
     }
     
@@ -134,7 +153,9 @@ class ViewController: UIViewController,  UITextFieldDelegate {
     }
     
     @IBAction func item3QuantityDecreaseButton(sender: AnyObject) {
-        --item3Num
+        
+        if item3Num > 0{ --item3Num } else {return}
+
         item3Quantity.text = "\(item3Num)"
         
         myBill.addLineItem("Water", quantity: item3Num, price: item3Price)

@@ -8,7 +8,9 @@
 
 import UIKit
 
-class PickerController: UIViewController,UIPickerViewDelegate {
+class PickerController: UIViewController,  UIPickerViewDelegate
+//, UIPickerViewDataSource
+{
 
     //    UI Picker Section
     

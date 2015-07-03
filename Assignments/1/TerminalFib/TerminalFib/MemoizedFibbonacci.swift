@@ -59,6 +59,7 @@ class LimitedIntCache: IntCacheable, Printable { // Printable causes the 'descri
         return smallestIndex
     
         // EXERCISE: Rewrite this function as a one-liner using as much "syntactic sugar" as possible
+    
     }
     
     subscript(index: Int) -> Int? {
