@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController,  UITextFieldDelegate {
     
     var myBill = RestaurantBill()
     var item1Num: Int = 0
@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var item1PriceInput: UITextField! {
         didSet {
-            self.item1PriceInput.delegate = self
+            item1PriceInput.delegate = self
         }
     }
 
@@ -85,6 +85,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         finalTotalTextLabel.text = "\(myBill.finalTotal)"
     
     }
+    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
