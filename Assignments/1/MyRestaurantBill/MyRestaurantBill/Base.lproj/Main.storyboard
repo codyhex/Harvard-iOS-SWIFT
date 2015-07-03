@@ -224,8 +224,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseTotalTextLabel" destination="AFI-4m-znt" id="SGO-7b-RMI"/>
+                        <outlet property="finalTotalTextLabel" destination="dWS-Mx-s9L" id="7n0-Xa-Kdv"/>
                         <outlet property="item1PriceInput" destination="npK-RL-bMo" id="2pp-FQ-I0v"/>
                         <outlet property="item1Quantity" destination="UKK-kc-YhZ" id="1su-iE-Z3t"/>
+                        <outlet property="taxTextLabel" destination="q4P-4Q-81d" id="qmH-EH-pFi"/>
+                        <outlet property="tipTextLabel" destination="2xM-BN-1fQ" id="MQM-Vh-tDg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
