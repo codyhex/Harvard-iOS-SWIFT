@@ -13,6 +13,8 @@
 		1667ED3C1B4B4EF600CD1EB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1667ED3B1B4B4EF600CD1EB3 /* Images.xcassets */; };
 		1667ED3F1B4B4EF600CD1EB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1667ED3D1B4B4EF600CD1EB3 /* LaunchScreen.xib */; };
 		1667ED4B1B4B4EF600CD1EB3 /* MyMVCdemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667ED4A1B4B4EF600CD1EB3 /* MyMVCdemoTests.swift */; };
+		1667ED551B4B50AD00CD1EB3 /* ColoredSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667ED541B4B50AD00CD1EB3 /* ColoredSquareModel.swift */; };
+		1667ED571B4B517200CD1EB3 /* ColoredSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667ED561B4B517200CD1EB3 /* ColoredSquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		1667ED441B4B4EF600CD1EB3 /* MyMVCdemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMVCdemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1667ED491B4B4EF600CD1EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1667ED4A1B4B4EF600CD1EB3 /* MyMVCdemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMVCdemoTests.swift; sourceTree = "<group>"; };
+		1667ED541B4B50AD00CD1EB3 /* ColoredSquareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredSquareModel.swift; sourceTree = "<group>"; };
+		1667ED561B4B517200CD1EB3 /* ColoredSquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredSquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				1667ED341B4B4EF600CD1EB3 /* AppDelegate.swift */,
 				1667ED361B4B4EF600CD1EB3 /* ViewController.swift */,
 				1667ED381B4B4EF600CD1EB3 /* Main.storyboard */,
+				1667ED541B4B50AD00CD1EB3 /* ColoredSquareModel.swift */,
+				1667ED561B4B517200CD1EB3 /* ColoredSquareView.swift */,
 				1667ED3B1B4B4EF600CD1EB3 /* Images.xcassets */,
 				1667ED3D1B4B4EF600CD1EB3 /* LaunchScreen.xib */,
 				1667ED321B4B4EF600CD1EB3 /* Supporting Files */,
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1667ED551B4B50AD00CD1EB3 /* ColoredSquareModel.swift in Sources */,
 				1667ED371B4B4EF600CD1EB3 /* ViewController.swift in Sources */,
+				1667ED571B4B517200CD1EB3 /* ColoredSquareView.swift in Sources */,
 				1667ED351B4B4EF600CD1EB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
