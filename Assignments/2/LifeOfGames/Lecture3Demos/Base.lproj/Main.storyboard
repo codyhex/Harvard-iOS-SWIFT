@@ -136,7 +136,7 @@
                                     <action selector="sliderChange:" destination="Gsh-D0-XqJ" eventType="valueChanged" id="2Af-Co-8hB"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-5G-moo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval: 0.5s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-5G-moo">
                                 <rect key="frame" x="218" y="462" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="lLC-O3-6We"/>
@@ -145,18 +145,42 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjJ-qe-lcH">
+                                <rect key="frame" x="218" y="517" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5P-Dk-z8m">
+                                <rect key="frame" x="74" y="512" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChange:" destination="Gsh-D0-XqJ" eventType="valueChanged" id="zNr-Cp-dei"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="        ^_^" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf4-qU-VgB">
+                                <rect key="frame" x="156" y="418" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YPq-PY-K3r" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="60" id="0kG-fa-V3w"/>
+                            <constraint firstItem="zjJ-qe-lcH" firstAttribute="leading" secondItem="DCZ-5G-moo" secondAttribute="leading" id="3dP-CE-raP"/>
                             <constraint firstItem="66s-YC-B23" firstAttribute="top" secondItem="HHT-yy-51n" secondAttribute="bottom" id="5RS-Rt-Ip9"/>
+                            <constraint firstItem="I5P-Dk-z8m" firstAttribute="leading" secondItem="YPq-PY-K3r" secondAttribute="leading" id="6yS-BH-1bv"/>
                             <constraint firstItem="DCZ-5G-moo" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="32" id="7yh-gC-3Ea"/>
                             <constraint firstItem="DCZ-5G-moo" firstAttribute="leading" secondItem="YPq-PY-K3r" secondAttribute="trailing" constant="30" id="LBH-vG-e8D"/>
+                            <constraint firstItem="yf4-qU-VgB" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="16" id="MYY-hy-Pzs"/>
+                            <constraint firstItem="I5P-Dk-z8m" firstAttribute="top" secondItem="zjJ-qe-lcH" secondAttribute="top" constant="-5" id="QSg-oA-iXc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DCZ-5G-moo" secondAttribute="trailing" constant="78" id="YKn-ye-spm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DCZ-5G-moo" secondAttribute="trailing" constant="60" id="YSN-eM-rnR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="66s-YC-B23" secondAttribute="trailing" id="cAa-Nd-2hp"/>
+                            <constraint firstItem="zjJ-qe-lcH" firstAttribute="top" secondItem="DCZ-5G-moo" secondAttribute="bottom" constant="34" id="ei4-DR-DZ6"/>
                             <constraint firstItem="pVW-wh-wgw" firstAttribute="top" secondItem="DCZ-5G-moo" secondAttribute="bottom" constant="251" id="fI6-FQ-las"/>
                             <constraint firstItem="DCZ-5G-moo" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="60" id="mJf-je-ZUO"/>
+                            <constraint firstItem="yf4-qU-VgB" firstAttribute="centerX" secondItem="66s-YC-B23" secondAttribute="centerX" id="q6p-Ze-cuJ"/>
                             <constraint firstItem="66s-YC-B23" firstAttribute="leading" secondItem="IJe-V7-07U" secondAttribute="leadingMargin" id="rkQ-w8-8UC"/>
                         </constraints>
                         <variation key="default">
@@ -170,8 +194,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="cellGridView" destination="66s-YC-B23" id="lyR-7C-D4I"/>
+                        <outlet property="geneField" destination="zjJ-qe-lcH" id="KqQ-VW-se3"/>
                         <outlet property="intervalField" destination="DCZ-5G-moo" id="D20-Zw-QGb"/>
                         <outlet property="sliderField" destination="YPq-PY-K3r" id="KN6-uc-7Dy"/>
+                        <outlet property="switchField" destination="yf4-qU-VgB" id="Wub-GZ-WTL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TS-4d-v53" userLabel="First Responder" sceneMemberID="firstResponder"/>

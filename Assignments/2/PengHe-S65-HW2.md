@@ -9,7 +9,7 @@ a. Stored as a property in a class instance;
 b. Therefore, automatically capture self of that class;
 **why is it important that they explicitly capture self as weak or unowned**?
 
-Because only by declare the closure with a capture list to be a weak or unowned reference, it is allowed to deallocated the instance when it becomes nil. The reason is that a closure stores as a property in a class and has some self.method, which catches itself, will build a **strong** connection to the instance. On the other hand, the instance holds a **strong** reference to the closure as well. They become a two-way strong connection and when not be deinit() when you assign the instance to be `nil`.
+Because only by declare the closure with a capture list to be a weak or unowned reference, it is allowed to deallocated the instance when it becomes nil. The reason is that a closure stores as a property in a class and has some self.method, which catches itself, will build a **strong** connection to the instance. On the other hand, the instance holds a **strong** reference to the closure as well. They become a two-way strong connection and will not delete the space when assigning the instance to be `nil`.
 
 #### 3.  (12 pts) The UIPicker
 ###### Consider a typical arrangement of a UIPicker within a UIViewController. The UIPicker is an Outlet (specified with the @IBOutlet attribute) which StoryBoard declares for you automatically as a weak reference. Now assume the UIPicker’s stored delegate property has been set to the self of the ViewController instance – assume this happened at a typical time such as in viewDidLoad() or in the didSet observer of the UIPicker reference. Draw a box-and-pointer diagram showing the reference cycle that’s avoided by declaring the reference to the UIPicker as weak.
@@ -108,3 +108,5 @@ See Code
 #### 17. (8 pts) Add an ‘Active’ toggle (UISwitch) that controls whether the animation is active or paused. It’s alright if it doesn’t take effect until the next scheduled timer has gone off.
 
 See Code
+
+![Circle](./interval_switch.png)
