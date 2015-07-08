@@ -14,7 +14,7 @@ Because only by declare the closure with a capture list to be a weak or unowned 
 #### 3.  (12 pts) The UIPicker
 ###### Consider a typical arrangement of a UIPicker within a UIViewController. The UIPicker is an Outlet (specified with the @IBOutlet attribute) which StoryBoard declares for you automatically as a weak reference. Now assume the UIPicker’s stored delegate property has been set to the self of the ViewController instance – assume this happened at a typical time such as in viewDidLoad() or in the didSet observer of the UIPicker reference. Draw a box-and-pointer diagram showing the reference cycle that’s avoided by declaring the reference to the UIPicker as weak.
 
-![](/Users/Penguin/Downloads/)
+![](./picker.png)
 See picture 
 
 #### 4. (4 pts) Why is it that adding UIPickerDataSource to the protocol list of a class cause an immediate compiler error, whereas adding UIPickerViewDelegate does not? For the sake of the question, assume the class starts off with no function members.

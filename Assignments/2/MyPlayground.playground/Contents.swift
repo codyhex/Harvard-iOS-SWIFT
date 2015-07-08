@@ -34,6 +34,7 @@ extension Int {
         return result
     }
 }
+
 // test case
 let hexString = pad("A8",8)
 var t1 = Int()
@@ -67,3 +68,36 @@ if let num = t2.fromHexString(hexMax, radix: 16) {
 else {
     println("invalid input")
 }
+
+// version two from doc update
+
+let hexDigits = 16
+
+extension Int {
+    
+    init?(fromHexString: String) {
+        let digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+        var result = Int(0)
+        for digit in fromHexString.lowercaseString {
+            if let range = digits.rangeOfString(String(digit)) {
+                let val = Int(distance(digits.startIndex, range.startIndex))
+                if val >= hexDigits {
+                    return nil
+                }
+                result = result * hexDigits + val
+            } else {
+                return nil
+            }
+        }
+        self = result
+    }
+}
+
+// test ver2
+var test6 = Int(fromHexString: "A9")
+
+var test7 = Int(fromHexString: "7FFFFFFFFFFFFFFF")
+
+
+
+
