@@ -33,16 +33,25 @@ class LiveCellGridViewController: CellGridViewController {
     
     @IBOutlet weak var switchField: UILabel!
     
+    var switchFlag: Bool = true // adding this flag will prevent slider reactivate the game while switch is Off
+    
     @IBAction func switchChange(sender: UISwitch) {
         if sender.on {
-            handleAppActivated()
+            if timer == nil {
+                handleAppActivated()    // assign a new timer
+            }
             switchField.text = ""
+            switchFlag = true
+            
         } else {
             assert(timer != nil)
-            timer!.invalidate()
-            timer = nil
-            
+            if timer != nil {
+                timer!.invalidate()
+                timer = nil
+            }
             switchField.text = "Game Paused"
+            
+            switchFlag = false
         }
     }
     
@@ -59,9 +68,17 @@ class LiveCellGridViewController: CellGridViewController {
         // This is the way that I figured it out
         // I suppose there should be a timer.reset() to reset the intervalSecond but I fail to find it.
         
-        handleAppResigned()     // stop current timer
-        timer = nil             // release the timer
-        handleAppActivated()    // assign a new timer
+        // only when the switch is remaining ON, the slider will start the timer
+        if switchFlag == true {
+            if timer == nil {
+                handleAppActivated()    // assign a new timer
+            }
+            else {
+                handleAppResigned()     // stop current timer
+                timer = nil             // release the timer
+                handleAppActivated()    // assign a new timer
+            }
+        }
         
     }
     
@@ -97,8 +114,6 @@ class LiveCellGridViewController: CellGridViewController {
             (notification) in
             if let message = notification.userInfo?[TimerApp.MessageKey] as? String {
                 
-//                self.intervalSeconds = Double(round(Double(self.sliderField.value) * 10)/10)
-                
                 switch message {
                 // When we're in a closure, all uses of 'self' must be explicit
                 case TimerApp.ActivatedMessage: self.handleAppActivated()
@@ -112,3 +127,4 @@ class LiveCellGridViewController: CellGridViewController {
         }
     }
 }
+
