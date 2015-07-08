@@ -84,6 +84,7 @@ var taxRate: SalesTax = .NM
 
 taxRate.rawValue
 
-
+let x = 1.23556789
+let y = Double(round(1000*x)/1000)
 
 

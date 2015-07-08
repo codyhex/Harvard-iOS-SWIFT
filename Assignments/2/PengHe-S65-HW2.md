@@ -86,10 +86,13 @@ It will color the stroke instead of filling the cell.
 	Hints: See the UIBezierPath reference in the Apple Docs. As the center, use the center of the CGRect that is calculated currently; the radius should be easy to calculate; angles are measured in radians, so that 2*pi = 360 degrees; since you’re going all the way around, it doesn’t really matter at what angle you start as long as you end there, and drawing direction doesn’t matter.
 
 ```
-let circlePath : UIBezierPath = UIBezierPath(arcCenter: arcCenter, radius: 
-CGFloat(radius), startAngle: CGFloat(-rad(90)), endAngle: CGFloat(rad(360-90)), clockwise: true)
-```
+let arcCenter  = CGPoint(x: CGFloat(x) * cellDim.x + CGFloat(cellDim.x / 2), y: CGFloat(y) * cellDim.y + CGFloat(cellDim.y / 2))
 
+let radius  = CGFloat(cellDim.x / 2)
+
+let cellPath : UIBezierPath = UIBezierPath(arcCenter: arcCenter, radius:CGFloat(radius), startAngle: CGFloat(0), endAngle: CGFloat(M_PI*2), clockwise: true)
+```
+![Circle](./circle.png)
 #### 14. (15 pts) Add a slider directly beneath that controls the time interval between calculations. Lay out the slider directly below the grid. Let it range from 0.1 to 5 seconds. The visual update pacing should track the slider as it is dragged, not just when it is released (‘Touch Up’).
 
 See code

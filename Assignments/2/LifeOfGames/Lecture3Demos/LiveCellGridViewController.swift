@@ -9,13 +9,32 @@ import Foundation // NSTimer
 import UIKit
 
 class LiveCellGridViewController: CellGridViewController {
-    let intervalSeconds = 0.5
+    var intervalSeconds = 0.5 {
+        didSet {
+            println("interval set to \(intervalField)")
+        }
+    }
     
     private var timer: NSTimer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         startObservers()
+    }
+    
+    @IBOutlet weak var sliderField: UISlider!
+    
+    @IBOutlet weak var intervalField: UILabel!
+    
+    @IBAction func sliderChange(sender: UISlider) {
+        // some how the sliderField.valve is a Float and results in long digits when rounded and have to cast it into Doule
+        var currentValue = Double(round(Double(sliderField.value) * 10)/10)
+        
+        println("current value of slider is \(currentValue)")
+        
+        intervalField.text = "\(currentValue)"
+        //update timer
+        
     }
     
     func handleAppActivated() {
@@ -35,6 +54,9 @@ class LiveCellGridViewController: CellGridViewController {
             // a significant change to the underlying model has occurred.
             // This is a *request* that is scheduled to happen sometime later.
             // (But soon; we want the App to be responsive and interactive)
+            
+//            self.intervalSeconds = Double(sliderField.value)
+
             cellGridView.setNeedsDisplay()
         }
     }
@@ -45,6 +67,9 @@ class LiveCellGridViewController: CellGridViewController {
             [unowned self]
             (notification) in
             if let message = notification.userInfo?[TimerApp.MessageKey] as? String {
+                
+//                self.intervalSeconds = Double(round(Double(self.sliderField.value) * 10)/10)
+                
                 switch message {
                 // When we're in a closure, all uses of 'self' must be explicit
                 case TimerApp.ActivatedMessage: self.handleAppActivated()
