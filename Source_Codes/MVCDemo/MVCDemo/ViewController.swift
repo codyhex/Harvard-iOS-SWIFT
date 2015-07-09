@@ -12,11 +12,29 @@ class ViewController: UIViewController {
         static let disconnect = "Disconnect model"
     }
     
-    @IBOutlet weak var hueEntry: UITextField!
-    @IBOutlet weak var sideEntry: UITextField!
-    @IBOutlet weak var xEntry: UITextField!
-    @IBOutlet weak var yEntry: UITextField!
-    @IBOutlet weak var connectModelButton: UIButton!
+    var allFields = [ UITextField : String]()
+    
+    @IBOutlet weak var xLocField: UITextField! {
+        didSet { allFields[xLocField] = ModelKeys.xLoc }
+    }
+    
+    @IBOutlet weak var yLocField: UITextField! {
+        didSet { allFields[yLocField] = ModelKeys.yLoc }
+    }
+    
+    @IBOutlet weak var hueField: UITextField! {
+        didSet { allFields[hueField] = ModelKeys.hue }
+    }
+    
+    @IBOutlet weak var sideLengthField: UITextField! {
+        didSet { allFields[sideLengthField] = ModelKeys.sideLength }
+    }
+    
+//    @IBOutlet weak var hueEntry: UITextField!
+//    @IBOutlet weak var sideEntry: UITextField!
+//    @IBOutlet weak var xEntry: UITextField!
+//    @IBOutlet weak var yEntry: UITextField!
+//    @IBOutlet weak var connectModelButton: UIButton!
     
     @IBOutlet weak var squareView: ColoredSquareView!
     var model: ColoredSquareDataSource?
@@ -24,8 +42,8 @@ class ViewController: UIViewController {
     // Warning: do not call before viewDidLoad()
     func updateUI() {
         squareView.setNeedsDisplay()
-        hueEntry.text = "\(model!.hue)"
-        sideEntry.text = "\(model!.side)"
+        hueEntry.text = "\(model[ModelKeys.hue]!)"
+        sideEntry.text = "\(model[ModelKeys.sideLength])"
         xEntry.text = "\(model!.vx)"
         yEntry.text = "\(model!.vy)"
         let buttonTitle = squareView.dataSource == nil ? Commands.connect : Commands.disconnect
@@ -44,6 +62,43 @@ class ViewController: UIViewController {
         updateUI()
     }
     
+    func startModelListener() {
+        let center = NSNotificationCenter.defaultCenter()
+        let uiQueue = NSOperationQueue.mainQueue()
+        
+        center.addObserverForName(ModelMsgs.notificationName, object: model, queue: uiQueue) {
+            [unowned self]
+            (notification) in
+            if let message = notification.userInfo?[ModelMsgs.notificationEventKey] as? String {
+                self.handleNotification(message)
+            }
+            else {
+                assertionFailure("No message found")
+            }
+        }
+    }
+    
+    func handleNotification(message: String) {
+        switch message {
+        case ModelMsgs.modelChangeDidFail:
+            update
+        case ModelMsgs.modelChangeDidSucceed:
+            updateGraphicalView()
+            updateTextualView()
+        }
+    }
+
+    func updateGraphicalView() {
+        squareView.setNeedsDisplay()
+    }
+    
+    func updateTextualView() {
+        for textField in allFields.keys {
+            let modelKey = allFields[textField]!
+            textField.text = "\(model[modelKey]!)"
+        }
+    }
+    
     @IBAction func toggleModelConnection(sender: AnyObject) {
         if squareView.dataSource == nil {
             squareView.dataSource = model
@@ -56,7 +111,7 @@ class ViewController: UIViewController {
     
     @IBAction func colorChanged(sender: UITextField) {
         if let newColor = sender.text.toDouble() {
-            model!.hue = newColor
+            model[ModelKeys.hue]! = newColor
         }
         updateUI()
     }
