@@ -30,35 +30,54 @@ class ViewController: UIViewController {
         didSet { allFields[sideLengthField] = ModelKeys.sideLength }
     }
     
-//    @IBOutlet weak var hueEntry: UITextField!
-//    @IBOutlet weak var sideEntry: UITextField!
-//    @IBOutlet weak var xEntry: UITextField!
-//    @IBOutlet weak var yEntry: UITextField!
-//    @IBOutlet weak var connectModelButton: UIButton!
+    @IBOutlet weak var hueEntry: UITextField!
+    @IBOutlet weak var sideEntry: UITextField!
+    @IBOutlet weak var xEntry: UITextField!
+    @IBOutlet weak var yEntry: UITextField!
+    @IBOutlet weak var connectModelButton: UIButton!
     
     @IBOutlet weak var squareView: ColoredSquareView!
-    var model: ColoredSquareDataSource?
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let frame = squareView.frame
+        model = ColoredSquareModel(minX: 0.0, maxX: Double(frame.width), minY: 0.0, maxY: Double(frame.height))
+        
+        squareView.dataSource = model
+    }
+    
+    @IBAction func numericValueDidChange(sender: UITextField) {
+        let modelKey: String = allFields[sender]!
+        model[modelKey] = sender.text.toDouble()
+    }
+    
+    var model: ColoredSquareDataSource! {
+        didSet {
+            startModelListener()
+        }
+    }
     
     // Warning: do not call before viewDidLoad()
     func updateUI() {
         squareView.setNeedsDisplay()
         hueEntry.text = "\(model[ModelKeys.hue]!)"
-        sideEntry.text = "\(model[ModelKeys.sideLength])"
-        xEntry.text = "\(model!.vx)"
-        yEntry.text = "\(model!.vy)"
+        sideEntry.text = "\(model[ModelKeys.sideLength]!)"
+        xEntry.text = "\(model[ModelKeys.xLoc]!)"
+        yEntry.text = "\(model[ModelKeys.yLoc]!)"
         let buttonTitle = squareView.dataSource == nil ? Commands.connect : Commands.disconnect
         connectModelButton.setTitle(buttonTitle, forState: .Normal)
     }
     
     override func viewDidLoad() {
-        model = ColoredSquareModel()
+        let frame = squareView.frame
+        model = ColoredSquareModel(minX: 0.0, maxX: Double(frame.width), minY: 0.0, maxY: Double(frame.height))
         updateUI()
     }
     
     @IBAction func squareViewTapped(sender: UIGestureRecognizer) {
         let tapSpot = sender.locationInView(squareView)
-        model!.vx = Double(tapSpot.x)
-        model!.vy = Double(tapSpot.y)
+        model[ModelKeys.xLoc]! = Double(tapSpot.x)
+        model[ModelKeys.yLoc]! = Double(tapSpot.y)
         updateUI()
     }
     
@@ -81,10 +100,13 @@ class ViewController: UIViewController {
     func handleNotification(message: String) {
         switch message {
         case ModelMsgs.modelChangeDidFail:
-            update
+//            update
+            println("Fail")
         case ModelMsgs.modelChangeDidSucceed:
             updateGraphicalView()
             updateTextualView()
+        default:
+            println("default")
         }
     }
 
@@ -118,21 +140,21 @@ class ViewController: UIViewController {
     
     @IBAction func sideChanged(sender: UITextField) {
         if let newSide = sender.text.toDouble() {
-            model!.side = newSide
+            model[ModelKeys.sideLength]! = newSide
         }
         updateUI()
     }
     
     @IBAction func xChanged(sender: UITextField) {
         if let newX = sender.text.toDouble() {
-            model!.vx = newX
+            model[ModelKeys.xLoc]! = newX
         }
         updateUI()
     }
     
     @IBAction func yChanged(sender: UITextField) {
         if let newY = sender.text.toDouble() {
-            model!.vy = newY
+            model[ModelKeys.yLoc]! = newY
         }
         updateUI()
     }
