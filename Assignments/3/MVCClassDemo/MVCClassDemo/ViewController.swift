@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         let frame = squareView.frame
         /** UIBible "A)": gaining access to the models it needs **/
-        /* @@HP: This is where we initialize the model, as the way of initial with a class constructor */
+        /* @@HP: The way of initial with a class constructor */
         model = ColoredSquareModel(minX: 0.0, maxX: Double(frame.width),
             minY: 0.0, maxY: Double(frame.height))
         /** UIBible "B": set delegates **/
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
             NSNotificationCenter.defaultCenter().removeObserver(obs)
         }
     }
-    
+    /* @@HP: This is where we initialize the model, as the way of initial with a class constructor */
     var model: ColoredSquareDataSource! {
         didSet {
             startModelListener()

@@ -9,9 +9,16 @@ import Foundation // NSTimer
 import UIKit
 
 
+struct ModelMsgs {
+    static let notificationName = "ColoredSquareModel"
+    static let notificationEventKey = "CS Model Message Key"
+    static let modelChangeDidSucceed = "CS Model Change Succeeded"
+    static let modelChangeDidFail = "CS Model Change Failed"
+}
 
 class LiveCellGridViewController: CellGridViewController {
-
+    var observer: NSObjectProtocol?
+    
     var intervalSeconds = 0.5 {
         didSet {
             println("interval set to \(intervalSeconds)")
@@ -23,6 +30,7 @@ class LiveCellGridViewController: CellGridViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startObservers()
+        startModelListener()
     }
     
     @IBOutlet weak var sliderField: UISlider!
@@ -93,19 +101,18 @@ class LiveCellGridViewController: CellGridViewController {
     }
     
     func handleTimer(timer: NSTimer) {
-        if let m = model {
-            
-            geneField.text = "The \(m.generation)nd Gen"
-            
-            m.nextGeneration()
-            // Responsibility is on the implementor to call setNeedsDisplay() whenever
-            // a significant change to the underlying model has occurred.
-            // This is a *request* that is scheduled to happen sometime later.
-            // (But soon; we want the App to be responsive and interactive)
-            
-            cellGridView.setNeedsDisplay()
-        }
+        
+        /* @@HP: do not call directly, use notify here */
+        /* @@HP: when timer traggers, send a msg */
+        println("handle Timer")
+        
+        var successFlag = true
+        /* @@HP: now sending the succeed msg only */
+        notifyObservers(success: successFlag)
+
     }
+    
+
     
     func startObservers() {
         let center = NSNotificationCenter.defaultCenter()
@@ -124,6 +131,80 @@ class LiveCellGridViewController: CellGridViewController {
             else {
                 assertionFailure("Missing message")
             }
+        }
+    }
+    
+    /* @@HP: Start the notificate Mode Below */
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let frame = squareView.frame
+        /** UIBible "A)": gaining access to the models it needs **/
+        /* @@HP: The way of initial with a class constructor */
+//        model = ColoredSquareModel(minX: 0.0, maxX: Double(frame.width),
+//            minY: 0.0, maxY: Double(frame.height))
+        /** UIBible "B": set delegates **/
+        cellGridView.dataSource = model // In-class Mistake 1: this was left out
+        // In-class Mistake 3: no final notification sent
+        /* @@Don't understand: how to update */
+        model.notifyObservers(success: true) // Need to force the view to update
+    }
+    }
+    override func viewDidDisappear(animated: Bool) {
+        if let obs = observer {
+            NSNotificationCenter.defaultCenter().removeObserver(obs)
+        }
+    }
+    
+    
+    func startModelListener() {
+        let center = NSNotificationCenter.defaultCenter()
+        let uiQueue = NSOperationQueue.mainQueue() // all UI activity must happen on the "main" thread
+        
+        /** UIBible C) Listen to relevant broadcasts **/
+        observer = center.addObserverForName(ModelMsgs.notificationName, object: model, queue: uiQueue) {
+            [unowned self]
+            (notification) in
+            // STEP 6 of diagram: hear the change (via a closure)
+            // pull out the specifics from the userInfo dictiontary
+            println("problem")
+            if let message = notification.userInfo?[ModelMsgs.notificationEventKey] as? String {
+                self.handleNotification(message) // "self." is required in closures
+            }
+            else {
+                assertionFailure("No message found in notification")
+            }
+        }
+    }
+    
+    
+    
+    
+    func handleNotification(message: String) {
+        // STEP 7 of diagram: parse & process the message
+        switch message {
+        case ModelMsgs.modelChangeDidFail:
+            println("Just fake one") // but NOT necessary to change graphical view; numbers haven't actually changed
+        case ModelMsgs.modelChangeDidSucceed:
+            updateGraphicalView()
+        default:
+            assertionFailure("Unexpected message: \(message)")
+        }
+    }
+    
+    
+    func updateGraphicalView() {
+        if let m = model {
+            
+            geneField.text = "The \(m.generation)nd Gen"
+            
+            m.nextGeneration()
+            // Responsibility is on the implementor to call setNeedsDisplay() whenever
+            // a significant change to the underlying model has occurred.
+            // This is a *request* that is scheduled to happen sometime later.
+            // (But soon; we want the App to be responsive and interactive)
+            
+            cellGridView.setNeedsDisplay()
         }
     }
 }
