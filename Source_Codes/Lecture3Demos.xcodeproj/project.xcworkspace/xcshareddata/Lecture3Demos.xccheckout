@@ -5,23 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BAB85D85-3083-4CB0-B38E-271788F33207</string>
+	<string>6EEED561-9B09-49E6-B626-F8D6B5C00E80</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Lecture3Demos</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
-		<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
+		<string>https://github.com/xia50/Harvard_CS65_Swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assignments/2/LifeOfGames/Lecture3Demos.xcodeproj</string>
+	<string>Source_Codes/Lecture3Demos.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
-		<string>../../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/xia50/harvard_csci_s65_swift.git</string>
+	<string>https://github.com/xia50/Harvard_CS65_Swift.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>1BFF9E848A968935B7EB87E1F263AC0C96034584</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Harvard_CSCI_65</string>
+			<string>Harvard_CS65_Swift</string>
 		</dict>
 	</array>
 </dict>

@@ -66,6 +66,13 @@ class ViewController: UIViewController {
     */
     
     /* viewDidAppear only happens after all views have been painted once */
+    /* @@HP: This is where we initialize the model, as the way of initial with a class constructor */
+    var model: ColoredSquareDataSource! {
+        didSet {
+            startModelListener()
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         let frame = squareView.frame
@@ -86,12 +93,7 @@ class ViewController: UIViewController {
             NSNotificationCenter.defaultCenter().removeObserver(obs)
         }
     }
-    /* @@HP: This is where we initialize the model, as the way of initial with a class constructor */
-    var model: ColoredSquareDataSource! {
-        didSet {
-            startModelListener()
-        }
-    }
+
 
     
     func startModelListener() {

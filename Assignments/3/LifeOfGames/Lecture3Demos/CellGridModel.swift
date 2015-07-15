@@ -1,6 +1,3 @@
-
-import Foundation
-
 typealias Point = (x: Int, y: Int)
 
 enum CellState {
@@ -10,13 +7,7 @@ enum CellState {
     case Empty
 }
 
-protocol CellGridDataSource: class /* adopters must be class (reference type) */ {
-    // encapsulates the idea of a dictionary of named parameters, each of which is floating-point
-//    subscript(index: String) -> Double? { get set }
-    func notifyObservers(#success: Bool)
-}
-
-class CellGridModel: CellGridDataSource {
+class CellGridModel {
     var grid: [[CellState]]
     var generation: Int
 
@@ -123,14 +114,5 @@ class CellGridModel: CellGridDataSource {
     
     func getState(p: Point) -> CellState {
         return grid[p.x][p.y]
-    }
-    
-    func notifyObservers(#success: Bool) {
-        println("notify Observers")
-        let message = success ? ModelMsgs.modelChangeDidSucceed : ModelMsgs.modelChangeDidFail
-        let notification = NSNotification(
-            name: ModelMsgs.notificationName, object: self,
-            userInfo: [ ModelMsgs.notificationEventKey : message ])
-        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
 }
