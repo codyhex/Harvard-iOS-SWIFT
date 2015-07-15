@@ -27,6 +27,7 @@ struct ModelKeys {
     static let xLoc = "xLoc" /* these string values are internal use only right now */
     static let yLoc = "yLoc"
     static let width = "width"
+    static let height = "height"
     static let hue = "hue"
 }
 
@@ -53,6 +54,10 @@ class ColoredSquareModel: ColoredSquareDataSource {
         static let minSide = 1.0
         static let maxSide = 250.0
         
+        static let defaultHeight = 100.0
+        static let minHeight = 1.0
+        static let maxHeight = 250.0
+        
         static let defaultHue = 0.0 /* red */
         static let minHue = 0.0
         static let maxHue = 1.0
@@ -69,6 +74,7 @@ class ColoredSquareModel: ColoredSquareDataSource {
         ModelKeys.xLoc: NumericAttribute(min: 0.0, max: 0.0, value: Limits.defaultX),
         ModelKeys.yLoc: NumericAttribute(min: 0.0, max: 0.0, value: Limits.defaultY),
         ModelKeys.width: NumericAttribute(min: Limits.minSide, max: Limits.maxSide, value: Limits.defaultSide),
+        ModelKeys.height: NumericAttribute(min: Limits.minHeight, max: Limits.maxHeight, value: Limits.defaultHeight),
         ModelKeys.hue: NumericAttribute(min: Limits.minHue, max: Limits.maxHue, value: Limits.defaultHue)
     ]
     

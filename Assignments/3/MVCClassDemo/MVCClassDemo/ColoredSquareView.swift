@@ -32,7 +32,7 @@ class ColoredSquareView: UIView {
             /** UIBible: Same thing. "they must delegate to a model". **/
             
             let squareBounds = CGRect(x: model[ModelKeys.xLoc]!, y: model[ModelKeys.yLoc]!,
-                width: model[ModelKeys.width]!, height: model[ModelKeys.width]!)
+                width: model[ModelKeys.width]!, height: model[ModelKeys.height]!)
             let rectPath = UIBezierPath(rect: squareBounds)
             let squareColor  = UIColor(hue: CGFloat(model[ModelKeys.hue]!),
                 saturation: CGFloat(0.8), brightness: 1.0, alpha: 1.0)
