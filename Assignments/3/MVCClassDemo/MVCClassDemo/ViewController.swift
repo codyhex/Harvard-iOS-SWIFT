@@ -40,7 +40,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightField: UITextField! {
         didSet { allFields[heightField] = ModelKeys.height }
     }
-    // By the time viewDidLoad is called, the allFields dict is fully popuulated
+    
+    @IBOutlet weak var areaField: UILabel!
+
+    // By the time viewDidLoad is called, the allFields dict is fully populated
     // Suspending an app does not affect any of this initialization -- it all stays as it last was
     
     @IBOutlet weak var squareView: ColoredSquareView!
@@ -143,6 +146,7 @@ class ViewController: UIViewController {
             // STEPS 8, 9, and 10 of diagram: It all happens within the UITextField code
             textField.text = "\(model[modelKey]!)"
         }
+        areaField.text = "Area is: \(model.getArea())"
     }
 }
 

@@ -21,6 +21,7 @@ protocol ColoredSquareDataSource: class /* adopters must be class (reference typ
     // encapsulates the idea of a dictionary of named parameters, each of which is floating-point
     subscript(index: String) -> Double? { get set }
     func notifyObservers(#success: Bool)
+    func getArea() -> Double
 }
 
 struct ModelKeys {
@@ -84,12 +85,23 @@ class ColoredSquareModel: ColoredSquareDataSource {
         return values.count
     }
     
+    var area: Double {
+        return values[ModelKeys.width]!.value * values[ModelKeys.height]!.value
+    }
+    
+    func getArea() -> Double {
+        return area
+    }
+    
     init(minX: Double, maxX: Double, minY: Double, maxY: Double) {
         assert(minX < maxX && minY < maxY) // Good defensive programming
         values[ModelKeys.xLoc]!.min = minX
         values[ModelKeys.xLoc]!.max = maxX
         values[ModelKeys.yLoc]!.min = minY
         values[ModelKeys.yLoc]!.max = maxY
+        /* @@HP: limit width and height */
+        values[ModelKeys.width]!.max = (maxX / 2)
+        values[ModelKeys.height]!.max = (maxY / 2)
     }
     
     // myModel["xLoc"] = 57.8 <-- 57.8 gets bound to newValue as a Double?; index gets bound to "xLoc"
