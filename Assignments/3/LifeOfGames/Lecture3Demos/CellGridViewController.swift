@@ -9,7 +9,9 @@
 import UIKit
 
 class CellGridViewController: UIViewController {
-    var model: CellGridModel?
+    
+    var model: CellGridDataSource!
+
     
     @IBOutlet weak var cellGridView: ModelBasedCellGridView!
     

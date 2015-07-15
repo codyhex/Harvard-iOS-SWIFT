@@ -1,3 +1,7 @@
+// NOTE: A model should not import UIKit!
+
+import Foundation
+
 typealias Point = (x: Int, y: Int)
 
 enum CellState {
@@ -7,9 +11,33 @@ enum CellState {
     case Empty
 }
 
-class CellGridModel {
+/** Part of C) of UIBible: notification system **/
+struct ModelMsgs {
+    /* @@HP: use implicit var name and sign the string message that only for debugging. 
+            so that we can reuse that and only change the string message HERE for displaying */
+    static let notificationName = "CellGridModel"
+    static let notificationEventKey = "CG Model Message Key"
+    static let modelChangeDidSucceed = "CG Model Change Succeeded"
+    static let modelChangeDidFail = "CG Model Change Failed"
+}
+
+protocol CellGridDataSource: class /* adopters must be class (reference type) */ {
+    // encapsulates the idea of a dictionary of named parameters, each of which is floating-point
+//    subscript(index: String) -> Double? { get set }
+    func notifyObservers(#success: Bool)
+    func getSize() -> Int
+    func getState(p: Point) -> CellState
+    func nextGeneration()
+    func getGeneration() -> Int
+}
+
+class CellGridModel: CellGridDataSource{
     var grid: [[CellState]]
     var generation: Int
+    
+    func getGeneration() -> Int {
+        return generation
+    }
 
     // This is a failable initializer. That is, invalid values will cause the constructor invocation to return nil.
     init?(size: Int) {
@@ -99,6 +127,10 @@ class CellGridModel {
         return grid.count
     }
     
+    func getSize() -> Int {
+        return size
+    }
+    
     func nextGeneration() {
         // We need a brand new grid because modifying the grid in-place will corrupt the clean snapshot of previous state
         var newGrid = [[CellState]](count: grid.count, repeatedValue: [CellState](count: grid.count, repeatedValue: .Empty))
@@ -110,9 +142,21 @@ class CellGridModel {
         // What happens here to the old two-dim array?
         grid = newGrid
         generation++
+        
+        /* @@HP: After "set" a new grid, send notification to the center that the model is new and need to display a new view */
+        notifyObservers(success: true)
     }
     
     func getState(p: Point) -> CellState {
         return grid[p.x][p.y]
+    }
+    
+    /** Part of "C)" of UIBible: notification system **/
+    func notifyObservers(#success: Bool) {
+        let message = success ? ModelMsgs.modelChangeDidSucceed : ModelMsgs.modelChangeDidFail
+        let notification = NSNotification(
+            name: ModelMsgs.notificationName, object: self,
+            userInfo: [ ModelMsgs.notificationEventKey : message ])
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
 }

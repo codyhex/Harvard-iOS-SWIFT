@@ -9,15 +9,25 @@
 import UIKit
 
 class ModelBasedCellGridView: HardCodedCellGridView {
+    /* @@HP: just in case the model not init */
+    struct Messages {
+        static let noModelFound = "Square View has no model!" as NSString
+        static let font = UIFont.systemFontOfSize(24.0)
+        static let color = UIColor.brownColor()
+        static let fontAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: color]
+    }
+    
     // Note the brevity allowed by explicit type and subsequent context
     let colors: [CellState: UIColor] = [ .Alive: .yellowColor(), .Born: .greenColor(), .Died: .brownColor(), .Empty: .grayColor() ]
     
-    var dataSource: CellGridModel?
+    var dataSource: CellGridDataSource?
 
+    
     override var cellDim: CGPoint {
         if let s = dataSource {
+            
             let smallerDim = min(frame.width, frame.height)
-            return CGPoint(x: smallerDim / CGFloat(s.size), y: smallerDim / CGFloat(s.size))
+            return CGPoint(x: smallerDim / CGFloat(s.getSize()), y: smallerDim / CGFloat(s.getSize()))
         }
         return CGPointZero
     }
@@ -38,8 +48,8 @@ class ModelBasedCellGridView: HardCodedCellGridView {
     
     override func drawRect(rect: CGRect) {
         if let source = dataSource {
-            for x in 0..<source.size {
-                for y in 0..<source.size {
+            for x in 0..<source.getSize() {
+                for y in 0..<source.getSize() {
                     let arcCenter   = CGPoint(x: CGFloat(x) * cellDim.x + CGFloat(cellDim.x / 2), y: CGFloat(y) * cellDim.y + CGFloat(cellDim.y / 2))
                     let radius  = CGFloat(cellDim.x / 2)
                     let cellPath : UIBezierPath = UIBezierPath(arcCenter: arcCenter, radius:
@@ -49,6 +59,9 @@ class ModelBasedCellGridView: HardCodedCellGridView {
                     cellPath.fill()
                 }
             }
+        }
+        else {
+            Messages.noModelFound.drawAtPoint(CGPoint(x: 10, y: 10), withAttributes: Messages.fontAttributes)
         }
     }
 }

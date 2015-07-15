@@ -11,6 +11,7 @@ import UIKit
 
 
 class LiveCellGridViewController: CellGridViewController {
+    var observer: NSObjectProtocol? /* Not shown in class. See startObservers / viewDidDisappear below */
 
     var intervalSeconds = 0.5 {
         didSet {
@@ -23,6 +24,8 @@ class LiveCellGridViewController: CellGridViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startObservers()
+        startModelListener()
+
     }
     
     @IBOutlet weak var sliderField: UISlider!
@@ -94,16 +97,11 @@ class LiveCellGridViewController: CellGridViewController {
     
     func handleTimer(timer: NSTimer) {
         if let m = model {
-            
-            geneField.text = "The \(m.generation)nd Gen"
-            
+
+            geneField.text = "The \(m.getGeneration())nd Gen"
+            /* @@HP: the model will send a msg after produce next generation */
             m.nextGeneration()
-            // Responsibility is on the implementor to call setNeedsDisplay() whenever
-            // a significant change to the underlying model has occurred.
-            // This is a *request* that is scheduled to happen sometime later.
-            // (But soon; we want the App to be responsive and interactive)
-            
-            cellGridView.setNeedsDisplay()
+
         }
     }
     
@@ -126,5 +124,58 @@ class LiveCellGridViewController: CellGridViewController {
             }
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        model.notifyObservers(success: true) // Need to force the view to update
+    }
+    
+    /** UIBible "F)": disposing of unused observers. Not shown in class **/
+    override func viewDidDisappear(animated: Bool) {
+        if let obs = observer {
+            NSNotificationCenter.defaultCenter().removeObserver(obs)
+        }
+    }
+    
+    func startModelListener() {
+        let center = NSNotificationCenter.defaultCenter()
+        let uiQueue = NSOperationQueue.mainQueue() // all UI activity must happen on the "main" thread
+        
+        /** UIBible C) Listen to relevant broadcasts **/
+        observer = center.addObserverForName(ModelMsgs.notificationName, object: model, queue: uiQueue) {
+            [unowned self]
+            (notification) in
+            // STEP 6 of diagram: hear the change (via a closure)
+            // pull out the specifics from the userInfo dictiontary
+            if let message = notification.userInfo?[ModelMsgs.notificationEventKey] as? String {
+                self.handleNotification(message) // "self." is required in closures
+            }
+            else {
+                assertionFailure("No message found in notification")
+            }
+        }
+    }
+    
+    /** UIBible E) Translate broadcasted message into view update commands **/
+    func handleNotification(message: String) {
+        // STEP 7 of diagram: parse & process the message
+        switch message {
+        case ModelMsgs.modelChangeDidFail:
+            println("Model Change Failed")
+        case ModelMsgs.modelChangeDidSucceed:
+            updateGraphicalView()
+        default:
+            assertionFailure("Unexpected message: \(message)")
+        }
+    }
+    
+    func updateGraphicalView() {
+        // STEP 8 of diagram: inform the view it's out of date
+        cellGridView.setNeedsDisplay()
+    }
+    
+   
+
 }
 

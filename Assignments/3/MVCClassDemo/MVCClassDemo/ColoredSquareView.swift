@@ -30,6 +30,7 @@ class ColoredSquareView: UIView {
         if let model = dataSource {
             // STEP 10 of diagram: Consult the model for the particulars
             /** UIBible: Same thing. "they must delegate to a model". **/
+            
             let squareBounds = CGRect(x: model[ModelKeys.xLoc]!, y: model[ModelKeys.yLoc]!,
                 width: model[ModelKeys.sideLength]!, height: model[ModelKeys.sideLength]!)
             let rectPath = UIBezierPath(rect: squareBounds)

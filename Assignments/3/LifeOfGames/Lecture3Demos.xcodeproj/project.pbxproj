@@ -88,11 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				6584055E1B3F9D6B001E7178 /* TimerViewController.swift */,
-				65C36E9B1B40E53700B1416E /* LiveCellGridViewController.swift */,
 				6584055C1B3F9D63001E7178 /* ModelBasedCellGridView.swift */,
+				65C36E9B1B40E53700B1416E /* LiveCellGridViewController.swift */,
 				6584055A1B3F9D5C001E7178 /* HardCodedCellGridView.swift */,
-				658405301B3F50E0001E7178 /* AppDelegate.swift */,
 				658405561B3F8F3F001E7178 /* CellGridViewController.swift */,
+				658405301B3F50E0001E7178 /* AppDelegate.swift */,
 				658405341B3F50E0001E7178 /* Main.storyboard */,
 				658405371B3F50E0001E7178 /* Images.xcassets */,
 				658405391B3F50E0001E7178 /* LaunchScreen.xib */,
@@ -443,6 +443,7 @@
 				FABFAD1E1B421D7900345340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
