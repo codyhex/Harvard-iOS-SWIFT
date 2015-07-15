@@ -64,4 +64,5 @@ class ModelBasedCellGridView: HardCodedCellGridView {
             Messages.noModelFound.drawAtPoint(CGPoint(x: 10, y: 10), withAttributes: Messages.fontAttributes)
         }
     }
+    
 }

@@ -11,7 +11,6 @@ import UIKit
 class CellGridViewController: UIViewController {
     
     var model: CellGridDataSource!
-
     
     @IBOutlet weak var cellGridView: ModelBasedCellGridView!
     
@@ -21,4 +20,5 @@ class CellGridViewController: UIViewController {
         model = CellGridModel(size: 20)
         cellGridView.dataSource = model
     }
+    
 }
