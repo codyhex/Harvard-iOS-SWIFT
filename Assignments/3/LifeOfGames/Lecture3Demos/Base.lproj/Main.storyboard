@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gsh-D0-XqJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TimerViewController" customModule="Lecture3Demos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Timing Info will go here" translatesAutoresizingMaskIntoConstraints="NO" id="SrB-BF-tgQ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SrB-BF-tgQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ne-mw-4ly"/>
+                            <constraint firstItem="SrB-BF-tgQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="1ew-4Z-Q58"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SrB-BF-tgQ" secondAttribute="bottom" id="E7u-SH-apd"/>
+                            <constraint firstAttribute="trailing" secondItem="SrB-BF-tgQ" secondAttribute="trailing" id="ruB-WI-yLb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLog" destination="SrB-BF-tgQ" id="SBz-Hb-Uzt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="312"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="De9-bh-oda">
+            <objects>
+                <viewController id="pfS-eX-6h5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0zN-Yt-EUz"/>
+                        <viewControllerLayoutGuide type="bottom" id="9va-X6-rrr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kfe-QX-yv3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-05-1zU" customClass="HardCodedCellGridView" customModule="Lecture3Demos" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="568" height="568"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lcq-05-1zU" secondAttribute="height" multiplier="1:1" id="Ck5-Wv-2UL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lcq-05-1zU" firstAttribute="top" secondItem="0zN-Yt-EUz" secondAttribute="bottom" id="4Vo-S5-x1L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lcq-05-1zU" secondAttribute="trailing" id="Ab6-iV-AnO"/>
+                            <constraint firstItem="lcq-05-1zU" firstAttribute="leading" secondItem="Kfe-QX-yv3" secondAttribute="leadingMargin" id="vHx-LH-ZRi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31x-hX-9rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="1046"/>
+        </scene>
+        <!--Cell Grid View Controller-->
+        <scene sceneID="EZ7-6x-pZE">
+            <objects>
+                <viewController id="ABv-QR-iCR" customClass="CellGridViewController" customModule="Lecture3Demos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GXW-OZ-wO5"/>
+                        <viewControllerLayoutGuide type="bottom" id="toy-xo-E9I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3bn-n3-w7W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jti-xL-eSY" customClass="ModelBasedCellGridView" customModule="Lecture3Demos" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="568" height="568"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jti-xL-eSY" secondAttribute="height" multiplier="1:1" id="WvH-pV-goG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jti-xL-eSY" firstAttribute="top" secondItem="GXW-OZ-wO5" secondAttribute="bottom" id="C9d-Gm-cxN"/>
+                            <constraint firstItem="jti-xL-eSY" firstAttribute="leading" secondItem="3bn-n3-w7W" secondAttribute="leadingMargin" id="EPa-Xf-EGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jti-xL-eSY" secondAttribute="trailing" id="cxX-X7-2HL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cellGridView" destination="jti-xL-eSY" id="zht-KW-v8T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upP-NZ-Cjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="1728"/>
+        </scene>
+        <!--Live Cell Grid View Controller-->
+        <scene sceneID="aam-5S-gYb">
+            <objects>
+                <viewController id="Gsh-D0-XqJ" customClass="LiveCellGridViewController" customModule="Lecture3Demos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HHT-yy-51n"/>
+                        <viewControllerLayoutGuide type="bottom" id="pVW-wh-wgw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IJe-V7-07U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66s-YC-B23" customClass="ModelBasedCellGridView" customModule="Lecture3Demos" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="382" height="382"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="66s-YC-B23" secondAttribute="height" multiplier="1:1" id="vjk-hd-1xb"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.10000000000000001" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="YPq-PY-K3r">
+                                <rect key="frame" x="72" y="462" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="9Fa-td-UBg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChange:" destination="Gsh-D0-XqJ" eventType="valueChanged" id="2Af-Co-8hB"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval: 0.5s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-5G-moo">
+                                <rect key="frame" x="218" y="462" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="lLC-O3-6We"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjJ-qe-lcH">
+                                <rect key="frame" x="218" y="517" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5P-Dk-z8m">
+                                <rect key="frame" x="74" y="512" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChange:" destination="Gsh-D0-XqJ" eventType="valueChanged" id="zNr-Cp-dei"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="        ^_^" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf4-qU-VgB">
+                                <rect key="frame" x="156" y="418" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YPq-PY-K3r" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="60" id="0kG-fa-V3w"/>
+                            <constraint firstItem="zjJ-qe-lcH" firstAttribute="leading" secondItem="DCZ-5G-moo" secondAttribute="leading" id="3dP-CE-raP"/>
+                            <constraint firstItem="66s-YC-B23" firstAttribute="top" secondItem="HHT-yy-51n" secondAttribute="bottom" id="5RS-Rt-Ip9"/>
+                            <constraint firstItem="I5P-Dk-z8m" firstAttribute="leading" secondItem="YPq-PY-K3r" secondAttribute="leading" id="6yS-BH-1bv"/>
+                            <constraint firstItem="DCZ-5G-moo" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="32" id="7yh-gC-3Ea"/>
+                            <constraint firstItem="DCZ-5G-moo" firstAttribute="leading" secondItem="YPq-PY-K3r" secondAttribute="trailing" constant="30" id="LBH-vG-e8D"/>
+                            <constraint firstItem="yf4-qU-VgB" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="16" id="MYY-hy-Pzs"/>
+                            <constraint firstItem="I5P-Dk-z8m" firstAttribute="top" secondItem="zjJ-qe-lcH" secondAttribute="top" constant="-5" id="QSg-oA-iXc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DCZ-5G-moo" secondAttribute="trailing" constant="78" id="YKn-ye-spm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DCZ-5G-moo" secondAttribute="trailing" constant="60" id="YSN-eM-rnR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="66s-YC-B23" secondAttribute="trailing" id="cAa-Nd-2hp"/>
+                            <constraint firstItem="zjJ-qe-lcH" firstAttribute="top" secondItem="DCZ-5G-moo" secondAttribute="bottom" constant="34" id="ei4-DR-DZ6"/>
+                            <constraint firstItem="pVW-wh-wgw" firstAttribute="top" secondItem="DCZ-5G-moo" secondAttribute="bottom" constant="251" id="fI6-FQ-las"/>
+                            <constraint firstItem="DCZ-5G-moo" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="60" id="mJf-je-ZUO"/>
+                            <constraint firstItem="yf4-qU-VgB" firstAttribute="centerX" secondItem="66s-YC-B23" secondAttribute="centerX" id="q6p-Ze-cuJ"/>
+                            <constraint firstItem="66s-YC-B23" firstAttribute="leading" secondItem="IJe-V7-07U" secondAttribute="leadingMargin" id="rkQ-w8-8UC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7yh-gC-3Ea"/>
+                                <exclude reference="YKn-ye-spm"/>
+                                <exclude reference="fI6-FQ-las"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="cellGridView" destination="66s-YC-B23" id="lyR-7C-D4I"/>
+                        <outlet property="geneField" destination="zjJ-qe-lcH" id="KqQ-VW-se3"/>
+                        <outlet property="intervalField" destination="DCZ-5G-moo" id="D20-Zw-QGb"/>
+                        <outlet property="sliderField" destination="YPq-PY-K3r" id="KN6-uc-7Dy"/>
+                        <outlet property="switchField" destination="yf4-qU-VgB" id="Wub-GZ-WTL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0TS-4d-v53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="2462"/>
+        </scene>
+    </scenes>
+</document>
