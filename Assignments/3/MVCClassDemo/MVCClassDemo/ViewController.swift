@@ -34,8 +34,8 @@ class ViewController: UIViewController {
         didSet { allFields[hueField] = ModelKeys.hue }
     }
 
-    @IBOutlet weak var sideLengthField: UITextField! {
-        didSet { allFields[sideLengthField] = ModelKeys.sideLength }
+    @IBOutlet weak var widthField: UITextField! {
+        didSet { allFields[widthField] = ModelKeys.width }
     }
     // By the time viewDidLoad is called, the allFields dict is fully popuulated
     // Suspending an app does not affect any of this initialization -- it all stays as it last was

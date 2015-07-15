@@ -26,7 +26,7 @@ protocol ColoredSquareDataSource: class /* adopters must be class (reference typ
 struct ModelKeys {
     static let xLoc = "xLoc" /* these string values are internal use only right now */
     static let yLoc = "yLoc"
-    static let sideLength = "sideLength"
+    static let width = "width"
     static let hue = "hue"
 }
 
@@ -68,7 +68,7 @@ class ColoredSquareModel: ColoredSquareDataSource {
          /** Model "D)" of UIBible: the model has to be initialized in an orderly way. **/
         ModelKeys.xLoc: NumericAttribute(min: 0.0, max: 0.0, value: Limits.defaultX),
         ModelKeys.yLoc: NumericAttribute(min: 0.0, max: 0.0, value: Limits.defaultY),
-        ModelKeys.sideLength: NumericAttribute(min: Limits.minSide, max: Limits.maxSide, value: Limits.defaultSide),
+        ModelKeys.width: NumericAttribute(min: Limits.minSide, max: Limits.maxSide, value: Limits.defaultSide),
         ModelKeys.hue: NumericAttribute(min: Limits.minHue, max: Limits.maxHue, value: Limits.defaultHue)
     ]
     
