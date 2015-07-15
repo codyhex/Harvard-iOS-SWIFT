@@ -179,22 +179,14 @@ class LiveCellGridViewController: CellGridViewController {
     }
     
     
-    /* @HP: <#commment#> */
-    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
-        let translation = recognizer.translationInView(self.view)
-        if let view = recognizer.view {
-            view.center = CGPoint(x:view.center.x + translation.x,
-                y:view.center.y + translation.y)
-        }
-        recognizer.setTranslation(CGPointZero, inView: self.view)
-    }
+  
     
     /* @HP: Start the touch function */
     /* @HP: This should happens ONLY when the pause is enabled */
     
     /* @HP: Basic touching feature codes copied from class */
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        if let uiTouches = event.touchesForView(view) as? Set<UITouch>,
+        if let uiTouches = event.touchesForView(cellGridView) as? Set<UITouch>,
             let touchCount = event.allTouches()?.count, // "1" for one finger touches, "2" for two finger touches
             let touch = uiTouches.first {
                 // normally, you need to translate the touch to the desired custom rendered subview
@@ -203,7 +195,7 @@ class LiveCellGridViewController: CellGridViewController {
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        if let uiTouches = event.touchesForView(view) as? Set<UITouch>,
+        if let uiTouches = event.touchesForView(cellGridView) as? Set<UITouch>,
             let touchCount = event.allTouches()?.count,
             let touch = uiTouches.first {
                 println("\(touchCount)-finger drag ended at \(touch.locationInView(view))")
@@ -211,7 +203,7 @@ class LiveCellGridViewController: CellGridViewController {
     }
     
     override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
-        if let uiTouches = event.touchesForView(view) as? Set<UITouch>,
+        if let uiTouches = event.touchesForView(cellGridView) as? Set<UITouch>,
             let touchCount = event.allTouches()?.count,
             let touch = uiTouches.first {
                 println("\(touchCount)-finger drag continued at \(touch.locationInView(view))")

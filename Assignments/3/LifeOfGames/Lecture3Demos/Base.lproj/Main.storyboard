@@ -88,12 +88,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jti-xL-eSY" customClass="ModelBasedCellGridView" customModule="Lecture3Demos" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="568" height="568"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jti-xL-eSY" secondAttribute="height" multiplier="1:1" id="WvH-pV-goG"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xvs-wN-5SM" appends="YES" id="yXV-dq-7DV"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jti-xL-eSY" firstAttribute="top" secondItem="GXW-OZ-wO5" secondAttribute="bottom" id="C9d-Gm-cxN"/>
                             <constraint firstItem="jti-xL-eSY" firstAttribute="leading" secondItem="3bn-n3-w7W" secondAttribute="leadingMargin" id="EPa-Xf-EGC"/>
@@ -105,6 +110,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upP-NZ-Cjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xvs-wN-5SM"/>
             </objects>
             <point key="canvasLocation" x="139" y="1728"/>
         </scene>
@@ -128,7 +134,7 @@
                                     <constraint firstAttribute="width" secondItem="66s-YC-B23" secondAttribute="height" multiplier="1:1" id="vjk-hd-1xb"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Fk3-6r-mMc" appends="YES" id="R02-qR-okL"/>
+                                    <outletCollection property="gestureRecognizers" destination="MRq-ZM-GQN" appends="YES" id="pIM-W7-eqX"/>
                                 </connections>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.10000000000000001" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="YPq-PY-K3r">
@@ -169,6 +175,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YPq-PY-K3r" firstAttribute="top" secondItem="66s-YC-B23" secondAttribute="bottom" constant="60" id="0kG-fa-V3w"/>
                             <constraint firstItem="zjJ-qe-lcH" firstAttribute="leading" secondItem="DCZ-5G-moo" secondAttribute="leading" id="3dP-CE-raP"/>
@@ -205,11 +212,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TS-4d-v53" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Fk3-6r-mMc">
-                    <connections>
-                        <action selector="handlePan:" destination="Gsh-D0-XqJ" id="1Cf-Qf-44H"/>
-                    </connections>
-                </panGestureRecognizer>
+                <tapGestureRecognizer id="MRq-ZM-GQN"/>
             </objects>
             <point key="canvasLocation" x="161" y="2462"/>
         </scene>
