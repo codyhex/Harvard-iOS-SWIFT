@@ -1,29 +1,20 @@
 # README #
 
-Let's Learn Swift from Harvard !
+Let's Learn Swift together !
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* This Repo contains the in class programs and a prototype final project.
+* These materials are used during the course CSCI-65 in Harvard University.
+* Thank you for [Daniel Bromberg](https://www.linkedin.com/pub/daniel-bromberg/32/699/41a) who is giving the lectures in the class on this new-born language.
+* Version: NOT contain Swift 2.0 which is newly released.
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+### My Notes About Swift ###
+**Mostly Captured Online**
+* [Tuples, Protocols and Delegates](https://www.evernote.com/l/AGLT1qv09eVD8LqYrK5J8bmWgYSTIjs-Tfg)
+* []()
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Peng He via [Email](thinkinbath@gmail.com)
+
