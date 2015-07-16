@@ -38,6 +38,6 @@ var a = 10.0 * Service.rawValue
 
 println("\(a)")
 
-
+Int(2.1)
 
 

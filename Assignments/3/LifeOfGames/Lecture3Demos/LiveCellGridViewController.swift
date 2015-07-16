@@ -190,7 +190,8 @@ class LiveCellGridViewController: CellGridViewController {
             let touchCount = event.allTouches()?.count, // "1" for one finger touches, "2" for two finger touches
             let touch = uiTouches.first {
                 // normally, you need to translate the touch to the desired custom rendered subview
-                println("\(touchCount)-finger drag started at \(touch.locationInView(view))")
+                println("\(touchCount)-finger drag started at \(touch.locationInView(cellGridView))")
+                cellMapping(touch.locationInView(cellGridView))
         }
     }
     
@@ -198,7 +199,7 @@ class LiveCellGridViewController: CellGridViewController {
         if let uiTouches = event.touchesForView(cellGridView) as? Set<UITouch>,
             let touchCount = event.allTouches()?.count,
             let touch = uiTouches.first {
-                println("\(touchCount)-finger drag ended at \(touch.locationInView(view))")
+                println("\(touchCount)-finger drag ended at \(touch.locationInView(cellGridView))")
         }
     }
     
@@ -206,8 +207,17 @@ class LiveCellGridViewController: CellGridViewController {
         if let uiTouches = event.touchesForView(cellGridView) as? Set<UITouch>,
             let touchCount = event.allTouches()?.count,
             let touch = uiTouches.first {
-                println("\(touchCount)-finger drag continued at \(touch.locationInView(view))")
+                println("\(touchCount)-finger drag continued at \(touch.locationInView(cellGridView))")
         }
+    }
+    
+    func cellMapping(touchPos: CGPoint) {
+        let size = model.getSize()
+        let xxLoc = Int(Float(touchPos.x) / Float(size))
+        let yyLoc = Int(Float(touchPos.y) / Float(size))
+        
+        println("#x: \(xxLoc) and #y: \(yyLoc)")
+        /* @HP: now parse the pixil into cell number */
     }
     
 //    override func viewDidLoad() {
