@@ -227,20 +227,35 @@ class LiveCellGridViewController: CellGridViewController {
     
     
     var pList: [Point] = []
+
     
     func cellMapping(touchPos: CGPoint) {
-        let size = model.getSize()
+        
         /* @HP: now parse the pixil into cell number */
-
-        let xxLoc = Int(Float(touchPos.x) / Float(size))
-        let yyLoc = Int(Float(touchPos.y) / Float(size))
         
-        var p = Point(xxLoc,yyLoc)
-        /* @HP: For now, just add them, no unique function performed */
-        pList.append(p)
+        let limit = min(cellGridView.frame.width,cellGridView.frame.height)
         
-        println("#x: \(xxLoc) and #y: \(yyLoc) and the list \(pList)")
+        let size = model.getSize()
         
+        let cellDim = (Float(limit) / Float(size))
+        
+        /* @HP: cell grid view check */
+        
+        if touchPos.x > limit || touchPos.y > limit {
+            println("out of cell grid")
+            return
+        }
+        else {
+            let xxLoc = Int(Float(touchPos.x) / cellDim)
+            let yyLoc = Int(Float(touchPos.y) / cellDim)
+            
+            
+            var p = Point(xxLoc,yyLoc)
+            /* @HP: For now, just add them, no unique function performed */
+            pList.append(p)
+            
+            println("#x: \(xxLoc) and #y: \(yyLoc) and the list \(pList)")
+        }
     }
     
     func processTouch() {
