@@ -4,6 +4,25 @@ import UIKit
 
 var str = "Hello, playground"
 
+
+
+
+let array = ["one", "one", "two", "two", "three", "three"]
+let unique = NSSet(array: array).allObjects
+
+var array2 : [Point] = []
+
+var p = (1,2)
+
+var p2 = Point(2,2)
+
+var p3 = Point(1,2)
+
+array2.append(p)
+array2.append(p2)
+array2.append(p3)
+
+
 let money = [1,2,3,4,5]
 
 var sum = money.reduce(0, combine: +)

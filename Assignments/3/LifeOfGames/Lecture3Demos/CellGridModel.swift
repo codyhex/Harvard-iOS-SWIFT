@@ -29,6 +29,7 @@ protocol CellGridDataSource: class /* adopters must be class (reference type) */
     func getState(p: Point) -> CellState
     func nextGeneration()
     func getGeneration() -> Int
+    func flipGridState(x: Int, y: Int) -> Bool
 }
 
 class CellGridModel: CellGridDataSource{
@@ -52,6 +53,22 @@ class CellGridModel: CellGridDataSource{
         grid[15][13] = .Died
     }
     
+    func flipGridState(x: Int, y: Int) -> Bool {
+        switch grid[x][y] {
+        case .Born:
+            grid[x][y] = .Died
+        case .Died:
+            grid[x][y] = .Born
+        case .Empty:
+            grid[x][y] = .Alive
+        case .Alive:
+            grid[x][y] = .Empty
+        default:
+            return false
+        }
+        
+        return true
+    }
     private func makeGlider() {
         grid[5][5] = .Alive
         grid[6][6] = .Alive

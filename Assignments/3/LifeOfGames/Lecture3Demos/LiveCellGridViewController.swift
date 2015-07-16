@@ -191,7 +191,11 @@ class LiveCellGridViewController: CellGridViewController {
             let touch = uiTouches.first {
                 // normally, you need to translate the touch to the desired custom rendered subview
                 println("\(touchCount)-finger drag started at \(touch.locationInView(cellGridView))")
-                cellMapping(touch.locationInView(cellGridView))
+                
+                if switchFlag == false {
+                    cellMapping(touch.locationInView(cellGridView))
+                    processTouch()
+                }
         }
     }
     
@@ -200,6 +204,11 @@ class LiveCellGridViewController: CellGridViewController {
             let touchCount = event.allTouches()?.count,
             let touch = uiTouches.first {
                 println("\(touchCount)-finger drag ended at \(touch.locationInView(cellGridView))")
+                
+                if switchFlag == false {
+                    cellMapping(touch.locationInView(cellGridView))
+                    processTouch()
+                }
         }
     }
     
@@ -208,16 +217,43 @@ class LiveCellGridViewController: CellGridViewController {
             let touchCount = event.allTouches()?.count,
             let touch = uiTouches.first {
                 println("\(touchCount)-finger drag continued at \(touch.locationInView(cellGridView))")
+                
+                if switchFlag == false {
+                    cellMapping(touch.locationInView(cellGridView))
+                    processTouch()
+                }
         }
     }
     
+    
+    var pList: [Point] = []
+    
     func cellMapping(touchPos: CGPoint) {
         let size = model.getSize()
+        /* @HP: now parse the pixil into cell number */
+
         let xxLoc = Int(Float(touchPos.x) / Float(size))
         let yyLoc = Int(Float(touchPos.y) / Float(size))
         
-        println("#x: \(xxLoc) and #y: \(yyLoc)")
-        /* @HP: now parse the pixil into cell number */
+        var p = Point(xxLoc,yyLoc)
+        /* @HP: For now, just add them, no unique function performed */
+        pList.append(p)
+        
+        println("#x: \(xxLoc) and #y: \(yyLoc) and the list \(pList)")
+        
+    }
+    
+    func processTouch() {
+        /* @HP: change the cell info */
+        for index in pList {
+            if model.flipGridState(index.x, y: index.y) == false {
+                println("touch processing wrong")
+                break
+            }
+        }
+        pList = []
+        
+        updateGraphicalView()
     }
     
 //    override func viewDidLoad() {
