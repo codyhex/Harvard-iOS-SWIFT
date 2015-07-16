@@ -225,9 +225,8 @@ class LiveCellGridViewController: CellGridViewController {
         }
     }
     
-    
+    /* @HP: create a list hold the grid and has been touched */
     var pList: [Point] = []
-
     
     func cellMapping(touchPos: CGPoint) {
         
@@ -271,17 +270,10 @@ class LiveCellGridViewController: CellGridViewController {
         updateGraphicalView()
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-   
 
 }
 

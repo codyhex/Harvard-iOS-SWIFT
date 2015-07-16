@@ -54,20 +54,26 @@ class CellGridModel: CellGridDataSource{
     }
     
     func flipGridState(x: Int, y: Int) -> Bool {
-        switch grid[x][y] {
-        case .Born:
-            grid[x][y] = .Died
-        case .Died:
-            grid[x][y] = .Born
-        case .Empty:
-            grid[x][y] = .Alive
-        case .Alive:
-            grid[x][y] = .Empty
-        default:
+        
+        if x > size || y > size {
+            println("Index out of range, x: \(x) and y: \(y)")
             return false
         }
-        
-        return true
+        else {
+            switch grid[x][y] {
+            case .Born:
+                grid[x][y] = .Died
+            case .Died:
+                grid[x][y] = .Born
+            case .Empty:
+                grid[x][y] = .Alive
+            case .Alive:
+                grid[x][y] = .Empty
+            default:
+                return false
+            }
+            return true
+        }
     }
     private func makeGlider() {
         grid[5][5] = .Alive
