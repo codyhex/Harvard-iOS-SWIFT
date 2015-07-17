@@ -8,90 +8,79 @@
 
 import UIKit
 
-class SimpleMasterController: UITableViewController {
+struct Identifiers {
+    static let basicCell = "basic cell"
+    static let detailSegue = "image detail segue"
+}
 
+class SimpleMasterController: DebugTableViewController, UISplitViewControllerDelegate
+{
+    var assetImages = [ "neon_vortex", "grass_patch", "speed_skating", "tall_building",
+        "missing_example" ]
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            // When you tap on a cell in a table view it gets selected (gray bg)
+            clearsSelectionOnViewWillAppear = false
+            preferredContentSize = CGSize(width: 320.0, height: 600.0)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if let splitVC = splitViewController { // accesses our parent view controller
+            splitVC.delegate = self
+        }
+        else {
+            assertionFailure("Someone messed up the storyboard, need a splitVC")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // Start off on the master view
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
+        Util.log("enter")
+        return true
     }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
+        return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
+        return assetImages.count
     }
-
-    /*
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
+    // We have to build the cell based on the row number
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+        // We are always in the first and only section
+        Util.log("enter, row \(indexPath.row)")
+        let cell = tableView.dequeueReusableCellWithIdentifier(Identifiers.basicCell, forIndexPath: indexPath) as! UITableViewCell
+        // Assume cell is full of old stale data from cells that have scrolled off 
+        // screen and are candidates for re-use
+        // Key linkage here: between UI and Model
+        cell.textLabel!.text = assetImages[indexPath.row] // 0-based indices
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // Set up the detail view controller with everything it needs to do its job
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        Util.log("enter, identifier \(segue.identifier)")
+        switch segue.identifier ?? "MISSING" {
+        case Identifiers.detailSegue:
+            if let indexPath = tableView.indexPathForSelectedRow(),
+            let destVCNav = segue.destinationViewController as? UINavigationController,
+                let detailVC = destVCNav.topViewController as? SimpleDetailViewController {
+                    // look up name of image in underlying data model based on clicked-on row
+                    let imageName = assetImages[indexPath.row]
+                    detailVC.imageName = imageName
+            }
+        default:
+            assertionFailure("unknown segue ID")
+        }
     }
-    */
-
 }

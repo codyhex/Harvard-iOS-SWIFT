@@ -16,6 +16,8 @@
 		65272A031B5479F900101A75 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65272A021B5479F900101A75 /* Util.swift */; };
 		65272A051B547B9000101A75 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65272A041B547B9000101A75 /* DebugViewController.swift */; };
 		65272A071B547D9800101A75 /* DebugTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65272A061B547D9800101A75 /* DebugTableViewController.swift */; };
+		65272A091B5485AE00101A75 /* SimpleMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65272A081B5485AE00101A75 /* SimpleMasterController.swift */; };
+		65272A0B1B54919100101A75 /* SimpleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65272A0A1B54919100101A75 /* SimpleDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		65272A021B5479F900101A75 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = ../Util.swift; sourceTree = "<group>"; };
 		65272A041B547B9000101A75 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		65272A061B547D9800101A75 /* DebugTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugTableViewController.swift; sourceTree = "<group>"; };
+		65272A081B5485AE00101A75 /* SimpleMasterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMasterController.swift; sourceTree = "<group>"; };
+		65272A0A1B54919100101A75 /* SimpleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				65272A021B5479F900101A75 /* Util.swift */,
+				65272A0A1B54919100101A75 /* SimpleDetailViewController.swift */,
 				65272A041B547B9000101A75 /* DebugViewController.swift */,
 				65272A061B547D9800101A75 /* DebugTableViewController.swift */,
 				652729E21B54787B00101A75 /* AppDelegate.swift */,
+				65272A081B5485AE00101A75 /* SimpleMasterController.swift */,
 				652729E41B54787B00101A75 /* ViewController.swift */,
 				652729E61B54787B00101A75 /* Main.storyboard */,
 				652729E91B54787B00101A75 /* Images.xcassets */,
@@ -222,8 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				652729E51B54787B00101A75 /* ViewController.swift in Sources */,
+				65272A091B5485AE00101A75 /* SimpleMasterController.swift in Sources */,
 				65272A071B547D9800101A75 /* DebugTableViewController.swift in Sources */,
 				65272A031B5479F900101A75 /* Util.swift in Sources */,
+				65272A0B1B54919100101A75 /* SimpleDetailViewController.swift in Sources */,
 				65272A051B547B9000101A75 /* DebugViewController.swift in Sources */,
 				652729E31B54787B00101A75 /* AppDelegate.swift in Sources */,
 			);
