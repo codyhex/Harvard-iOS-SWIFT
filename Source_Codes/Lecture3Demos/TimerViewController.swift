@@ -44,7 +44,7 @@ class TimerViewController: UIViewController {
         logIt("App just resigned")
         if let t = timer {
             t.invalidate()
-            logIt("Timer canceled at \(NSDate()) when app resigned")
+            logIt("Timer NOT canceled at \(NSDate()) when app resigned")
         }
         else {
             logIt("Strange, there was no timer to cancel. Lifecycle error?")
@@ -74,7 +74,7 @@ class TimerViewController: UIViewController {
             // ignore the [unowned self] for now; it's called a "capture list" and it's just something you need
             // when an anonymous closure is using its containing object's data. It has to do with correct memory
             // management and is one of the sharp ugly corners of Swift programming.
-            [unowned self]
+            [unowned self] // This is the capture list: how to capture 'self'
             (notification: NSNotification!) -> Void in
             if let message = notification.userInfo?[TimerApp.MessageKey] as? String {
                 switch message {

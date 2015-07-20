@@ -9,7 +9,7 @@
 import UIKit
 
 struct TimerApp {
-    static let NotificationName = "AppLifeCycle"
+    static let NotificationName = "AppLifeCycle" // This is our radio station
     static let MessageKey = "message"
     static let ResignedMessage = "resigned"
     static let ActivatedMessage = "activated"
