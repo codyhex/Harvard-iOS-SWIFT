@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wrn-jP-NAO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-x0-PBy">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA1-oc-raB">
+                                <rect key="frame" x="279" y="261" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nA1-oc-raB" firstAttribute="centerX" secondItem="b4z-x0-PBy" secondAttribute="centerX" id="5zb-L8-Mz0"/>
+                            <constraint firstItem="b4z-x0-PBy" firstAttribute="top" secondItem="nA1-oc-raB" secondAttribute="bottom" constant="8" symbolic="YES" id="6lr-xa-pTu"/>
+                            <constraint firstItem="b4z-x0-PBy" firstAttribute="centerY" secondItem="Wrn-jP-NAO" secondAttribute="centerY" id="6t6-5b-QUN"/>
+                            <constraint firstItem="Wrn-jP-NAO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CdB-mb-gvl"/>
+                            <constraint firstItem="nA1-oc-raB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="241" id="TFk-tO-LC6"/>
+                            <constraint firstAttribute="trailing" secondItem="Wrn-jP-NAO" secondAttribute="trailing" id="XeD-dG-Cei"/>
+                            <constraint firstItem="Wrn-jP-NAO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gBu-Ls-BX6"/>
+                            <constraint firstItem="Wrn-jP-NAO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oJm-zv-8R2"/>
+                            <constraint firstItem="b4z-x0-PBy" firstAttribute="centerX" secondItem="Wrn-jP-NAO" secondAttribute="centerX" id="qBN-k6-Ue6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="b4z-x0-PBy" id="etO-lX-XcM"/>
+                        <outlet property="errorLabel" destination="nA1-oc-raB" id="Loc-pq-O9y"/>
+                        <outlet property="mainImageView" destination="Wrn-jP-NAO" id="2Qc-yP-Tun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
