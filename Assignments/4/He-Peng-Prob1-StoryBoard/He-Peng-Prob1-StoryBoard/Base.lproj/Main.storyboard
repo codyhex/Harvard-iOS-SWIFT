@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is the info about how to use this App. Test Test Test Test Test Test Test Test Test Test Test Test " lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGl-CU-M92">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is the info about how to use this App. " lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGl-CU-M92">
                                 <rect key="frame" x="45" y="121" width="334" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="334" id="VCe-1D-oJy"/>
@@ -81,8 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-Vd-wbl">
-                                <rect key="frame" x="7" y="74" width="400" height="400"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_kai.gif" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-Vd-wbl">
+                                <rect key="frame" x="7" y="74" width="400" height="402"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqR-41-lnV">
                                 <rect key="frame" x="134" y="588" width="147" height="48"/>
@@ -151,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-Df-5dk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_kai.gif" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-Df-5dk">
                                 <rect key="frame" x="7" y="74" width="400" height="400"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Je-gJ-0DC">
@@ -220,6 +220,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ld5-Om-1ug">
+                                <rect key="frame" x="15" y="633" width="382" height="128"/>
+                                <string key="text">@Comment: The pattern simply means the structure of the word. L | R mean Left &amp; Right; In | Ex mean inside &amp; Outside signature; C | B means a complicated component on the top potion and a uni-char on the bottom.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -271,6 +277,60 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFu-76-5by">
                                 <rect key="frame" x="0.0" y="74" width="414" height="662"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_zhuan.gif" translatesAutoresizingMaskIntoConstraints="NO" id="vaq-Ek-kOd">
+                                        <rect key="frame" x="8" y="29" width="234" height="266"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="266" id="tJ0-Rt-N9D"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_xiang.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xxP-GY-dwP">
+                                        <rect key="frame" x="24" y="357" width="218" height="198"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="198" id="Eds-sF-PxS"/>
+                                            <constraint firstAttribute="width" constant="218" id="SbF-I0-QtV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The character in Old Fashion" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t02-DI-tJw">
+                                        <rect key="frame" x="250" y="130" width="130" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="Hd4-LI-nSn"/>
+                                            <constraint firstAttribute="height" constant="63" id="ial-Qc-Y9H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The character of Things" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idc-7u-uKf">
+                                        <rect key="frame" x="255" y="424" width="159" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="Ayn-EM-g3I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-IZ-alX">
+                                        <rect key="frame" x="24" y="563" width="382" height="128"/>
+                                        <string key="text">@Comment: How to layout an article in a UIScroll view like this? Combines a picture and sentence. Or, if it is a better I diea if I frame in a website and send the request to mywebsite which will generates an explanation page for the view?</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Idc-7u-uKf" secondAttribute="trailing" id="5o2-XG-hYy"/>
+                                    <constraint firstItem="xxP-GY-dwP" firstAttribute="leading" secondItem="VFu-76-5by" secondAttribute="leading" constant="24" id="5tj-a4-upB"/>
+                                    <constraint firstItem="t02-DI-tJw" firstAttribute="top" secondItem="VFu-76-5by" secondAttribute="top" constant="130" id="Dfy-yy-o5O"/>
+                                    <constraint firstItem="xxP-GY-dwP" firstAttribute="top" secondItem="vaq-Ek-kOd" secondAttribute="bottom" constant="62" id="Kwq-9O-qS0"/>
+                                    <constraint firstItem="vaq-Ek-kOd" firstAttribute="leading" secondItem="VFu-76-5by" secondAttribute="leadingMargin" id="TZJ-W2-XBH"/>
+                                    <constraint firstAttribute="bottom" secondItem="xxP-GY-dwP" secondAttribute="bottom" constant="107" id="WN6-xN-mM6"/>
+                                    <constraint firstAttribute="trailing" secondItem="t02-DI-tJw" secondAttribute="trailing" constant="34" id="ca3-ae-wZR"/>
+                                    <constraint firstItem="Idc-7u-uKf" firstAttribute="top" secondItem="VFu-76-5by" secondAttribute="top" constant="424" id="e2X-nd-Eic"/>
+                                    <constraint firstItem="vaq-Ek-kOd" firstAttribute="top" secondItem="VFu-76-5by" secondAttribute="top" constant="29" id="h05-8Y-USS"/>
+                                    <constraint firstItem="t02-DI-tJw" firstAttribute="leading" secondItem="vaq-Ek-kOd" secondAttribute="trailing" constant="8" symbolic="YES" id="s6L-BU-XJ9"/>
+                                    <constraint firstItem="xxP-GY-dwP" firstAttribute="trailing" secondItem="vaq-Ek-kOd" secondAttribute="trailing" id="uev-XH-3CN"/>
+                                    <constraint firstItem="Idc-7u-uKf" firstAttribute="leading" secondItem="xxP-GY-dwP" secondAttribute="trailing" constant="13" id="yFT-38-esX"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -346,6 +406,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-nr-vT5">
+                                <rect key="frame" x="95" y="468" width="240" height="128"/>
+                                <string key="text">@Commet: I use a segue to connect start over to the navigation sence; however, this will show a "back" button on the "first view" when user is doing the second run. How to erase the "back" button?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -414,6 +480,11 @@
             <point key="canvasLocation" x="2323" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fo_kai.gif" width="370" height="370"/>
+        <image name="fo_xiang.jpg" width="750" height="562"/>
+        <image name="fo_zhuan.gif" width="370" height="370"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sh5-G5-Qo0"/>
     </inferredMetricsTieBreakers>

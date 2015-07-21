@@ -13,6 +13,9 @@
 		AA68D6931B5E931C00EF1585 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA68D6921B5E931C00EF1585 /* Images.xcassets */; };
 		AA68D6961B5E931C00EF1585 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA68D6941B5E931C00EF1585 /* LaunchScreen.xib */; };
 		AA68D6A21B5E931C00EF1585 /* He_Peng_Prob1_StoryBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA68D6A11B5E931C00EF1585 /* He_Peng_Prob1_StoryBoardTests.swift */; };
+		AA68D6AC1B5EDB3E00EF1585 /* fo_kai.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA68D6AB1B5EDB3E00EF1585 /* fo_kai.gif */; };
+		AA68D6AE1B5EDD0B00EF1585 /* fo_zhuan.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA68D6AD1B5EDD0B00EF1585 /* fo_zhuan.gif */; };
+		AA68D6B01B5EDD1800EF1585 /* fo_xiang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA68D6AF1B5EDD1800EF1585 /* fo_xiang.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		AA68D69B1B5E931C00EF1585 /* He-Peng-Prob1-StoryBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "He-Peng-Prob1-StoryBoardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA68D6A01B5E931C00EF1585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA68D6A11B5E931C00EF1585 /* He_Peng_Prob1_StoryBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = He_Peng_Prob1_StoryBoardTests.swift; sourceTree = "<group>"; };
+		AA68D6AB1B5EDB3E00EF1585 /* fo_kai.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fo_kai.gif; sourceTree = "<group>"; };
+		AA68D6AD1B5EDD0B00EF1585 /* fo_zhuan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fo_zhuan.gif; sourceTree = "<group>"; };
+		AA68D6AF1B5EDD1800EF1585 /* fo_xiang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fo_xiang.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 		AA68D6891B5E931C00EF1585 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA68D6AF1B5EDD1800EF1585 /* fo_xiang.jpg */,
+				AA68D6AD1B5EDD0B00EF1585 /* fo_zhuan.gif */,
+				AA68D6AB1B5EDB3E00EF1585 /* fo_kai.gif */,
 				AA68D68A1B5E931C00EF1585 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,7 +203,10 @@
 			files = (
 				AA68D6911B5E931C00EF1585 /* Main.storyboard in Resources */,
 				AA68D6961B5E931C00EF1585 /* LaunchScreen.xib in Resources */,
+				AA68D6AC1B5EDB3E00EF1585 /* fo_kai.gif in Resources */,
+				AA68D6AE1B5EDD0B00EF1585 /* fo_zhuan.gif in Resources */,
 				AA68D6931B5E931C00EF1585 /* Images.xcassets in Resources */,
+				AA68D6B01B5EDD1800EF1585 /* fo_xiang.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 				AA68D6A71B5E931C00EF1585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA68D6A81B5E931C00EF1585 /* Build configuration list for PBXNativeTarget "He-Peng-Prob1-StoryBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				AA68D6AA1B5E931C00EF1585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
