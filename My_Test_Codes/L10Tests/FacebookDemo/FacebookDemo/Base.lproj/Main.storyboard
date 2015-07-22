@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacebookDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9t0-U7-s3h" customClass="FBSDKProfilePictureView">
+                                <rect key="frame" x="87" y="89" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-Zb-Eab" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="87" y="383" width="240" height="80"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9t0-U7-s3h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="87" id="5ny-GE-F7n"/>
+                            <constraint firstItem="9t0-U7-s3h" firstAttribute="leading" secondItem="KsQ-Zb-Eab" secondAttribute="leading" id="7R0-kz-vdF"/>
+                            <constraint firstAttribute="centerX" secondItem="KsQ-Zb-Eab" secondAttribute="centerX" id="8Va-21-nzb"/>
+                            <constraint firstItem="9t0-U7-s3h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="azM-fH-Z96"/>
+                            <constraint firstAttribute="bottom" secondItem="9t0-U7-s3h" secondAttribute="bottom" constant="407" id="geo-9e-aUB"/>
+                            <constraint firstItem="KsQ-Zb-Eab" firstAttribute="top" secondItem="9t0-U7-s3h" secondAttribute="bottom" constant="54" id="ub4-a0-Dj4"/>
+                            <constraint firstItem="9t0-U7-s3h" firstAttribute="trailing" secondItem="KsQ-Zb-Eab" secondAttribute="trailing" id="vB8-H1-7Po"/>
+                            <constraint firstAttribute="centerY" secondItem="KsQ-Zb-Eab" secondAttribute="centerY" constant="-55" id="yqL-A7-wUX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
