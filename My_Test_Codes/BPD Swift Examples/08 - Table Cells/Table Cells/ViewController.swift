@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                    cellForRowAtIndexPath indexPath: NSIndexPath)
                        -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellTableIdentifier, forIndexPath: indexPath)
-                      as NameAndColorCell
+                      as! NameAndColorCell
 
         let rowData = computers[indexPath.row]
         cell.name = rowData["Name"]!

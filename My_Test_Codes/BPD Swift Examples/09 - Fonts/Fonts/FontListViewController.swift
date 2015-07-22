@@ -51,10 +51,10 @@ class FontListViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell =  tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel.font = fontForDisplay(atIndexPath: indexPath)
-        cell.textLabel.text = fontNames[indexPath.row]
+        cell.textLabel!.font = fontForDisplay(atIndexPath: indexPath)
+        cell.textLabel!.text = fontNames[indexPath.row]
         cell.detailTextLabel?.text = fontNames[indexPath.row]
         
         return cell
@@ -95,16 +95,16 @@ class FontListViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        let tableViewCell = sender as UITableViewCell
+        let tableViewCell = sender as! UITableViewCell
         let indexPath = tableView.indexPathForCell(tableViewCell)!
         let font = fontForDisplay(atIndexPath: indexPath)
         
         if segue.identifier == "ShowFontSizes" {
-            let sizesVC =  segue.destinationViewController as FontSizesViewController
+            let sizesVC =  segue.destinationViewController as! FontSizesViewController
             sizesVC.title = font.fontName
             sizesVC.font = font
         } else {
-            let infoVC = segue.destinationViewController as FontInfoViewController
+            let infoVC = segue.destinationViewController as! FontInfoViewController
             infoVC.font = font
             infoVC.favorite = contains(FavoritesList.sharedFavoriteList.favorites, font.fontName)
         }

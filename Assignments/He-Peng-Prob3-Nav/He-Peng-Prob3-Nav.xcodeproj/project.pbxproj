@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAFEDD691B5FFC4400A50D25 /* He_Peng_Prob3_NavTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDD681B5FFC4400A50D25 /* He_Peng_Prob3_NavTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAFEDD631B5FFC4400A50D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAFEDD431B5FFC4400A50D25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAFEDD4A1B5FFC4400A50D25;
+			remoteInfo = "He-Peng-Prob3-Nav";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAFEDD4B1B5FFC4400A50D25 /* He-Peng-Prob3-Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "He-Peng-Prob3-Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFEDD621B5FFC4400A50D25 /* He-Peng-Prob3-NavTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "He-Peng-Prob3-NavTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFEDD671B5FFC4400A50D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFEDD681B5FFC4400A50D25 /* He_Peng_Prob3_NavTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = He_Peng_Prob3_NavTests.swift; sourceTree = "<group>"; };
+		AAFEDD721B6003BA00A50D25 /* He-Peng-Prob3-Nav-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "He-Peng-Prob3-Nav-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAFEDD481B5FFC4400A50D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFEDD5F1B5FFC4400A50D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAFEDD421B5FFC4400A50D25 = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD4D1B5FFC4400A50D25 /* He-Peng-Prob3-Nav */,
+				AAFEDD651B5FFC4400A50D25 /* He-Peng-Prob3-NavTests */,
+				AAFEDD4C1B5FFC4400A50D25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAFEDD4C1B5FFC4400A50D25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD4B1B5FFC4400A50D25 /* He-Peng-Prob3-Nav.app */,
+				AAFEDD621B5FFC4400A50D25 /* He-Peng-Prob3-NavTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAFEDD4D1B5FFC4400A50D25 /* He-Peng-Prob3-Nav */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD721B6003BA00A50D25 /* He-Peng-Prob3-Nav-Bridging-Header.h */,
+			);
+			path = "He-Peng-Prob3-Nav";
+			sourceTree = "<group>";
+		};
+		AAFEDD651B5FFC4400A50D25 /* He-Peng-Prob3-NavTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD681B5FFC4400A50D25 /* He_Peng_Prob3_NavTests.swift */,
+				AAFEDD661B5FFC4400A50D25 /* Supporting Files */,
+			);
+			path = "He-Peng-Prob3-NavTests";
+			sourceTree = "<group>";
+		};
+		AAFEDD661B5FFC4400A50D25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD671B5FFC4400A50D25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAFEDD4A1B5FFC4400A50D25 /* He-Peng-Prob3-Nav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAFEDD6C1B5FFC4400A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-Nav" */;
+			buildPhases = (
+				AAFEDD471B5FFC4400A50D25 /* Sources */,
+				AAFEDD481B5FFC4400A50D25 /* Frameworks */,
+				AAFEDD491B5FFC4400A50D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "He-Peng-Prob3-Nav";
+			productName = "He-Peng-Prob3-Nav";
+			productReference = AAFEDD4B1B5FFC4400A50D25 /* He-Peng-Prob3-Nav.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAFEDD611B5FFC4400A50D25 /* He-Peng-Prob3-NavTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAFEDD6F1B5FFC4400A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-NavTests" */;
+			buildPhases = (
+				AAFEDD5E1B5FFC4400A50D25 /* Sources */,
+				AAFEDD5F1B5FFC4400A50D25 /* Frameworks */,
+				AAFEDD601B5FFC4400A50D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAFEDD641B5FFC4400A50D25 /* PBXTargetDependency */,
+			);
+			name = "He-Peng-Prob3-NavTests";
+			productName = "He-Peng-Prob3-NavTests";
+			productReference = AAFEDD621B5FFC4400A50D25 /* He-Peng-Prob3-NavTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAFEDD431B5FFC4400A50D25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = HePeng;
+				TargetAttributes = {
+					AAFEDD4A1B5FFC4400A50D25 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AAFEDD611B5FFC4400A50D25 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AAFEDD4A1B5FFC4400A50D25;
+					};
+				};
+			};
+			buildConfigurationList = AAFEDD461B5FFC4400A50D25 /* Build configuration list for PBXProject "He-Peng-Prob3-Nav" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAFEDD421B5FFC4400A50D25;
+			productRefGroup = AAFEDD4C1B5FFC4400A50D25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAFEDD4A1B5FFC4400A50D25 /* He-Peng-Prob3-Nav */,
+				AAFEDD611B5FFC4400A50D25 /* He-Peng-Prob3-NavTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAFEDD491B5FFC4400A50D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFEDD601B5FFC4400A50D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAFEDD471B5FFC4400A50D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFEDD5E1B5FFC4400A50D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFEDD691B5FFC4400A50D25 /* He_Peng_Prob3_NavTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAFEDD641B5FFC4400A50D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAFEDD4A1B5FFC4400A50D25 /* He-Peng-Prob3-Nav */;
+			targetProxy = AAFEDD631B5FFC4400A50D25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAFEDD6A1B5FFC4400A50D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAFEDD6B1B5FFC4400A50D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAFEDD6D1B5FFC4400A50D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "He-Peng-Prob3-Nav/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "He-Peng-Prob3-Nav/He-Peng-Prob3-Nav-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAFEDD6E1B5FFC4400A50D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "He-Peng-Prob3-Nav/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "He-Peng-Prob3-Nav/He-Peng-Prob3-Nav-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		AAFEDD701B5FFC4400A50D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "He-Peng-Prob3-NavTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/He-Peng-Prob3-Nav.app/He-Peng-Prob3-Nav";
+			};
+			name = Debug;
+		};
+		AAFEDD711B5FFC4400A50D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "He-Peng-Prob3-NavTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/He-Peng-Prob3-Nav.app/He-Peng-Prob3-Nav";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAFEDD461B5FFC4400A50D25 /* Build configuration list for PBXProject "He-Peng-Prob3-Nav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFEDD6A1B5FFC4400A50D25 /* Debug */,
+				AAFEDD6B1B5FFC4400A50D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAFEDD6C1B5FFC4400A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-Nav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFEDD6D1B5FFC4400A50D25 /* Debug */,
+				AAFEDD6E1B5FFC4400A50D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AAFEDD6F1B5FFC4400A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-NavTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFEDD701B5FFC4400A50D25 /* Debug */,
+				AAFEDD711B5FFC4400A50D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAFEDD431B5FFC4400A50D25 /* Project object */;
+}

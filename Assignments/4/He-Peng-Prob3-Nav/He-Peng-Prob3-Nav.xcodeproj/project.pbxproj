@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC836FB1B6013D800AC4D2A /* RestaurantBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC836FA1B6013D800AC4D2A /* RestaurantBill.swift */; };
+		AAFEDD871B60041200A50D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFEDD851B60041200A50D25 /* Main.storyboard */; };
+		AAFEDD891B60041200A50D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFEDD881B60041200A50D25 /* Images.xcassets */; };
+		AAFEDD8C1B60041200A50D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFEDD8A1B60041200A50D25 /* LaunchScreen.xib */; };
+		AAFEDD981B60041200A50D25 /* He_Peng_Prob3_NavTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDD971B60041200A50D25 /* He_Peng_Prob3_NavTests.swift */; };
+		AAFEDDA71B60046000A50D25 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDDA11B60046000A50D25 /* Util.swift */; };
+		AAFEDDA81B60046000A50D25 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDDA21B60046000A50D25 /* DebugViewController.swift */; };
+		AAFEDDA91B60046000A50D25 /* DebugTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDDA31B60046000A50D25 /* DebugTableViewController.swift */; };
+		AAFEDDAA1B60046000A50D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDDA41B60046000A50D25 /* AppDelegate.swift */; };
+		AAFEDDAB1B60046000A50D25 /* SimpleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDDA51B60046000A50D25 /* SimpleDetailViewController.swift */; };
+		AAFEDDAC1B60046000A50D25 /* SimpleMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEDDA61B60046000A50D25 /* SimpleMasterController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAFEDD921B60041200A50D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAFEDD741B60041200A50D25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAFEDD7B1B60041200A50D25;
+			remoteInfo = "He-Peng-Prob3-Nav";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAC836FA1B6013D800AC4D2A /* RestaurantBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantBill.swift; sourceTree = "<group>"; };
+		AAFEDD7C1B60041200A50D25 /* He-Peng-Prob3-Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "He-Peng-Prob3-Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFEDD801B60041200A50D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFEDD861B60041200A50D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAFEDD881B60041200A50D25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AAFEDD8B1B60041200A50D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AAFEDD911B60041200A50D25 /* He-Peng-Prob3-NavTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "He-Peng-Prob3-NavTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFEDD961B60041200A50D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFEDD971B60041200A50D25 /* He_Peng_Prob3_NavTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = He_Peng_Prob3_NavTests.swift; sourceTree = "<group>"; };
+		AAFEDDA11B60046000A50D25 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		AAFEDDA21B60046000A50D25 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		AAFEDDA31B60046000A50D25 /* DebugTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugTableViewController.swift; sourceTree = "<group>"; };
+		AAFEDDA41B60046000A50D25 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAFEDDA51B60046000A50D25 /* SimpleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDetailViewController.swift; sourceTree = "<group>"; };
+		AAFEDDA61B60046000A50D25 /* SimpleMasterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMasterController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAFEDD791B60041200A50D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFEDD8E1B60041200A50D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAFEDD731B60041200A50D25 = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD7E1B60041200A50D25 /* He-Peng-Prob3-Nav */,
+				AAFEDD941B60041200A50D25 /* He-Peng-Prob3-NavTests */,
+				AAFEDD7D1B60041200A50D25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAFEDD7D1B60041200A50D25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD7C1B60041200A50D25 /* He-Peng-Prob3-Nav.app */,
+				AAFEDD911B60041200A50D25 /* He-Peng-Prob3-NavTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAFEDD7E1B60041200A50D25 /* He-Peng-Prob3-Nav */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDDA11B60046000A50D25 /* Util.swift */,
+				AAFEDDA21B60046000A50D25 /* DebugViewController.swift */,
+				AAFEDDA31B60046000A50D25 /* DebugTableViewController.swift */,
+				AAFEDDA41B60046000A50D25 /* AppDelegate.swift */,
+				AAFEDDA51B60046000A50D25 /* SimpleDetailViewController.swift */,
+				AAFEDDA61B60046000A50D25 /* SimpleMasterController.swift */,
+				AAC836FA1B6013D800AC4D2A /* RestaurantBill.swift */,
+				AAFEDD851B60041200A50D25 /* Main.storyboard */,
+				AAFEDD881B60041200A50D25 /* Images.xcassets */,
+				AAFEDD8A1B60041200A50D25 /* LaunchScreen.xib */,
+				AAFEDD7F1B60041200A50D25 /* Supporting Files */,
+			);
+			path = "He-Peng-Prob3-Nav";
+			sourceTree = "<group>";
+		};
+		AAFEDD7F1B60041200A50D25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD801B60041200A50D25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAFEDD941B60041200A50D25 /* He-Peng-Prob3-NavTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD971B60041200A50D25 /* He_Peng_Prob3_NavTests.swift */,
+				AAFEDD951B60041200A50D25 /* Supporting Files */,
+			);
+			path = "He-Peng-Prob3-NavTests";
+			sourceTree = "<group>";
+		};
+		AAFEDD951B60041200A50D25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEDD961B60041200A50D25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAFEDD7B1B60041200A50D25 /* He-Peng-Prob3-Nav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAFEDD9B1B60041200A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-Nav" */;
+			buildPhases = (
+				AAFEDD781B60041200A50D25 /* Sources */,
+				AAFEDD791B60041200A50D25 /* Frameworks */,
+				AAFEDD7A1B60041200A50D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "He-Peng-Prob3-Nav";
+			productName = "He-Peng-Prob3-Nav";
+			productReference = AAFEDD7C1B60041200A50D25 /* He-Peng-Prob3-Nav.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAFEDD901B60041200A50D25 /* He-Peng-Prob3-NavTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAFEDD9E1B60041200A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-NavTests" */;
+			buildPhases = (
+				AAFEDD8D1B60041200A50D25 /* Sources */,
+				AAFEDD8E1B60041200A50D25 /* Frameworks */,
+				AAFEDD8F1B60041200A50D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAFEDD931B60041200A50D25 /* PBXTargetDependency */,
+			);
+			name = "He-Peng-Prob3-NavTests";
+			productName = "He-Peng-Prob3-NavTests";
+			productReference = AAFEDD911B60041200A50D25 /* He-Peng-Prob3-NavTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAFEDD741B60041200A50D25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = HePeng;
+				TargetAttributes = {
+					AAFEDD7B1B60041200A50D25 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AAFEDD901B60041200A50D25 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AAFEDD7B1B60041200A50D25;
+					};
+				};
+			};
+			buildConfigurationList = AAFEDD771B60041200A50D25 /* Build configuration list for PBXProject "He-Peng-Prob3-Nav" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAFEDD731B60041200A50D25;
+			productRefGroup = AAFEDD7D1B60041200A50D25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAFEDD7B1B60041200A50D25 /* He-Peng-Prob3-Nav */,
+				AAFEDD901B60041200A50D25 /* He-Peng-Prob3-NavTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAFEDD7A1B60041200A50D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFEDD871B60041200A50D25 /* Main.storyboard in Resources */,
+				AAFEDD8C1B60041200A50D25 /* LaunchScreen.xib in Resources */,
+				AAFEDD891B60041200A50D25 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFEDD8F1B60041200A50D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAFEDD781B60041200A50D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFEDDAB1B60046000A50D25 /* SimpleDetailViewController.swift in Sources */,
+				AAFEDDAC1B60046000A50D25 /* SimpleMasterController.swift in Sources */,
+				AAFEDDAA1B60046000A50D25 /* AppDelegate.swift in Sources */,
+				AAC836FB1B6013D800AC4D2A /* RestaurantBill.swift in Sources */,
+				AAFEDDA81B60046000A50D25 /* DebugViewController.swift in Sources */,
+				AAFEDDA71B60046000A50D25 /* Util.swift in Sources */,
+				AAFEDDA91B60046000A50D25 /* DebugTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFEDD8D1B60041200A50D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFEDD981B60041200A50D25 /* He_Peng_Prob3_NavTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAFEDD931B60041200A50D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAFEDD7B1B60041200A50D25 /* He-Peng-Prob3-Nav */;
+			targetProxy = AAFEDD921B60041200A50D25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAFEDD851B60041200A50D25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAFEDD861B60041200A50D25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAFEDD8A1B60041200A50D25 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAFEDD8B1B60041200A50D25 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAFEDD991B60041200A50D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAFEDD9A1B60041200A50D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAFEDD9C1B60041200A50D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "He-Peng-Prob3-Nav/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAFEDD9D1B60041200A50D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "He-Peng-Prob3-Nav/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AAFEDD9F1B60041200A50D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "He-Peng-Prob3-NavTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/He-Peng-Prob3-Nav.app/He-Peng-Prob3-Nav";
+			};
+			name = Debug;
+		};
+		AAFEDDA01B60041200A50D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "He-Peng-Prob3-NavTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/He-Peng-Prob3-Nav.app/He-Peng-Prob3-Nav";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAFEDD771B60041200A50D25 /* Build configuration list for PBXProject "He-Peng-Prob3-Nav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFEDD991B60041200A50D25 /* Debug */,
+				AAFEDD9A1B60041200A50D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAFEDD9B1B60041200A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-Nav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFEDD9C1B60041200A50D25 /* Debug */,
+				AAFEDD9D1B60041200A50D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAFEDD9E1B60041200A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-NavTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFEDD9F1B60041200A50D25 /* Debug */,
+				AAFEDDA01B60041200A50D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAFEDD741B60041200A50D25 /* Project object */;
+}
