@@ -26,7 +26,7 @@ class NameAndColorCell: UITableViewCell {
     var nameLabel: UILabel!
     var colorLabel: UILabel!
     
-    override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let nameLabelRect = CGRectMake(0, 5, 70, 15)
