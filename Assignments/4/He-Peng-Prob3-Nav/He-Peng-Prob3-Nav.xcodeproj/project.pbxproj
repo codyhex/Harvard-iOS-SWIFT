@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAC836FB1B6013D800AC4D2A /* RestaurantBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC836FA1B6013D800AC4D2A /* RestaurantBill.swift */; };
 		AAFEDD871B60041200A50D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFEDD851B60041200A50D25 /* Main.storyboard */; };
 		AAFEDD891B60041200A50D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFEDD881B60041200A50D25 /* Images.xcassets */; };
 		AAFEDD8C1B60041200A50D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFEDD8A1B60041200A50D25 /* LaunchScreen.xib */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AAC836FA1B6013D800AC4D2A /* RestaurantBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantBill.swift; sourceTree = "<group>"; };
 		AAFEDD7C1B60041200A50D25 /* He-Peng-Prob3-Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "He-Peng-Prob3-Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFEDD801B60041200A50D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAFEDD861B60041200A50D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				AAFEDDA41B60046000A50D25 /* AppDelegate.swift */,
 				AAFEDDA51B60046000A50D25 /* SimpleDetailViewController.swift */,
 				AAFEDDA61B60046000A50D25 /* SimpleMasterController.swift */,
+				AAC836FA1B6013D800AC4D2A /* RestaurantBill.swift */,
 				AAFEDD851B60041200A50D25 /* Main.storyboard */,
 				AAFEDD881B60041200A50D25 /* Images.xcassets */,
 				AAFEDD8A1B60041200A50D25 /* LaunchScreen.xib */,
@@ -227,6 +230,7 @@
 				AAFEDDAB1B60046000A50D25 /* SimpleDetailViewController.swift in Sources */,
 				AAFEDDAC1B60046000A50D25 /* SimpleMasterController.swift in Sources */,
 				AAFEDDAA1B60046000A50D25 /* AppDelegate.swift in Sources */,
+				AAC836FB1B6013D800AC4D2A /* RestaurantBill.swift in Sources */,
 				AAFEDDA81B60046000A50D25 /* DebugViewController.swift in Sources */,
 				AAFEDDA71B60046000A50D25 /* Util.swift in Sources */,
 				AAFEDDA91B60046000A50D25 /* DebugTableViewController.swift in Sources */,
@@ -430,6 +434,7 @@
 				AAFEDD9D1B60041200A50D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAFEDD9E1B60041200A50D25 /* Build configuration list for PBXNativeTarget "He-Peng-Prob3-NavTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +443,7 @@
 				AAFEDDA01B60041200A50D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

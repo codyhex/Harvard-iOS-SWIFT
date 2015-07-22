@@ -77,6 +77,8 @@ class SimpleMasterController: DebugTableViewController, UISplitViewControllerDel
                     // look up name of image in underlying data model based on clicked-on row
                     let imageName = assetImages[indexPath.row]
                     detailVC.imageName = imageName
+                    let myBill = RestaurantBill()
+                    detailVC.myBills = myBill
             }
         default:
             assertionFailure("unknown segue ID")
