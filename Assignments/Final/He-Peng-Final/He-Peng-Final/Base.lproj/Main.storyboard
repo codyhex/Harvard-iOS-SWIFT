@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q0L-OP-Cwy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QeW-28-lS1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -27,7 +27,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iO-BN-Cq7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instructions:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iO-BN-Cq7">
                                 <rect key="frame" x="45" y="95" width="215" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -188,7 +188,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_kai.gif" translatesAutoresizingMaskIntoConstraints="NO" id="jGb-Ii-caU">
-                                <rect key="frame" x="7" y="74" width="400" height="400"/>
+                                <rect key="frame" x="7" y="30" width="400" height="444"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzy-Sa-dzl">
                                 <rect key="frame" x="114" y="588" width="187" height="48"/>
@@ -201,7 +201,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select The Character Pattern:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89n-7r-52d">
-                                <rect key="frame" x="16" y="483" width="283" height="21"/>
+                                <rect key="frame" x="16" y="483.5" width="283" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -257,7 +257,7 @@
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLO-gm-Ckf">
-                                <rect key="frame" x="15" y="633" width="382" height="128"/>
+                                <rect key="frame" x="-92" y="13" width="66" height="61"/>
                                 <string key="text">@Comment: The pattern simply means the structure of the word. L | R mean Left &amp; Right; In | Ex mean inside &amp; Outside signature; C | B means a complicated component on the top potion and a uni-char on the bottom.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -302,7 +302,7 @@
         <!--Results View Controller-->
         <scene sceneID="cQT-dA-HDD">
             <objects>
-                <viewController id="JXR-kA-d5V" userLabel="Results View Controller" sceneMemberID="viewController">
+                <viewController id="JXR-kA-d5V" userLabel="Results View Controller" customClass="ResultsViewController" customModule="He_Peng_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aFk-bK-yXL"/>
                         <viewControllerLayoutGuide type="bottom" id="MG5-Ol-Kes"/>
@@ -311,70 +311,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGS-Gu-KZj">
-                                <rect key="frame" x="0.0" y="74" width="414" height="662"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_zhuan.gif" translatesAutoresizingMaskIntoConstraints="NO" id="4kc-iF-o1O">
-                                        <rect key="frame" x="8" y="29" width="234" height="266"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="266" id="dte-P2-Kq9"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fo_xiang.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gUB-dY-uhD">
-                                        <rect key="frame" x="24" y="357" width="218" height="198"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="218" id="OFP-D3-FTm"/>
-                                            <constraint firstAttribute="height" constant="198" id="R0q-2m-7mo"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The character in Old Fashion" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwN-cp-TAH">
-                                        <rect key="frame" x="250" y="130" width="130" height="63"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="130" id="Avj-jP-ioA"/>
-                                            <constraint firstAttribute="height" constant="63" id="Gp6-fi-ZWa"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The character of Things" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-bA-jce">
-                                        <rect key="frame" x="255" y="424" width="159" height="63"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="63" id="oT2-zF-9uK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbP-lv-ocZ">
-                                        <rect key="frame" x="24" y="563" width="382" height="128"/>
-                                        <string key="text">@Comment: How to layout an article in a UIScroll view like this? Combines a picture and sentence. Or, if it is a better I diea if I frame in a website and send the request to mywebsite which will generates an explanation page for the view?</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="4kc-iF-o1O" firstAttribute="top" secondItem="VGS-Gu-KZj" secondAttribute="top" constant="29" id="50f-5N-ubz"/>
-                                    <constraint firstItem="gUB-dY-uhD" firstAttribute="leading" secondItem="VGS-Gu-KZj" secondAttribute="leading" constant="24" id="E7O-w9-TGg"/>
-                                    <constraint firstAttribute="trailing" secondItem="e8s-bA-jce" secondAttribute="trailing" id="Ebo-7K-dl0"/>
-                                    <constraint firstAttribute="bottom" secondItem="gUB-dY-uhD" secondAttribute="bottom" constant="107" id="GjZ-dJ-4tY"/>
-                                    <constraint firstItem="lwN-cp-TAH" firstAttribute="leading" secondItem="4kc-iF-o1O" secondAttribute="trailing" constant="8" symbolic="YES" id="Hd1-x6-18W"/>
-                                    <constraint firstItem="lwN-cp-TAH" firstAttribute="top" secondItem="VGS-Gu-KZj" secondAttribute="top" constant="130" id="Ja0-cC-OdG"/>
-                                    <constraint firstItem="e8s-bA-jce" firstAttribute="top" secondItem="VGS-Gu-KZj" secondAttribute="top" constant="424" id="LfF-AC-jIL"/>
-                                    <constraint firstItem="4kc-iF-o1O" firstAttribute="leading" secondItem="VGS-Gu-KZj" secondAttribute="leadingMargin" id="SR9-lC-PEu"/>
-                                    <constraint firstItem="gUB-dY-uhD" firstAttribute="trailing" secondItem="4kc-iF-o1O" secondAttribute="trailing" id="a0L-7G-y29"/>
-                                    <constraint firstItem="gUB-dY-uhD" firstAttribute="top" secondItem="4kc-iF-o1O" secondAttribute="bottom" constant="62" id="omG-WU-4WC"/>
-                                    <constraint firstItem="e8s-bA-jce" firstAttribute="leading" secondItem="gUB-dY-uhD" secondAttribute="trailing" constant="13" id="uja-Bl-a1h"/>
-                                    <constraint firstAttribute="trailing" secondItem="lwN-cp-TAH" secondAttribute="trailing" constant="34" id="wFq-wF-lNA"/>
-                                </constraints>
-                            </scrollView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9P-gb-KQZ">
+                                <rect key="frame" x="0.0" y="30" width="414" height="706"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VGS-Gu-KZj" firstAttribute="top" secondItem="aFk-bK-yXL" secondAttribute="bottom" constant="10" id="4Ho-4o-BFK"/>
-                            <constraint firstItem="VGS-Gu-KZj" firstAttribute="leading" secondItem="vOT-ia-cFz" secondAttribute="leading" id="hUt-Op-TvE"/>
-                            <constraint firstItem="VGS-Gu-KZj" firstAttribute="bottom" secondItem="MG5-Ol-Kes" secondAttribute="top" id="oWX-iM-6NA"/>
-                            <constraint firstAttribute="trailing" secondItem="VGS-Gu-KZj" secondAttribute="trailing" id="pBS-3g-uXG"/>
+                            <constraint firstItem="h9P-gb-KQZ" firstAttribute="bottom" secondItem="MG5-Ol-Kes" secondAttribute="top" id="XNw-Pu-paS"/>
+                            <constraint firstAttribute="trailing" secondItem="h9P-gb-KQZ" secondAttribute="trailing" id="ZF2-dB-7gp"/>
+                            <constraint firstItem="h9P-gb-KQZ" firstAttribute="leading" secondItem="vOT-ia-cFz" secondAttribute="leading" id="fV1-tN-yaZ"/>
+                            <constraint firstItem="h9P-gb-KQZ" firstAttribute="top" secondItem="aFk-bK-yXL" secondAttribute="bottom" constant="10" id="icX-zo-RkG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R39-Y9-byq">
@@ -385,6 +332,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="webView" destination="h9P-gb-KQZ" id="x8m-jv-2dY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBw-CP-VDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -479,7 +429,5 @@
     </scenes>
     <resources>
         <image name="fo_kai.gif" width="370" height="370"/>
-        <image name="fo_xiang.jpg" width="750" height="562"/>
-        <image name="fo_zhuan.gif" width="370" height="370"/>
     </resources>
 </document>

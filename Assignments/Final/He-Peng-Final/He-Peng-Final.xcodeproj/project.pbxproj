@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16B8EAF71B6993A70086158A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8EAF61B6993A70086158A /* ResultsViewController.swift */; };
 		AA55AE931B61A97A00A9F1B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55AE921B61A97A00A9F1B3 /* AppDelegate.swift */; };
 		AA55AE951B61A97A00A9F1B3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55AE941B61A97A00A9F1B3 /* FirstViewController.swift */; };
 		AA55AE981B61A97A00A9F1B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55AE961B61A97A00A9F1B3 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16B8EAF61B6993A70086158A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		AA55AE8D1B61A97A00A9F1B3 /* He-Peng-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "He-Peng-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA55AE911B61A97A00A9F1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA55AE921B61A97A00A9F1B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				AA55AE921B61A97A00A9F1B3 /* AppDelegate.swift */,
 				AA55AE941B61A97A00A9F1B3 /* FirstViewController.swift */,
+				16B8EAF61B6993A70086158A /* ResultsViewController.swift */,
 				AAE5410C1B647C1400985FB8 /* PhotoViewController.swift */,
 				AA55AE961B61A97A00A9F1B3 /* Main.storyboard */,
 				AA55AE991B61A97A00A9F1B3 /* Images.xcassets */,
@@ -231,6 +234,7 @@
 				AAE5410D1B647C1400985FB8 /* PhotoViewController.swift in Sources */,
 				AA55AE951B61A97A00A9F1B3 /* FirstViewController.swift in Sources */,
 				AA55AE931B61A97A00A9F1B3 /* AppDelegate.swift in Sources */,
+				16B8EAF71B6993A70086158A /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
