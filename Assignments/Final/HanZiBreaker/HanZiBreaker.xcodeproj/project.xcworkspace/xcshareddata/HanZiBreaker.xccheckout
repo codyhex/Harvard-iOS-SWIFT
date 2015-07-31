@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1829B7A6-9089-4BB2-838A-EC86EBE9C26D</string>
+	<string>8AC8053B-FA84-48B7-93C4-C244602537A8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>He-Peng-Final</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
 		<string>https://github.com/xia50/Harvard_CS65_Swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assignments/Final/He-Peng-Final/He-Peng-Final.xcodeproj</string>
+	<string>Assignments/Final/HanZiBreaker/HanZiBreaker.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
