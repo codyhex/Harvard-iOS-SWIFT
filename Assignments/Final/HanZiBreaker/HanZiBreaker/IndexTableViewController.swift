@@ -61,7 +61,7 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
     }
     
     func makeSubviewName(indexPath: NSIndexPath) -> String {
-        return "(Pic)#\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row))"
+        return "(Pic)#\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[0])"
     }
     
     // prepareCellForRendering

@@ -4,13 +4,25 @@
 <dict>
 	<key>Directions</key>
 	<array>
-		<string>North</string>
-		<string>East</string>
+		<array>
+			<string>North</string>
+			<string>北</string>
+		</array>
+		<array>
+			<string>East</string>
+			<string>东</string>
+		</array>
 	</array>
 	<key>Actions</key>
 	<array>
-		<string>Drink</string>
-		<string>Eat</string>
+		<array>
+			<string>Eat</string>
+			<string>吃</string>
+		</array>
+		<array>
+			<string>Drink</string>
+			<string>喝</string>
+		</array>
 	</array>
 </dict>
 </plist>
