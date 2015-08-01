@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8AC8053B-FA84-48B7-93C4-C244602537A8</string>
+	<string>B6DA2CED-4D4A-44A7-BC90-05C7012EB9D5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>HanZiBreaker</string>
+	<string>L02UsingTV</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
 		<string>https://github.com/xia50/Harvard_CS65_Swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assignments/Final/HanZiBreaker/HanZiBreaker.xcodeproj</string>
+	<string>Assignments/Final/HanZiBreaker/LearniOSTable/L02UsingTV/L02UsingTV.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1BFF9E848A968935B7EB87E1F263AC0C96034584</key>
-		<string>../../../../..</string>
+		<string>../../../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/xia50/Harvard_CS65_Swift.git</string>

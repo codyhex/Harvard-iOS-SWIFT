@@ -15,6 +15,7 @@
 		AA3A39C61B6B491200D3CD3A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */; };
 		AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */; };
 		AA3A39CA1B6B497200D3CD3A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */; };
+		AAA2C0971B6C7A9A004235C6 /* wordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2C0961B6C7A9A004235C6 /* wordList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalsViewController.swift; sourceTree = "<group>"; };
 		AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		AAA2C0961B6C7A9A004235C6 /* wordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wordList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AA3A39A41B6B47A900D3CD3A /* Info.plist */,
+				AAA2C0961B6C7A9A004235C6 /* wordList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				AA3A39AB1B6B47A900D3CD3A /* Main.storyboard in Resources */,
 				AA3A39B01B6B47A900D3CD3A /* LaunchScreen.xib in Resources */,
+				AAA2C0971B6C7A9A004235C6 /* wordList.plist in Resources */,
 				AA3A39AD1B6B47A900D3CD3A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +423,7 @@
 				AA3A39C11B6B47A900D3CD3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA3A39C21B6B47A900D3CD3A /* Build configuration list for PBXNativeTarget "HanZiBreakerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				AA3A39C41B6B47A900D3CD3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

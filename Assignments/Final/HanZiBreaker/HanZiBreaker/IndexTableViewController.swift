@@ -22,7 +22,7 @@ class MyModel {
     // radicalVC.identifier = myModelInstance.myItems[indexPath.row]
 }
 
-class IndexTableViewController: UITableViewController {
+class IndexTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
 
     var mostRecentMoreInfo: String? {
         didSet {
@@ -33,31 +33,56 @@ class IndexTableViewController: UITableViewController {
         }
     }
     
-    func makeSubviewName(indexPath: NSIndexPath) -> String {
-        return "#\(indexPath.row + 1)"
+    var wordList: NSDictionary! = nil
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        wordList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("wordList", withExtension: "plist")!)
+        
+//        self.dataSource = self
+//        self.delegate = self
     }
     
+//    init(frame: CGRect) {
+//        super.init(frame: frame)
+//        // Initialization code
+//    }
+    
+    
+
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return wordList.count
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Identifiers.tableSize
+        return (wordList.allValues[section] as! NSArray).count
+    }
+    
+    func makeSubviewName(indexPath: NSIndexPath) -> String {
+        return "(Pic)#\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row))"
     }
     
     // prepareCellForRendering
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Identifiers.basicCell, forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel!.text = makeSubviewName(indexPath)
-        if cell.textLabel!.text == mostRecentMoreInfo {
-            cell.textLabel!.text! += "(user got more)"
-        }
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return wordList.allKeys[section] as? String
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         return false
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("\((wordList.allValues[indexPath.section] as? NSArray)?.objectAtIndex(indexPath.row)) Selected")
     }
     
     // MARK: - Navigation

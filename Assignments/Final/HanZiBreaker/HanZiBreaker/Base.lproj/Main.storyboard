@@ -33,8 +33,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="LcP-c2-FtK" id="AGg-b4-98b"/>
-                            <outlet property="delegate" destination="LcP-c2-FtK" id="0Ex-w9-hnD"/>
+                            <outlet property="dataSource" destination="LcP-c2-FtK" id="j93-hA-sAk"/>
+                            <outlet property="delegate" destination="LcP-c2-FtK" id="F1K-dl-LFy"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Characters" id="sjf-f1-78z"/>
