@@ -7,10 +7,12 @@
 		<array>
 			<string>North</string>
 			<string>北</string>
+			<string>12110</string>
 		</array>
 		<array>
 			<string>East</string>
 			<string>东</string>
+			<string>40904</string>
 		</array>
 	</array>
 	<key>Actions</key>
@@ -18,10 +20,12 @@
 		<array>
 			<string>Eat</string>
 			<string>吃</string>
+			<string>68017</string>
 		</array>
 		<array>
 			<string>Drink</string>
 			<string>喝</string>
+			<string>66027</string>
 		</array>
 	</array>
 </dict>

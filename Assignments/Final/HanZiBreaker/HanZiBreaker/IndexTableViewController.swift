@@ -61,13 +61,29 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
     }
     
     func makeSubviewName(indexPath: NSIndexPath) -> String {
-        return "(Pic)#\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[0])"
+        return "#\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[0])"
+    }
+    
+    func getChineseName(indexPath: NSIndexPath) -> String {
+        return "\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[1])"
+    }
+    
+    func getFourCornerCode(indexPath: NSIndexPath) -> String {
+        return "\((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[2])"
     }
     
     // prepareCellForRendering
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Identifiers.basicCell, forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel!.text = makeSubviewName(indexPath)
+        cell.textLabel?.font = UIFont .boldSystemFontOfSize(25)
+        
+ /* @@HP: when adding the image, there is a "title" word shows between the image and word. Dob't know how to fix it */
+        var imageName = ((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[1] as? String)!
+        let image = UIImage(named: imageName)
+        cell.imageView?.image = image
+        let highlightedImage = UIImage(named: imageName + "_RC")
+        cell.imageView?.highlightedImage = highlightedImage
         
         return cell
     }
@@ -100,7 +116,9 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
                     // finally we have the handle on the view we need to prepare
                     // and we have a handle on the data from "indexPath"
                     // This is the big moment that connects the data from parent to child
-                    radicalVC.title = "Radicals of \(makeSubviewName(indexPath))"
+                    radicalVC.title = "Radicals of \(getChineseName(indexPath))"
+                    radicalVC.chineseName = getChineseName(indexPath)
+                    radicalVC.FCCode = getFourCornerCode(indexPath)
                     radicalVC.identifier = makeSubviewName(indexPath)
                     //...in a realistic scenario, the right side is a lookup, based on
                     // the indexPath's section & row, into a substantial data model

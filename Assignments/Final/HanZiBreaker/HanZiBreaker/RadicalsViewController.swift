@@ -11,10 +11,12 @@ import UIKit
 class RadicalsViewController: UIViewController {
     // The parent has the responsibility of setting up the data model of the child, so the child can render itself properly
     var identifier: String? // The "model"
+    var chineseName: String?
+    var FCCode: String?
     
-    @IBOutlet weak var myLabel: UILabel! {
+    @IBOutlet weak var radicalsTextField: UILabel! {
         didSet {
-            myLabel.text = identifier
+            radicalsTextField.text = "Selected Radical Code: \(FCCode!)"
         }
     }
     

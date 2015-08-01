@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chi" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吃" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
                                 <rect key="frame" x="100" y="100" width="400" height="400"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
@@ -150,7 +150,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myLabel" destination="J6O-pq-y9d" id="Znu-Fd-SQk"/>
+                        <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeB-1L-dfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +208,7 @@
         <image name="a" width="200" height="200"/>
         <image name="b" width="200" height="200"/>
         <image name="c" width="200" height="200"/>
-        <image name="chi" width="400" height="400"/>
         <image name="d" width="200" height="200"/>
+        <image name="吃" width="400" height="400"/>
     </resources>
 </document>
