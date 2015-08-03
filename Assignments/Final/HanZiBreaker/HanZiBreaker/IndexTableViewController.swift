@@ -14,6 +14,7 @@ struct Identifiers {
     static let possibleRadicalsSegue = "possible radicals segue"
     static let radicalMeaningsSegue = "radical meanings segue"
     static let tableSize = 10
+    static let reuseIdentifier = "radical cell"
 }
 
 class MyModel {

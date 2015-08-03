@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169F34E81B702E0500A2BE4B /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F34E71B702E0500A2BE4B /* SearchCollectionViewCell.swift */; };
 		AA3A39A61B6B47A900D3CD3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */; };
 		AA3A39AB1B6B47A900D3CD3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3A39A91B6B47A900D3CD3A /* Main.storyboard */; };
 		AA3A39AD1B6B47A900D3CD3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		169F34E71B702E0500A2BE4B /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA3A39A01B6B47A900D3CD3A /* HanZiBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanZiBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3A39A41B6B47A900D3CD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */,
 				AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */,
 				AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */,
+				169F34E71B702E0500A2BE4B /* SearchCollectionViewCell.swift */,
 				AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */,
 				AA8A5AF51B6FC10A003BC4BE /* projectTests.playground */,
 				AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */,
@@ -237,6 +240,7 @@
 			files = (
 				AA880AE91B6F11AB005CA11B /* SearchRadicalsViewController.swift in Sources */,
 				AA3A39C61B6B491200D3CD3A /* IndexTableViewController.swift in Sources */,
+				169F34E81B702E0500A2BE4B /* SearchCollectionViewCell.swift in Sources */,
 				AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */,
 				AA3A39A61B6B47A900D3CD3A /* AppDelegate.swift in Sources */,
 				AA3A39CA1B6B497200D3CD3A /* ResultsViewController.swift in Sources */,

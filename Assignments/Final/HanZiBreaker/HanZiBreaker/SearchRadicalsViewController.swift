@@ -19,7 +19,7 @@ struct RadicalProperties {
     static let URL = 3
 }
 
-class SearchRadicalsViewController: UIViewController {
+class SearchRadicalsViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var radicalCode: String? {
         didSet {
@@ -39,12 +39,14 @@ class SearchRadicalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchRadical()
         displayChoices()
         searchWebsite()
+        
+        // Register cell classes
+        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.reuseIdentifier)
       }
-
-
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -83,6 +85,35 @@ class SearchRadicalsViewController: UIViewController {
         else {
             println("the user did not select radical of choice(s)")
         }
+    }
+    
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        //#warning Incomplete method implementation -- Return the number of sections
+        return 1
+    }
+    
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //#warning Incomplete method implementation -- Return the number of items in the section
+        if let count = possibleRadicals?.count {
+            return count
+        }
+        else {
+            println("the radical choice array is empty")
+            return 0
+        }
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.reuseIdentifier, forIndexPath: indexPath) as! SearchCollectionViewCell
+        
+        // Configure the cell
+        if let radicalInfo = selectedRadicalInfo {
+            cell.radicalChoiceButtonField.setTitle(String(radicalInfo[RadicalProperties.character] as! NSString), forState: .Normal)
+        }
+        cell.backgroundColor = UIColor.blackColor()
+        
+        return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
