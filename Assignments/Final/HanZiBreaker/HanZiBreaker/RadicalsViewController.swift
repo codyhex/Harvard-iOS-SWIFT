@@ -21,7 +21,7 @@ class RadicalsViewController: UIViewController {
     var red: CGFloat = 1.0
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
-    var brushWidth: CGFloat = 10.0
+    var brushWidth: CGFloat = 5.0
     var opacity: CGFloat = 1.0
     
     @IBOutlet weak var radicalsTextField: UILabel! {
@@ -46,10 +46,17 @@ class RadicalsViewController: UIViewController {
         let context = UIGraphicsGetCurrentContext()
         
         selectView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        //println(fromPoint.y)
         
         // 2
-        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        println(fromPoint.y)
+        var p1:CGPoint
+        var p2:CGPoint
+        p1 = view.convertPoint(fromPoint, toView:selectView)
+        p2 = view.convertPoint(toPoint, toView:selectView)
+        
+        CGContextMoveToPoint(context, p1.x, p1.y)
+        CGContextAddLineToPoint(context, p2.x, p2.y)
         
         // 3
         CGContextSetLineCap(context, kCGLineCapRound)
