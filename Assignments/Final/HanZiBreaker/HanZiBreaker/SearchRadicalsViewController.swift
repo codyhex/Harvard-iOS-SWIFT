@@ -14,6 +14,12 @@ import UIKit
 
 class SearchRadicalsViewController: UIViewController {
 
+    var radicalCode: String? {
+        didSet {
+            println(self.radicalCode)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

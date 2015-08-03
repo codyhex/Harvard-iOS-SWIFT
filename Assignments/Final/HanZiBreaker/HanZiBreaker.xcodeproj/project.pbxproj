@@ -87,9 +87,9 @@
 			children = (
 				AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */,
 				AA3A39A91B6B47A900D3CD3A /* Main.storyboard */,
-				AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */,
 				AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */,
 				AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */,
+				AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */,
 				AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */,
 				AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */,
 				AA3A39AE1B6B47A900D3CD3A /* LaunchScreen.xib */,
