@@ -16,7 +16,9 @@
 		AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */; };
 		AA3A39CA1B6B497200D3CD3A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */; };
 		AA880AE91B6F11AB005CA11B /* SearchRadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */; };
-		AAA2C0971B6C7A9A004235C6 /* wordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2C0961B6C7A9A004235C6 /* wordList.plist */; };
+		AA8A5AF21B6FBF6A003BC4BE /* radical FC code list.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */; };
+		AA8A5AF41B6FBFA1003BC4BE /* radical websites.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */; };
+		AAA2C0971B6C7A9A004235C6 /* word list.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2C0961B6C7A9A004235C6 /* word list.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,10 @@
 		AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalsViewController.swift; sourceTree = "<group>"; };
 		AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRadicalsViewController.swift; sourceTree = "<group>"; };
-		AAA2C0961B6C7A9A004235C6 /* wordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wordList.plist; sourceTree = "<group>"; };
+		AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "radical FC code list.plist"; sourceTree = "<group>"; };
+		AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "radical websites.plist"; sourceTree = "<group>"; };
+		AA8A5AF51B6FC10A003BC4BE /* projectTests.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = projectTests.playground; sourceTree = "<group>"; };
+		AAA2C0961B6C7A9A004235C6 /* word list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "word list.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 				AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */,
 				AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */,
 				AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */,
+				AA8A5AF51B6FC10A003BC4BE /* projectTests.playground */,
 				AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */,
 				AA3A39AE1B6B47A900D3CD3A /* LaunchScreen.xib */,
 				AA3A39A31B6B47A900D3CD3A /* Supporting Files */,
@@ -101,8 +107,10 @@
 		AA3A39A31B6B47A900D3CD3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */,
+				AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */,
 				AA3A39A41B6B47A900D3CD3A /* Info.plist */,
-				AAA2C0961B6C7A9A004235C6 /* wordList.plist */,
+				AAA2C0961B6C7A9A004235C6 /* word list.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,9 +212,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA8A5AF41B6FBFA1003BC4BE /* radical websites.plist in Resources */,
+				AA8A5AF21B6FBF6A003BC4BE /* radical FC code list.plist in Resources */,
 				AA3A39AB1B6B47A900D3CD3A /* Main.storyboard in Resources */,
 				AA3A39B01B6B47A900D3CD3A /* LaunchScreen.xib in Resources */,
-				AAA2C0971B6C7A9A004235C6 /* wordList.plist in Resources */,
+				AAA2C0971B6C7A9A004235C6 /* word list.plist in Resources */,
 				AA3A39AD1B6B47A900D3CD3A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

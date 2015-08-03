@@ -39,18 +39,9 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        wordList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("wordList", withExtension: "plist")!)
+        wordList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("word list", withExtension: "plist")!)
         
-//        self.dataSource = self
-//        self.delegate = self
     }
-    
-//    init(frame: CGRect) {
-//        super.init(frame: frame)
-//        // Initialization code
-//    }
-    
-    
 
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
