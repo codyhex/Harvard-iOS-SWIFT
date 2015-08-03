@@ -194,6 +194,9 @@
                             <constraint firstItem="VFb-E6-jKq" firstAttribute="leading" secondItem="OYY-aK-Tgg" secondAttribute="leading" id="xLw-DF-S0F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultsWebView" destination="VFb-E6-jKq" id="jBk-Xt-PuA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYW-r2-n7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

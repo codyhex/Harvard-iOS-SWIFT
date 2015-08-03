@@ -94,7 +94,7 @@ class SearchRadicalsViewController: UIViewController {
                 if let resultVC = segue.destinationViewController as? ResultsViewController {
 
                     if let radicalInfo = selectedRadicalInfo {
-                        resultVC.title = "Result of \(radicalInfo[RadicalProperties.character])"
+                        resultVC.title = "~ \(radicalInfo[RadicalProperties.character]) ~"
 //                        resultVC.identifier = radicalInfo[RadicalProperties.character]
                         resultVC.websiteURL = radicalInfo[RadicalProperties.URL] as? String
                     }

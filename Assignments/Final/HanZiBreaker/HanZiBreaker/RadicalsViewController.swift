@@ -116,7 +116,7 @@ class RadicalsViewController: UIViewController {
                     let numControllersOnStack = navVC.viewControllers.count
                     if let tableVC = navVC.viewControllers[numControllersOnStack - 2] as? IndexTableViewController {
                         tableVC.mostRecentMoreInfo = identifier
-                        searchRadicalsVC.title = "Possible Radicals"
+                        searchRadicalsVC.title = "Radicals"
                         searchRadicalsVC.radicalCode = String(self.encoder)
                         cleanCache()
                     }

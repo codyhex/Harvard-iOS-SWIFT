@@ -108,7 +108,7 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
                     // finally we have the handle on the view we need to prepare
                     // and we have a handle on the data from "indexPath"
                     // This is the big moment that connects the data from parent to child
-                    radicalVC.title = "Radicals of \(getChineseName(indexPath))"
+                    radicalVC.title = "\(getChineseName(indexPath))"
                     radicalVC.chineseName = getChineseName(indexPath)
                     radicalVC.FCCode = getFourCornerCode(indexPath)
                     radicalVC.identifier = makeSubviewName(indexPath)

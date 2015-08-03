@@ -14,6 +14,7 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        showWebsite()
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +24,15 @@ class ResultsViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var resultsWebView: UIWebView!
+    
+    func showWebsite() {
+        if let url = websiteURL {
+            let website = NSURL(string: url)
+            let requestObj = NSURLRequest(URL:website!)
+            resultsWebView.loadRequest(requestObj)
+        }
+    }
 
     
 
