@@ -22,13 +22,13 @@ class RadicalsViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == Identifiers.moreDetailSegue {
+        if segue.identifier == Identifiers.possibleRadicalsSegue {
             if let moreDetailVC = segue.destinationViewController as? UIViewController {
                 if let navVC = parentViewController as? UINavigationController {
                     let numControllersOnStack = navVC.viewControllers.count
                     if let tableVC = navVC.viewControllers[numControllersOnStack - 2] as? IndexTableViewController {
                         tableVC.mostRecentMoreInfo = identifier
-                        moreDetailVC.title = "Results"
+                        moreDetailVC.title = "Possible Radicals"
                     }
                     else {
                         assertionFailure("Failed to find a tableVC")

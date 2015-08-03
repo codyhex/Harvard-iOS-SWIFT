@@ -15,6 +15,7 @@
 		AA3A39C61B6B491200D3CD3A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */; };
 		AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */; };
 		AA3A39CA1B6B497200D3CD3A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */; };
+		AA880AE91B6F11AB005CA11B /* SearchRadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */; };
 		AAA2C0971B6C7A9A004235C6 /* wordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2C0961B6C7A9A004235C6 /* wordList.plist */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalsViewController.swift; sourceTree = "<group>"; };
 		AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRadicalsViewController.swift; sourceTree = "<group>"; };
 		AAA2C0961B6C7A9A004235C6 /* wordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wordList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			children = (
 				AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */,
 				AA3A39A91B6B47A900D3CD3A /* Main.storyboard */,
+				AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */,
 				AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */,
 				AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */,
 				AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA880AE91B6F11AB005CA11B /* SearchRadicalsViewController.swift in Sources */,
 				AA3A39C61B6B491200D3CD3A /* IndexTableViewController.swift in Sources */,
 				AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */,
 				AA3A39A61B6B47A900D3CD3A /* AppDelegate.swift in Sources */,

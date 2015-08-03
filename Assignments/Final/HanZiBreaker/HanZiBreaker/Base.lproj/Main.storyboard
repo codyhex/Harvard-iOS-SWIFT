@@ -58,14 +58,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吃" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
                                 <rect key="frame" x="100" y="100" width="400" height="400"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
-                                <rect key="frame" x="205" y="540" width="191" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
+                                <rect key="frame" x="150" y="540" width="302" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Search for results">
+                                <state key="normal" title="Search for possible radicals">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CoX-D9-xIs" kind="show" identifier="show result segue" id="sun-Ja-0VE"/>
+                                    <segue destination="kiM-mY-D79" kind="show" identifier="possible radicals segue" id="wbx-Fo-9gs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Radical(s):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6O-pq-y9d">
@@ -185,7 +185,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYW-r2-n7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="488"/>
+            <point key="canvasLocation" x="3318" y="488"/>
+        </scene>
+        <!--Search Radicals View Controller-->
+        <scene sceneID="wTI-TM-BWd">
+            <objects>
+                <viewController id="kiM-mY-D79" userLabel="Search Radicals View Controller" customClass="SearchRadicalsViewController" customModule="HanZiBreaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4lc-Q9-6kl"/>
+                        <viewControllerLayoutGuide type="bottom" id="tYm-fT-0XS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sk9-I7-AYO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpo-0r-sfg">
+                                <rect key="frame" x="113" y="538" width="376" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Search for radical meanings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CoX-D9-xIs" kind="show" identifier="radical meanings segue" id="zRp-Ax-i4O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dpo-0r-sfg" secondAttribute="bottom" constant="20" symbolic="YES" id="4vQ-i3-s6N">
+                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                            </constraint>
+                            <constraint firstItem="dpo-0r-sfg" firstAttribute="centerX" secondItem="Sk9-I7-AYO" secondAttribute="centerX" id="bW1-GB-S5k"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTJ-RZ-1uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2583" y="488"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OA5-wF-War">

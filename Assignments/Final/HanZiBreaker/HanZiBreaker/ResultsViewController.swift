@@ -2,6 +2,7 @@
 //  ResultsViewController.swift
 //  HanZiBreaker
 //
+
 //  Created by HePeng on 7/31/15.
 //  Copyright (c) 2015 HePeng. All rights reserved.
 //
@@ -22,14 +23,6 @@ class ResultsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

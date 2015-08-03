@@ -9,9 +9,10 @@
 import UIKit
 
 struct Identifiers {
-    static let moreDetailSegue = "show result segue"
     static let basicSegue = "select radical segue"
     static let basicCell = "index character cell"
+    static let possibleRadicalsSegue = "possible radicals segue"
+    static let radicalMeaningsSegue = "radical meanings segue"
     static let tableSize = 10
 }
 
