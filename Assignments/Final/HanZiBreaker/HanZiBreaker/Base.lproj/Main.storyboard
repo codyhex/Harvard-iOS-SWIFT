@@ -55,11 +55,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吃" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
-                                <rect key="frame" x="100" y="100" width="400" height="400"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMM-RJ-Tji" userLabel="Select View">
+                                <rect key="frame" x="1" y="64" width="600" height="443"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
-                                <rect key="frame" x="150" y="540" width="302" height="42"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吃" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
+                                <rect key="frame" x="322" y="91" width="400" height="400"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
+                                <rect key="frame" x="372" y="531" width="302" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Search for possible radicals">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -69,31 +72,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Radical(s):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6O-pq-y9d">
-                                <rect key="frame" x="224" y="515" width="152" height="21"/>
+                                <rect key="frame" x="446" y="506" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="955" width="152" height="21"/>
+                                </variation>
                             </label>
                             <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-Q3-Gck" userLabel="CornerButtonB">
-                                <rect key="frame" x="300" y="100" width="200" height="200"/>
+                                <rect key="frame" x="522" y="91" width="200" height="200"/>
                                 <state key="normal" backgroundImage="b">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-IC-tMm" userLabel="CornerButtonC">
-                                <rect key="frame" x="300" y="300" width="200" height="200"/>
+                                <rect key="frame" x="522" y="291" width="200" height="200"/>
                                 <state key="normal" backgroundImage="c">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-Q9-x7T" userLabel="CornerButtonD">
-                                <rect key="frame" x="100" y="300" width="200" height="200"/>
+                                <rect key="frame" x="322" y="291" width="200" height="200"/>
                                 <state key="normal" backgroundImage="d">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-2D-QKV" userLabel="CornerButtonA">
-                                <rect key="frame" x="100" y="100" width="200" height="200"/>
+                                <rect key="frame" x="322" y="91" width="200" height="200"/>
                                 <state key="normal" backgroundImage="a">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -101,24 +107,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="36" id="1T3-qe-uKC">
-                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="27" id="1T3-qe-uKC">
+                                <variation key="heightClass=regular-widthClass=compact" constant="287"/>
                             </constraint>
                             <constraint firstItem="PK2-Q3-Gck" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-200" id="3Dc-mh-2PH">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
                             </constraint>
+                            <constraint firstItem="lMM-RJ-Tji" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" constant="-222" id="BZa-wu-EMN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-27.5"/>
+                            </constraint>
+                            <constraint firstItem="lMM-RJ-Tji" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="-15" id="Fpq-WP-U3B"/>
                             <constraint firstItem="J6O-pq-y9d" firstAttribute="top" secondItem="MhK-KR-Pjz" secondAttribute="bottom" constant="15" id="HU6-5T-3he">
                                 <variation key="heightClass=regular-widthClass=compact" constant="203"/>
                             </constraint>
-                            <constraint firstAttribute="centerX" secondItem="MhK-KR-Pjz" secondAttribute="centerX" id="J8H-7F-pNz">
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                            <constraint firstAttribute="centerX" secondItem="MhK-KR-Pjz" secondAttribute="centerX" constant="-222" id="J8H-7F-pNz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-22.5"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="PK2-Q3-Gck" secondAttribute="bottom" constant="-200" id="PMg-t4-N6W">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
                             </constraint>
-                            <constraint firstItem="J6O-pq-y9d" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" id="Q6B-K6-fKG"/>
-                            <constraint firstAttribute="centerY" secondItem="MhK-KR-Pjz" secondAttribute="centerY" id="V04-X9-8dV">
-                                <variation key="heightClass=regular-widthClass=compact" constant="96"/>
+                            <constraint firstItem="J6O-pq-y9d" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" constant="-1" id="Q6B-K6-fKG"/>
+                            <constraint firstAttribute="centerY" secondItem="MhK-KR-Pjz" secondAttribute="centerY" constant="9" id="V04-X9-8dV">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-151"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="b2c-2D-QKV" secondAttribute="trailing" constant="-200" id="XTN-Wy-6vL">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
@@ -132,30 +142,37 @@
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="dbC-Q9-x7T" secondAttribute="trailing" constant="-200" id="dRu-h3-Quj">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
                             </constraint>
+                            <constraint firstItem="bkD-LB-SRx" firstAttribute="top" secondItem="lMM-RJ-Tji" secondAttribute="bottom" constant="24" id="eoe-bz-jqI">
+                                <variation key="heightClass=regular-widthClass=compact" constant="271"/>
+                            </constraint>
                             <constraint firstItem="bkD-LB-SRx" firstAttribute="top" secondItem="MhK-KR-Pjz" secondAttribute="bottom" constant="40" id="g4B-bd-Kih">
                                 <variation key="heightClass=regular-widthClass=compact" constant="228"/>
                             </constraint>
                             <constraint firstItem="Mtn-IC-tMm" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-200" id="hG8-15-fVg">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
                             </constraint>
-                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="84" id="hqw-qz-Xr6">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-21"/>
+                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="306" id="hqw-qz-Xr6">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="dbC-Q9-x7T" secondAttribute="bottom" constant="-400" id="qQl-uA-SWr">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
-                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" id="rWw-3f-P5Q">
+                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" constant="-1" id="rWw-3f-P5Q">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-5.5"/>
+                            </constraint>
+                            <constraint firstItem="lMM-RJ-Tji" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="14" id="zqB-yF-Wjl">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                             </constraint>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
+                        <outlet property="selectView" destination="lMM-RJ-Tji" id="z4y-wQ-jfR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeB-1L-dfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="488"/>
+            <point key="canvasLocation" x="1849.5" y="487.5"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="INc-w5-kL7">
