@@ -117,7 +117,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
                 cell.radicalImage.image = UIImage(named: imageName)
             }
             /* @@HP: use the chinese radical character as the label */
-            cell.radicalField.text = radicalInfo[RadicalProperties.character] as? String
+            cell.radicalField.text = ("Item: " + (radicalInfo[RadicalProperties.character] as? String)!)
         }
         /* @@HP: this action I learned from Alex coule make a customized call back function to the target from subview */
         //cell.radicalChoiceButtonField.addTarget(self, action: "handleTapped:", forControlEvents: .TouchUpInside)
@@ -126,8 +126,16 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
-        
+
+        var cell : SearchCollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! SearchCollectionViewCell
+        if cell.cellIsTapped == false {
+            cell.cellIsTapped = true
+            cell.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+        }
+        else {
+            cell.cellIsTapped = false
+            cell.backgroundColor = UIColor.clearColor()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

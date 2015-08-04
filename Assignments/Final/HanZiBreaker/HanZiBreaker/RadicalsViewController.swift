@@ -35,12 +35,16 @@ class RadicalsViewController: UIViewController {
     }
     
     @IBOutlet weak var buttonAField: UIButton!
+    @IBOutlet weak var buttonBField: UIButton!
+    @IBOutlet weak var buttonCField: UIButton!
+    @IBOutlet weak var buttonDField: UIButton!
 
     
     @IBAction func cornerAwasTapped(sender: UIButton) {
         /* @@HP: animate the tapped region, onece tapped again, flip the value */
         if cornerAWasTapped == false {
             cornerAWasTapped = true
+            /* @@HP: highlight the background once the button was tapped down and used as vaild */
             buttonAField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
 
             if let code = FCCode {
@@ -59,6 +63,8 @@ class RadicalsViewController: UIViewController {
         /* @@HP: animate the tapped region, onece tapped again, flip the value */
         if cornerBWasTapped == false {
             cornerBWasTapped = true
+            buttonBField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+
             if let code = FCCode {
                 encoder[CornerIndexs.B] = code[advance(code.startIndex, CornerIndexs.B)]
             }
@@ -76,6 +82,8 @@ class RadicalsViewController: UIViewController {
         /* @@HP: animate the tapped region, onece tapped again, flip the value */
         if cornerCWasTapped == false {
             cornerCWasTapped = true
+            buttonCField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+
             if let code = FCCode {
                 encoder[CornerIndexs.C] = code[advance(code.startIndex, CornerIndexs.C)]
             }
@@ -92,6 +100,8 @@ class RadicalsViewController: UIViewController {
         /* @@HP: animate the tapped region, onece tapped again, flip the value */
         if cornerDWasTapped == false {
             cornerDWasTapped = true
+            buttonDField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+
             if let code = FCCode {
                 encoder[CornerIndexs.D] = code[advance(code.startIndex, CornerIndexs.D)]
             }

@@ -163,6 +163,9 @@
                     </view>
                     <connections>
                         <outlet property="buttonAField" destination="b2c-2D-QKV" id="6Tr-gX-RG6"/>
+                        <outlet property="buttonBField" destination="PK2-Q3-Gck" id="fMN-j7-cv6"/>
+                        <outlet property="buttonCField" destination="Mtn-IC-tMm" id="MFk-zg-dKq"/>
+                        <outlet property="buttonDField" destination="dbC-Q9-x7T" id="PEw-ys-V4Z"/>
                         <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
                     </connections>
                 </viewController>

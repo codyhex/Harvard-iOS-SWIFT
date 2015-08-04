@@ -10,6 +10,7 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
+    var cellIsTapped = false
     
     @IBOutlet weak var radicalImage: UIImageView!
     
