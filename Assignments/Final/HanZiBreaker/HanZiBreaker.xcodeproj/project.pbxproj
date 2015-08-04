@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		169F34E81B702E0500A2BE4B /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F34E71B702E0500A2BE4B /* SearchCollectionViewCell.swift */; };
+		AA3A39A61B6B47A900D3CD3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */; };
+		AA3A39AB1B6B47A900D3CD3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3A39A91B6B47A900D3CD3A /* Main.storyboard */; };
+		AA3A39AD1B6B47A900D3CD3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */; };
+		AA3A39B01B6B47A900D3CD3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3A39AE1B6B47A900D3CD3A /* LaunchScreen.xib */; };
+		AA3A39BC1B6B47A900D3CD3A /* HanZiBreakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39BB1B6B47A900D3CD3A /* HanZiBreakerTests.swift */; };
+		AA3A39C61B6B491200D3CD3A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */; };
+		AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */; };
+		AA3A39CA1B6B497200D3CD3A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */; };
+		AA880AE91B6F11AB005CA11B /* SearchRadicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */; };
+		AA8A5AF21B6FBF6A003BC4BE /* radical FC code list.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */; };
+		AA8A5AF41B6FBFA1003BC4BE /* radical websites.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */; };
+		AAA2C0971B6C7A9A004235C6 /* word list.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2C0961B6C7A9A004235C6 /* word list.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA3A39B61B6B47A900D3CD3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA3A39981B6B47A900D3CD3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3A399F1B6B47A900D3CD3A;
+			remoteInfo = HanZiBreaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		169F34E71B702E0500A2BE4B /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA3A39A01B6B47A900D3CD3A /* HanZiBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanZiBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3A39A41B6B47A900D3CD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA3A39AA1B6B47A900D3CD3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA3A39AF1B6B47A900D3CD3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AA3A39B51B6B47A900D3CD3A /* HanZiBreakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanZiBreakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3A39BA1B6B47A900D3CD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3A39BB1B6B47A900D3CD3A /* HanZiBreakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanZiBreakerTests.swift; sourceTree = "<group>"; };
+		AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
+		AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalsViewController.swift; sourceTree = "<group>"; };
+		AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRadicalsViewController.swift; sourceTree = "<group>"; };
+		AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "radical FC code list.plist"; sourceTree = "<group>"; };
+		AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "radical websites.plist"; sourceTree = "<group>"; };
+		AA8A5AF51B6FC10A003BC4BE /* projectTests.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = projectTests.playground; sourceTree = "<group>"; };
+		AAA2C0961B6C7A9A004235C6 /* word list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "word list.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA3A399D1B6B47A900D3CD3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3A39B21B6B47A900D3CD3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA3A39971B6B47A900D3CD3A = {
+			isa = PBXGroup;
+			children = (
+				AA3A39A21B6B47A900D3CD3A /* HanZiBreaker */,
+				AA3A39B81B6B47A900D3CD3A /* HanZiBreakerTests */,
+				AA3A39A11B6B47A900D3CD3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA3A39A11B6B47A900D3CD3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA3A39A01B6B47A900D3CD3A /* HanZiBreaker.app */,
+				AA3A39B51B6B47A900D3CD3A /* HanZiBreakerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA3A39A21B6B47A900D3CD3A /* HanZiBreaker */ = {
+			isa = PBXGroup;
+			children = (
+				AA3A39A51B6B47A900D3CD3A /* AppDelegate.swift */,
+				AA3A39A91B6B47A900D3CD3A /* Main.storyboard */,
+				AA3A39C51B6B491200D3CD3A /* IndexTableViewController.swift */,
+				AA3A39C71B6B495400D3CD3A /* RadicalsViewController.swift */,
+				AA880AE81B6F11AB005CA11B /* SearchRadicalsViewController.swift */,
+				169F34E71B702E0500A2BE4B /* SearchCollectionViewCell.swift */,
+				AA3A39C91B6B497200D3CD3A /* ResultsViewController.swift */,
+				AA8A5AF51B6FC10A003BC4BE /* projectTests.playground */,
+				AA3A39AC1B6B47A900D3CD3A /* Images.xcassets */,
+				AA3A39AE1B6B47A900D3CD3A /* LaunchScreen.xib */,
+				AA3A39A31B6B47A900D3CD3A /* Supporting Files */,
+			);
+			path = HanZiBreaker;
+			sourceTree = "<group>";
+		};
+		AA3A39A31B6B47A900D3CD3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */,
+				AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */,
+				AA3A39A41B6B47A900D3CD3A /* Info.plist */,
+				AAA2C0961B6C7A9A004235C6 /* word list.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA3A39B81B6B47A900D3CD3A /* HanZiBreakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA3A39BB1B6B47A900D3CD3A /* HanZiBreakerTests.swift */,
+				AA3A39B91B6B47A900D3CD3A /* Supporting Files */,
+			);
+			path = HanZiBreakerTests;
+			sourceTree = "<group>";
+		};
+		AA3A39B91B6B47A900D3CD3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA3A39BA1B6B47A900D3CD3A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA3A399F1B6B47A900D3CD3A /* HanZiBreaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA3A39BF1B6B47A900D3CD3A /* Build configuration list for PBXNativeTarget "HanZiBreaker" */;
+			buildPhases = (
+				AA3A399C1B6B47A900D3CD3A /* Sources */,
+				AA3A399D1B6B47A900D3CD3A /* Frameworks */,
+				AA3A399E1B6B47A900D3CD3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HanZiBreaker;
+			productName = HanZiBreaker;
+			productReference = AA3A39A01B6B47A900D3CD3A /* HanZiBreaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA3A39B41B6B47A900D3CD3A /* HanZiBreakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA3A39C21B6B47A900D3CD3A /* Build configuration list for PBXNativeTarget "HanZiBreakerTests" */;
+			buildPhases = (
+				AA3A39B11B6B47A900D3CD3A /* Sources */,
+				AA3A39B21B6B47A900D3CD3A /* Frameworks */,
+				AA3A39B31B6B47A900D3CD3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA3A39B71B6B47A900D3CD3A /* PBXTargetDependency */,
+			);
+			name = HanZiBreakerTests;
+			productName = HanZiBreakerTests;
+			productReference = AA3A39B51B6B47A900D3CD3A /* HanZiBreakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA3A39981B6B47A900D3CD3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = HePeng;
+				TargetAttributes = {
+					AA3A399F1B6B47A900D3CD3A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AA3A39B41B6B47A900D3CD3A = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AA3A399F1B6B47A900D3CD3A;
+					};
+				};
+			};
+			buildConfigurationList = AA3A399B1B6B47A900D3CD3A /* Build configuration list for PBXProject "HanZiBreaker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA3A39971B6B47A900D3CD3A;
+			productRefGroup = AA3A39A11B6B47A900D3CD3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA3A399F1B6B47A900D3CD3A /* HanZiBreaker */,
+				AA3A39B41B6B47A900D3CD3A /* HanZiBreakerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA3A399E1B6B47A900D3CD3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA8A5AF41B6FBFA1003BC4BE /* radical websites.plist in Resources */,
+				AA8A5AF21B6FBF6A003BC4BE /* radical FC code list.plist in Resources */,
+				AA3A39AB1B6B47A900D3CD3A /* Main.storyboard in Resources */,
+				AA3A39B01B6B47A900D3CD3A /* LaunchScreen.xib in Resources */,
+				AAA2C0971B6C7A9A004235C6 /* word list.plist in Resources */,
+				AA3A39AD1B6B47A900D3CD3A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3A39B31B6B47A900D3CD3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA3A399C1B6B47A900D3CD3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA880AE91B6F11AB005CA11B /* SearchRadicalsViewController.swift in Sources */,
+				AA3A39C61B6B491200D3CD3A /* IndexTableViewController.swift in Sources */,
+				169F34E81B702E0500A2BE4B /* SearchCollectionViewCell.swift in Sources */,
+				AA3A39C81B6B495400D3CD3A /* RadicalsViewController.swift in Sources */,
+				AA3A39A61B6B47A900D3CD3A /* AppDelegate.swift in Sources */,
+				AA3A39CA1B6B497200D3CD3A /* ResultsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3A39B11B6B47A900D3CD3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3A39BC1B6B47A900D3CD3A /* HanZiBreakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA3A39B71B6B47A900D3CD3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA3A399F1B6B47A900D3CD3A /* HanZiBreaker */;
+			targetProxy = AA3A39B61B6B47A900D3CD3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA3A39A91B6B47A900D3CD3A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA3A39AA1B6B47A900D3CD3A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA3A39AE1B6B47A900D3CD3A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA3A39AF1B6B47A900D3CD3A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA3A39BD1B6B47A900D3CD3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA3A39BE1B6B47A900D3CD3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA3A39C01B6B47A900D3CD3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HanZiBreaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA3A39C11B6B47A900D3CD3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HanZiBreaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AA3A39C31B6B47A900D3CD3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HanZiBreakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanZiBreaker.app/HanZiBreaker";
+			};
+			name = Debug;
+		};
+		AA3A39C41B6B47A900D3CD3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HanZiBreakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanZiBreaker.app/HanZiBreaker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA3A399B1B6B47A900D3CD3A /* Build configuration list for PBXProject "HanZiBreaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3A39BD1B6B47A900D3CD3A /* Debug */,
+				AA3A39BE1B6B47A900D3CD3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA3A39BF1B6B47A900D3CD3A /* Build configuration list for PBXNativeTarget "HanZiBreaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3A39C01B6B47A900D3CD3A /* Debug */,
+				AA3A39C11B6B47A900D3CD3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA3A39C21B6B47A900D3CD3A /* Build configuration list for PBXNativeTarget "HanZiBreakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3A39C31B6B47A900D3CD3A /* Debug */,
+				AA3A39C41B6B47A900D3CD3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA3A39981B6B47A900D3CD3A /* Project object */;
+}
