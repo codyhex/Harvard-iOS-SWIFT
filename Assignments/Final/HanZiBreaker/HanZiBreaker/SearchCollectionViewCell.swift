@@ -10,5 +10,10 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
-        
+    
+    @IBOutlet weak var radicalImage: UIImageView!
+    
+    
+    @IBOutlet weak var radicalField: UILabel!
+    
 }

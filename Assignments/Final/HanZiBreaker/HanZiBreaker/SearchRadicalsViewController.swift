@@ -20,7 +20,7 @@ struct RadicalProperties {
 }
 
 class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     var radicalCode: String? {
         didSet {
             println(self.radicalCode)
@@ -34,7 +34,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     var possibleRadicals: NSArray?
     
     @IBOutlet weak var collectionView: UICollectionView?
-
+    
     var userSelectedRadical: String? = "口"    /* @@HP: for test, code code here */
     
     var selectedRadicalInfo: NSArray?
@@ -48,7 +48,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         
         // Register cell classes
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.reuseIdentifier)
-      }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,7 +56,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         radicalFCCodeList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("radical FC code list", withExtension: "plist")!)
         radicalWebsites = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("radical websites", withExtension: "plist")!)
     }
-
+    
     func searchRadical() {
         if let code = radicalCode {
             possibleRadicals = radicalFCCodeList[code] as? NSArray
@@ -66,7 +66,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         }
         
     }
-
+    
     func displayChoices() {
         if let choices = possibleRadicals {
             for item in choices {
@@ -76,7 +76,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         else {
             println("no radicals is selected")
         }
-     
+        
     }
     
     /* @@HP: suppose the user will always select the correct radical */
@@ -112,9 +112,14 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         
         // Configure the cell
         if let radicalInfo = selectedRadicalInfo {
-            //cell.radicalChoiceButtonField.setTitle(String(radicalInfo[RadicalProperties.character] as! NSString), forState: .Normal)
+            /* @@HP: Use the wiki radical ID "Radical 30" for example to name the radical image name with dim 100 * 100 pix */
+            if let imageName = radicalInfo[RadicalProperties.WikiID] as? String {
+                cell.radicalImage.image = UIImage(named: imageName)
+            }
+            /* @@HP: use the chinese radical character as the label */
+            cell.radicalField.text = radicalInfo[RadicalProperties.character] as? String
         }
-//        cell.backgroundColor = UIColor.blackColor()
+        /* @@HP: this action I learned from Alex coule make a customized call back function to the target from subview */
         //cell.radicalChoiceButtonField.addTarget(self, action: "handleTapped:", forControlEvents: .TouchUpInside)
         
         return cell
@@ -130,27 +135,27 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         case Identifiers.radicalMeaningsSegue:
             // figure out which row of the table we're transitioning from
             
-                // now need to look up the RadicalsViewController instance
-                if let resultVC = segue.destinationViewController as? ResultsViewController {
-
-                    if let radicalInfo = selectedRadicalInfo {
-                        resultVC.title = "~ \(radicalInfo[RadicalProperties.character]) ~"
-//                        resultVC.identifier = radicalInfo[RadicalProperties.character]
-                        resultVC.websiteURL = radicalInfo[RadicalProperties.URL] as? String
-                    }
-                    else{
-                        println("selected radical info not found")
-                    }
-
+            // now need to look up the RadicalsViewController instance
+            if let resultVC = segue.destinationViewController as? ResultsViewController {
+                
+                if let radicalInfo = selectedRadicalInfo {
+                    resultVC.title = "~ \(radicalInfo[RadicalProperties.character]) ~"
+                    //                        resultVC.identifier = radicalInfo[RadicalProperties.character]
+                    resultVC.websiteURL = radicalInfo[RadicalProperties.URL] as? String
                 }
-                else {
-                    assertionFailure("destination of segue was not a ResultsViewController!")
+                else{
+                    println("selected radical info not found")
                 }
-
+                
+            }
+            else {
+                assertionFailure("destination of segue was not a ResultsViewController!")
+            }
+            
         default:
             assertionFailure("unknown segue ID \(segue.identifier)")
         }
     }
-
+    
     
 }

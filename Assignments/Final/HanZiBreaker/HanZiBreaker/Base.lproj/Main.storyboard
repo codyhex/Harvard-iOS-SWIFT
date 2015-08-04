@@ -162,6 +162,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonAField" destination="b2c-2D-QKV" id="6Tr-gX-RG6"/>
                         <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
                     </connections>
                 </viewController>
@@ -228,7 +229,7 @@
                                 <rect key="frame" x="16" y="164" width="568" height="324"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gFN-RT-zp8">
-                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="itemSize" width="100" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -238,10 +239,69 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ZR-Xx-XwD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radical" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIn-Le-k9w">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="4ZR-Xx-XwD" firstAttribute="leading" secondItem="3ey-Cb-kNH" secondAttribute="leading" id="6K8-y0-I51"/>
+                                            <constraint firstItem="4ZR-Xx-XwD" firstAttribute="top" secondItem="3ey-Cb-kNH" secondAttribute="top" id="D2i-Bt-sUB"/>
+                                            <constraint firstAttribute="trailing" secondItem="4ZR-Xx-XwD" secondAttribute="trailing" id="RZz-gk-CM8"/>
+                                            <constraint firstItem="qIn-Le-k9w" firstAttribute="leading" secondItem="3ey-Cb-kNH" secondAttribute="leadingMargin" constant="2" id="VbF-T6-d9w"/>
+                                            <constraint firstItem="qIn-Le-k9w" firstAttribute="centerX" secondItem="4ZR-Xx-XwD" secondAttribute="centerX" id="Wrz-TC-VDy"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="4ZR-Xx-XwD" secondAttribute="bottom" constant="42" id="vOQ-Rt-u0W"/>
+                                            <constraint firstItem="qIn-Le-k9w" firstAttribute="top" secondItem="4ZR-Xx-XwD" secondAttribute="bottom" constant="12" id="xzy-sX-hC7">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                            </constraint>
+                                            <constraint firstItem="qIn-Le-k9w" firstAttribute="bottom" secondItem="3ey-Cb-kNH" secondAttribute="bottomMargin" id="y2d-Ui-rrh"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="4ZR-Xx-XwD"/>
+                                                <exclude reference="qIn-Le-k9w"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="6K8-y0-I51"/>
+                                                <exclude reference="D2i-Bt-sUB"/>
+                                                <exclude reference="RZz-gk-CM8"/>
+                                                <exclude reference="vOQ-Rt-u0W"/>
+                                                <exclude reference="VbF-T6-d9w"/>
+                                                <exclude reference="Wrz-TC-VDy"/>
+                                                <exclude reference="xzy-sX-hC7"/>
+                                                <exclude reference="y2d-Ui-rrh"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="4ZR-Xx-XwD"/>
+                                                <include reference="qIn-Le-k9w"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="6K8-y0-I51"/>
+                                                <include reference="D2i-Bt-sUB"/>
+                                                <include reference="RZz-gk-CM8"/>
+                                                <include reference="vOQ-Rt-u0W"/>
+                                                <include reference="VbF-T6-d9w"/>
+                                                <include reference="Wrz-TC-VDy"/>
+                                                <include reference="xzy-sX-hC7"/>
+                                                <include reference="y2d-Ui-rrh"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="radicalField" destination="qIn-Le-k9w" id="wKF-NX-CUv"/>
+                                            <outlet property="radicalImage" destination="4ZR-Xx-XwD" id="5PU-QH-nOO"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

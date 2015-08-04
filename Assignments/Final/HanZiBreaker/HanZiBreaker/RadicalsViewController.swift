@@ -34,10 +34,15 @@ class RadicalsViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var buttonAField: UIButton!
+
+    
     @IBAction func cornerAwasTapped(sender: UIButton) {
         /* @@HP: animate the tapped region, onece tapped again, flip the value */
         if cornerAWasTapped == false {
             cornerAWasTapped = true
+            buttonAField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+
             if let code = FCCode {
                     encoder[CornerIndexs.A] = code[code.startIndex]
                 }
