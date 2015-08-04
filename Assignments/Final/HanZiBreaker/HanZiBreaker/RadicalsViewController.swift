@@ -9,6 +9,8 @@
 import UIKit
 
 let LINKED_CHAR: Character = "-"
+let TOUCH_SECTIONS: Int = 4
+
 struct CornerIndexs {
     static let A = 0
     static let B = 1
@@ -138,6 +140,22 @@ class RadicalsViewController: UIViewController {
         
         encoder = Array<Character>(count: 5, repeatedValue: "-")
     }
+    
+    ///////////////////
+    
+    func convertFCCorners() {
+        if let code = FCCode {
+            for(var buttonIndex = 0; buttonIndex < TOUCH_SECTIONS; ++buttonIndex) {
+                if buttonPressed[buttonIndex] == true {
+                    encoder[buttonIndex] = code[advance(code.startIndex, buttonIndex)]
+                }
+            }
+        }
+        else {
+            println("FC code is empty")
+        }
+        
+    }
 
     /////////////////////////////////////////Draw Begins////////////////////////////////////
     //for draw
@@ -159,6 +177,9 @@ class RadicalsViewController: UIViewController {
     var labelSelectCounts = [Int]()
     var labelSelectThreshold = 2
     
+    var buttonPressed = Array<Bool>(count: TOUCH_SECTIONS, repeatedValue: false)
+    
+    
     //draw
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         swiped = false
@@ -179,7 +200,10 @@ class RadicalsViewController: UIViewController {
         {
             labelSelectCounts.append(0)
             labels[i].backgroundColor = UIColor.clearColor()
+            buttonPressed[i] = false
         }
+        encoder = Array<Character>(count: 5, repeatedValue: "-")
+
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
@@ -219,7 +243,7 @@ class RadicalsViewController: UIViewController {
         convertedOrigin = self.view.convertPoint(labels[labelIndex].frame.origin, toView: coordView)
         if(pt.x > convertedOrigin.x && pt.x < convertedOrigin.x + size.width && pt.y > convertedOrigin.y && pt.y < convertedOrigin.y + size.height)
         {
-            println("Inside")
+//            println("Inside")
             labelSelectCounts[labelIndex]++
             return true
         }
@@ -230,6 +254,7 @@ class RadicalsViewController: UIViewController {
         if(labelSelectCounts[labelIndex] > labelSelectThreshold)
         {
             labels[labelIndex].backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+            buttonPressed[labelIndex] = true
         }
     }
     
@@ -262,7 +287,13 @@ class RadicalsViewController: UIViewController {
         selectView.image = nil
         UIGraphicsEndImageContext()
         
+        convertFCCorners()
+        
+        radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
+
     }
+    
+
     
     
     /////////////////////////////////////////Draw Ends////////////////////////////////////
