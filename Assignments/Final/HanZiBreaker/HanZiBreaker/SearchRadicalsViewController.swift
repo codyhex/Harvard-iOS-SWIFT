@@ -12,6 +12,8 @@
 
 import UIKit
 
+let PAGE_404_URL = "http://thinkinbath.com/404/"
+
 struct RadicalProperties {
     static let WikiID = 0
     static let pinyin = 1
@@ -37,7 +39,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     
     var userSelectedRadical: String?
     
-    var selectedRadicalInfo: NSArray?
+    var selectedRadicalInfo: Array<String>?
     
     @IBOutlet weak var infoTextField: UILabel!
     
@@ -57,7 +59,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         radicalFCCodeList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("radical FC code list", withExtension: "plist")!)
         radicalWebsites = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("radical websites", withExtension: "plist")!)
     }
-    
+    /* @@HP: use the corner FC code search in the radical dictionary, return the possible radical info as Array(s) */
     func searchRadical() {
         if let code = radicalCode {
             possibleRadicals = radicalFCCodeList[code] as? NSArray
@@ -67,7 +69,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         }
         
     }
-    
+    /* @@HP: prepare the possible results for collection view to display */
     func displayChoices() {
         if let choices = possibleRadicals {
             for item in choices {
@@ -80,13 +82,17 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         
     }
     
-    /* @@HP: suppose the user will always select the correct radical */
-    func searchWebsite() {
+    /* @@HP: use the select key to acquire website link, thios should happen in prepare for segue */
+    func searchWebsite() -> String {
         if let choice = userSelectedRadical {
-            selectedRadicalInfo = radicalWebsites[choice] as? NSArray
+            selectedRadicalInfo = radicalWebsites[choice] as? Array<String>
+            
+            return selectedRadicalInfo![RadicalProperties.URL]
         }
         else {
             println("the user did not select radical of choice(s)")
+            
+            return PAGE_404_URL
         }
     }
     
@@ -110,15 +116,13 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.reuseIdentifier, forIndexPath: indexPath) as! SearchCollectionViewCell
-        
+
         // Configure the cell
-        if let radicalInfo = selectedRadicalInfo {
-            /* @@HP: Use the wiki radical ID "Radical 30" for example to name the radical image name with dim 100 * 100 pix */
-            if let imageName = radicalInfo[RadicalProperties.WikiID] as? String {
-                cell.radicalImage.image = UIImage(named: imageName)
-            }
-            /* @@HP: use the chinese radical character as the label */
-            cell.radicalCharacter = (radicalInfo[RadicalProperties.character] as? String)!
+        if let itemCharacter = possibleRadicals?.objectAtIndex(indexPath.row) as? String {
+                cell.radicalInfo = radicalWebsites[itemCharacter] as? Array
+        }
+        else {
+            println("radical website dict lookup results not found")
         }
         /* @@HP: this action I learned from Alex coule make a customized call back function to the target from subview */
         //cell.radicalChoiceButtonField.addTarget(self, action: "handleTapped:", forControlEvents: .TouchUpInside)
@@ -148,13 +152,14 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
             infoTextField.text = "Select the correct radical !"
         }
         
-        /* @@HP: assign the value to user select key */
-        if let selectedRadical = cell.radicalCharacter {
-            userSelectedRadical = selectedRadical
+        /* @@HP: when user touch on a cell, select the cell's character key */
+        if let radicalInfo = cell.radicalInfo {
+                userSelectedRadical = radicalInfo[RadicalProperties.character]
         }
-        else {
-            println("empty radical character in the cell#\(indexPath)")
+        else{
+            println("radical info in cell \(indexPath.row) is empty")
         }
+
         
     }
     /* @@HP: check the cell status, there must be ONLY one select is selected at a single search ! */
@@ -180,8 +185,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
                 if let radicalInfo = selectedRadicalInfo {
                     resultVC.title = "~ \(radicalInfo[RadicalProperties.character]) ~"
                     //                        resultVC.identifier = radicalInfo[RadicalProperties.character]
-                    resultVC.websiteURL = radicalInfo[RadicalProperties.URL] as? String
-                }
+                    resultVC.websiteURL = searchWebsite()                }
                 else{
                     println("selected radical info not found")
                 }
