@@ -13,19 +13,11 @@ struct Identifiers {
     static let basicCell = "index character cell"
     static let possibleRadicalsSegue = "possible radicals segue"
     static let radicalMeaningsSegue = "radical meanings segue"
-    static let tableSize = 10
     static let reuseIdentifier = "radical cell"
 }
 
-class MyModel {
-    var myItems: [ String ] = [String]()
-    
-    // in prepareForSegue you might see:
-    // radicalVC.identifier = myModelInstance.myItems[indexPath.row]
-}
-
 class IndexTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     var mostRecentMoreInfo: String? {
         didSet {
             // Whenever the model changes AFTER the first time the view is shown on
@@ -43,7 +35,7 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
         wordList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("word list", withExtension: "plist")!)
         
     }
-
+    /////////////// Table View Initilization //////////////////////
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return wordList.count
@@ -71,7 +63,7 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
         cell.textLabel!.text = makeSubviewName(indexPath)
         cell.textLabel?.font = UIFont .boldSystemFontOfSize(25)
         
- /* @@HP: when adding the image, there is a "title" word shows between the image and word. Dob't know how to fix it */
+        /* @@HP: when adding the image, there is a "title" word shows between the image and word. Dob't know how to fix it */
         var imageName = ((wordList.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row)[1] as? String)!
         let image = UIImage(named: imageName)
         cell.imageView?.image = image
@@ -90,9 +82,9 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
         return false
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("\((wordList.allValues[indexPath.section] as? NSArray)?.objectAtIndex(indexPath.row)) Selected")
-    }
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        println("\((wordList.allValues[indexPath.section] as? NSArray)?.objectAtIndex(indexPath.row)) Selected")
+//    }
     
     // MARK: - Navigation
     // Segue: Transition from one full-screen view to another where user is "diving deeper"
@@ -132,6 +124,6 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
             assertionFailure("unknown segue ID \(segue.identifier)")
         }
     }
-
+    
     
 }

@@ -23,11 +23,7 @@ struct RadicalProperties {
 
 class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var radicalCode: String? {
-        didSet {
-            println(self.radicalCode)
-        }
-    }
+    var radicalCode: String?
     
     var radicalFCCodeList: NSDictionary! = nil
     
@@ -35,11 +31,11 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     
     var possibleRadicals: NSArray?
     
-    @IBOutlet weak var collectionView: UICollectionView?
-    
     var userSelectedRadical: String?
     
     var selectedRadicalInfo: Array<String>?
+    
+    @IBOutlet weak var collectionView: UICollectionView?
     
     @IBOutlet weak var infoTextField: UILabel!
     
@@ -47,29 +43,35 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         
         searchRadical()
-        displayChoices()
-        
-        // Register cell classes
-        //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.reuseIdentifier)
+        //displayChoices()
     }
-    
+    /* @@HP: load dicts */
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         radicalFCCodeList = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("radical FC code list", withExtension: "plist")!)
         radicalWebsites = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("radical websites", withExtension: "plist")!)
     }
+    
     /* @@HP: use the corner FC code search in the radical dictionary, return the possible radical info as Array(s) */
     func searchRadical() {
         if let code = radicalCode {
-            possibleRadicals = radicalFCCodeList[code] as? NSArray
+            /* @@HP: check if the code is in the dict */
+            if radicalFCCodeList[code] as? NSArray == nil {
+                possibleRadicals = radicalFCCodeList["-----"] as? NSArray
+                infoTextField.text = "Radical Not Found"
+            }
+            else {
+                possibleRadicals = radicalFCCodeList[code] as? NSArray
+            }
         }
         else {
             println("radical code \(radicalCode) is not in the diactionary")
         }
         
     }
-    /* @@HP: prepare the possible results for collection view to display */
+    
+    /* @@HP: prepare the possible results for collection view to display Debug Only*/
     func displayChoices() {
         if let choices = possibleRadicals {
             for item in choices {
@@ -79,7 +81,6 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         else {
             println("no radicals is selected")
         }
-        
     }
     
     /* @@HP: use the select key to acquire website link, thios should happen in prepare for segue */
@@ -95,6 +96,8 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
             return PAGE_404_URL
         }
     }
+    
+    //////////////////// Collection View Initilizatino //////////////////////////////////////
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
@@ -116,10 +119,10 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.reuseIdentifier, forIndexPath: indexPath) as! SearchCollectionViewCell
-
+        
         // Configure the cell
         if let itemCharacter = possibleRadicals?.objectAtIndex(indexPath.row) as? String {
-                cell.radicalInfo = radicalWebsites[itemCharacter] as? Array
+            cell.radicalInfo = radicalWebsites[itemCharacter] as? Array
         }
         else {
             println("radical website dict lookup results not found")
@@ -131,7 +134,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+        
         var cell : SearchCollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! SearchCollectionViewCell
         if cell.cellIsTapped == false {
             cell.cellIsTapped = true
@@ -141,7 +144,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
             cell.cellIsTapped = false
             cell.backgroundColor = UIColor.clearColor()
         }
-        
+        /* @@HP: remind user of the number of selection, however, this should prevent user advance to the next view when more than one radical is selected, for now, I don't know how */
         if selectOnlyOneRadical() > 1 {
             infoTextField.text = "Please select only ONE item!"
         }
@@ -154,12 +157,12 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         
         /* @@HP: when user touch on a cell, select the cell's character key */
         if let radicalInfo = cell.radicalInfo {
-                userSelectedRadical = radicalInfo[RadicalProperties.character]
+            userSelectedRadical = radicalInfo[RadicalProperties.character]
         }
         else{
             println("radical info in cell \(indexPath.row) is empty")
         }
-
+        
         
     }
     /* @@HP: check the cell status, there must be ONLY one select is selected at a single search ! */
@@ -184,12 +187,11 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
                 
                 if let radicalInfo = selectedRadicalInfo {
                     resultVC.title = "~ \(radicalInfo[RadicalProperties.character]) ~"
-                    //                        resultVC.identifier = radicalInfo[RadicalProperties.character]
-                    resultVC.websiteURL = searchWebsite()                }
+                    resultVC.websiteURL = searchWebsite()
+                }
                 else{
                     println("selected radical info not found")
                 }
-                
             }
             else {
                 assertionFailure("destination of segue was not a ResultsViewController!")

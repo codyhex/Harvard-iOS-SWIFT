@@ -9,8 +9,12 @@
 import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
-    
+    /* @@HP: callIsTapped is used for the cell view hightlighted feature */
     var cellIsTapped = false
+    
+    @IBOutlet weak var radicalImage: UIImageView!
+    
+    @IBOutlet weak var radicalField: UILabel!
     
     var radicalInfo: Array<String>? {
         didSet {
@@ -25,14 +29,12 @@ class SearchCollectionViewCell: UICollectionViewCell {
                 radicalImage.image = UIImage(named: imageName)
             }
             /* @@HP: use the chinese radical character as the label */
-            radicalField.text = ("Item: " + radicalInfo![RadicalProperties.character])
-            
+            if radicalInfo![RadicalProperties.character] == "囧" {
+                radicalField.text = ("Oops!")
+            }
+            else {
+                radicalField.text = ("Item: " + radicalInfo![RadicalProperties.character])
+            }
         }
     }
-    
-    @IBOutlet weak var radicalImage: UIImageView!
-    
-    
-    @IBOutlet weak var radicalField: UILabel!
-    
 }

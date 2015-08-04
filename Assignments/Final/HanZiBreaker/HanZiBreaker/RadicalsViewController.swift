@@ -10,7 +10,7 @@ import UIKit
 
 let LINKED_CHAR: Character = "-"
 let TOUCH_SECTIONS: Int = 4
-
+/* @@HP: this structure was used in the button-tapped selection method, since I update it to draw line selection. there is no use of this but I want to memo myself about the label order shuold be used in such a easy way instead of indexing ordered array */
 struct CornerIndexs {
     static let A = 0
     static let B = 1
@@ -24,140 +24,11 @@ class RadicalsViewController: UIViewController {
     var identifier: String? // The "model"
     var chineseName: String?
     var FCCode: String?
+    /* @@HP: use an array of char to hold the FC corner value */
     var encoder: Array<Character> = Array(count: 5, repeatedValue: "-")
-    
-    var cornerAWasTapped = false, cornerBWasTapped = false, cornerCWasTapped = false, cornerDWasTapped = false
-    
     var radicalCode = "" /* @@HP: FCcode is actually five digits */
+    var buttonPressed = Array<Bool>(count: TOUCH_SECTIONS, repeatedValue: false)
     
-    @IBOutlet weak var radicalsTextField: UILabel! {
-        didSet {
-            radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
-        }
-    }
-    
-    @IBOutlet weak var wordImage: UIImageView! {
-        didSet {
-            if let imageName = chineseName {
-                wordImage.image = UIImage(named: imageName)
-            }
-            else {
-                println("image name wrong \(chineseName)")
-            }
-        }
-    }
-
-    @IBOutlet weak var buttonAField: UIButton!
-    @IBOutlet weak var buttonBField: UIButton!
-    @IBOutlet weak var buttonCField: UIButton!
-    @IBOutlet weak var buttonDField: UIButton!
-
-    
-    @IBAction func cornerAwasTapped(sender: UIButton) {
-        /* @@HP: animate the tapped region, onece tapped again, flip the value */
-        if cornerAWasTapped == false {
-            cornerAWasTapped = true
-            /* @@HP: highlight the background once the button was tapped down and used as vaild */
-            buttonAField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
-
-            if let code = FCCode {
-                    encoder[CornerIndexs.A] = code[code.startIndex]
-                }
-        }
-        else {
-            cornerAWasTapped = false
-            encoder[CornerIndexs.A] = LINKED_CHAR
-            buttonAField.backgroundColor = UIColor.clearColor()
-        }
-        
-        radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
-    }
-    
-    @IBAction func cornerBwasTapped(sender: UIButton) {
-        /* @@HP: animate the tapped region, onece tapped again, flip the value */
-        if cornerBWasTapped == false {
-            cornerBWasTapped = true
-            buttonBField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
-
-            if let code = FCCode {
-                encoder[CornerIndexs.B] = code[advance(code.startIndex, CornerIndexs.B)]
-            }
-
-        }
-        else {
-            cornerBWasTapped = false
-            encoder[CornerIndexs.B] = LINKED_CHAR
-            buttonBField.backgroundColor = UIColor.clearColor()
-        }
-        
-        radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
-    }
-    
-    @IBAction func cornerCWasTapped(sender: UIButton) {
-        /* @@HP: animate the tapped region, onece tapped again, flip the value */
-        if cornerCWasTapped == false {
-            cornerCWasTapped = true
-            buttonCField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
-
-            if let code = FCCode {
-                encoder[CornerIndexs.C] = code[advance(code.startIndex, CornerIndexs.C)]
-            }
-        }
-        else {
-            cornerCWasTapped = false
-            encoder[CornerIndexs.C] = LINKED_CHAR
-            buttonCField.backgroundColor = UIColor.clearColor()
-        }
-        
-        radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
-    }
-    
-    @IBAction func cornerDWasTapped(sender: UIButton) {
-        /* @@HP: animate the tapped region, onece tapped again, flip the value */
-        if cornerDWasTapped == false {
-            cornerDWasTapped = true
-            buttonDField.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
-
-            if let code = FCCode {
-                encoder[CornerIndexs.D] = code[advance(code.startIndex, CornerIndexs.D)]
-            }
-        }
-        else {
-            cornerDWasTapped = false
-            encoder[CornerIndexs.D] = LINKED_CHAR
-            buttonDField.backgroundColor = UIColor.clearColor()
-
-        }
-        
-        radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
-    }
-    
-    func cleanCache() {
-        cornerAWasTapped = false
-        cornerBWasTapped = false
-        cornerCWasTapped = false
-        cornerDWasTapped = false
-        
-        encoder = Array<Character>(count: 5, repeatedValue: "-")
-    }
-    
-    ///////////////////
-    
-    func convertFCCorners() {
-        if let code = FCCode {
-            for(var buttonIndex = 0; buttonIndex < TOUCH_SECTIONS; ++buttonIndex) {
-                if buttonPressed[buttonIndex] == true {
-                    encoder[buttonIndex] = code[advance(code.startIndex, buttonIndex)]
-                }
-            }
-        }
-        else {
-            println("FC code is empty")
-        }
-        
-    }
-
-    /////////////////////////////////////////Draw Begins////////////////////////////////////
     //for draw
     @IBOutlet weak var selectView: UIImageView!
     var swiped = false
@@ -173,12 +44,45 @@ class RadicalsViewController: UIViewController {
     @IBOutlet weak var label_B: UIButton!
     @IBOutlet weak var label_C: UIButton!
     @IBOutlet weak var label_D: UIButton!
+    
     var labels = [UIButton]()
     var labelSelectCounts = [Int]()
     var labelSelectThreshold = 2
     
-    var buttonPressed = Array<Bool>(count: TOUCH_SECTIONS, repeatedValue: false)
     
+    
+    @IBOutlet weak var radicalsTextField: UILabel! {
+        didSet {
+            radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
+        }
+    }
+    /* @@HP: load the background Image */
+    @IBOutlet weak var wordImage: UIImageView! {
+        didSet {
+            if let imageName = chineseName {
+                wordImage.image = UIImage(named: imageName)
+            }
+            else {
+                println("image name wrong \(chineseName)")
+            }
+        }
+    }
+    
+    func convertFCCorners() {
+        if let code = FCCode {
+            for(var buttonIndex = 0; buttonIndex < TOUCH_SECTIONS; ++buttonIndex) {
+                if buttonPressed[buttonIndex] == true {
+                    encoder[buttonIndex] = code[advance(code.startIndex, buttonIndex)]
+                }
+            }
+        }
+        else {
+            println("FC code is empty")
+        }
+        
+    }
+    
+    /////////////////////////////////////////Draw Selection Begins////////////////////////////////////
     
     //draw
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -203,7 +107,7 @@ class RadicalsViewController: UIViewController {
             buttonPressed[i] = false
         }
         encoder = Array<Character>(count: 5, repeatedValue: "-")
-
+        
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
@@ -243,14 +147,13 @@ class RadicalsViewController: UIViewController {
         convertedOrigin = self.view.convertPoint(labels[labelIndex].frame.origin, toView: coordView)
         if(pt.x > convertedOrigin.x && pt.x < convertedOrigin.x + size.width && pt.y > convertedOrigin.y && pt.y < convertedOrigin.y + size.height)
         {
-//            println("Inside")
             labelSelectCounts[labelIndex]++
             return true
         }
         return false
     }
     
-    func selectLabel(labelIndex: Int)->Void {
+    func selectLabel(labelIndex: Int) {
         if(labelSelectCounts[labelIndex] > labelSelectThreshold)
         {
             labels[labelIndex].backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
@@ -269,7 +172,7 @@ class RadicalsViewController: UIViewController {
             lastPoint = currentPoint
             
             //active corresponding labels if selected
-            for(var i = 0;i<4;i++)
+            for(var i = 0; i < TOUCH_SECTIONS; ++i)
             {
                 isTouchInsideLabel(currentPoint, labelIndex:i, coordView:selectView)
                 selectLabel(i)
@@ -278,23 +181,19 @@ class RadicalsViewController: UIViewController {
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
-        if !swiped {
-            
-        }
+        //        if !swiped {
+        //
+        //        }
         // clear the drawing
         UIGraphicsBeginImageContext(selectView.frame.size)
         selectView.image = nil
         UIGraphicsEndImageContext()
-        
+        /* @@HP: convert the selection to FC corner code */
         convertFCCorners()
-        
+        /* @@HP: update the text label */
         radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
-
+        
     }
-    
-
-    
     
     /////////////////////////////////////////Draw Ends////////////////////////////////////
     
@@ -308,7 +207,6 @@ class RadicalsViewController: UIViewController {
                         tableVC.mostRecentMoreInfo = identifier
                         searchRadicalsVC.title = "Radicals"
                         searchRadicalsVC.radicalCode = String(self.encoder)
-//                        cleanCache()
                     }
                     else {
                         assertionFailure("Failed to find a tableVC")

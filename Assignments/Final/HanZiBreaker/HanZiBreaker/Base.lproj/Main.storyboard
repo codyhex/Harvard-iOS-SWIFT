@@ -59,6 +59,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
                                 <rect key="frame" x="100" y="100" width="400" height="400"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-IZ-fG7" userLabel="Select Draw View">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="W23-LD-cab">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="482"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="400" id="tvc-4N-wYX">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="395"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="W23-LD-cab"/>
+                                        <exclude reference="tvc-4N-wYX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="W23-LD-cab"/>
+                                        <exclude reference="tvc-4N-wYX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
                                 <rect key="frame" x="150" y="540" width="302" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -83,9 +106,6 @@
                                 <state key="normal" backgroundImage="a">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="cornerAwasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="xlN-o3-Q38"/>
-                                </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-Q3-Gck" userLabel="CornerButtonB">
                                 <rect key="frame" x="300" y="100" width="200" height="200"/>
@@ -95,9 +115,6 @@
                                 <state key="normal" backgroundImage="b">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="cornerBwasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="2po-V0-a0L"/>
-                                </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-IC-tMm" userLabel="CornerButtonC">
                                 <rect key="frame" x="300" y="300" width="200" height="200"/>
@@ -107,9 +124,6 @@
                                 <state key="normal" backgroundImage="c">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="cornerCWasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="JTZ-WC-ICY"/>
-                                </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-Q9-x7T" userLabel="CornerButtonD">
                                 <rect key="frame" x="100" y="300" width="200" height="200"/>
@@ -119,33 +133,7 @@
                                 <state key="normal" backgroundImage="d">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="cornerDWasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="DQG-iW-1L1"/>
-                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-IZ-fG7" userLabel="Select Draw View">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="W23-LD-cab">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="482"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="400" id="tvc-4N-wYX">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="395"/>
-                                    </constraint>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="W23-LD-cab"/>
-                                        <exclude reference="tvc-4N-wYX"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="W23-LD-cab"/>
-                                        <exclude reference="tvc-4N-wYX"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -233,10 +221,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="buttonAField" destination="b2c-2D-QKV" id="6Tr-gX-RG6"/>
-                        <outlet property="buttonBField" destination="PK2-Q3-Gck" id="fMN-j7-cv6"/>
-                        <outlet property="buttonCField" destination="Mtn-IC-tMm" id="MFk-zg-dKq"/>
-                        <outlet property="buttonDField" destination="dbC-Q9-x7T" id="PEw-ys-V4Z"/>
                         <outlet property="label_A" destination="b2c-2D-QKV" id="thY-he-7PN"/>
                         <outlet property="label_B" destination="PK2-Q3-Gck" id="dqE-IW-NXE"/>
                         <outlet property="label_C" destination="Mtn-IC-tMm" id="mBv-WG-M0a"/>

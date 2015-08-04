@@ -10,19 +10,14 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         showWebsite()
-        // Do any additional setup after loading the view.
     }
-
-    var websiteURL: String? {
-        didSet {
-            println(websiteURL)
-        }
-    }
+    
+    var websiteURL: String?
     
     @IBOutlet weak var resultsWebView: UIWebView!
     
@@ -33,7 +28,7 @@ class ResultsViewController: UIViewController {
             resultsWebView.loadRequest(requestObj)
         }
     }
-
     
-
+    
+    
 }
