@@ -55,6 +55,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMM-RJ-Tji" userLabel="Select View">
+                                <rect key="frame" x="1" y="64" width="600" height="443"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吃" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
                                 <rect key="frame" x="322" y="91" width="400" height="400"/>
                             </imageView>
@@ -98,20 +101,17 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMM-RJ-Tji" userLabel="Select View">
-                                <rect key="frame" x="1" y="64" width="600" height="443"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="27" id="1T3-qe-uKC">
-                                <variation key="heightClass=regular-widthClass=compact" constant="253"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="41"/>
                             </constraint>
                             <constraint firstItem="PK2-Q3-Gck" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-200" id="3Dc-mh-2PH">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-224"/>
                             </constraint>
                             <constraint firstItem="lMM-RJ-Tji" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" constant="-222" id="BZa-wu-EMN">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-1.5"/>
                             </constraint>
                             <constraint firstItem="lMM-RJ-Tji" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="-15" id="Fpq-WP-U3B">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -120,14 +120,14 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="209"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="MhK-KR-Pjz" secondAttribute="centerX" constant="-222" id="J8H-7F-pNz">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-0.5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-1.5"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="PK2-Q3-Gck" secondAttribute="bottom" constant="-200" id="PMg-t4-N6W">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-192"/>
                             </constraint>
                             <constraint firstItem="J6O-pq-y9d" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" constant="-1" id="Q6B-K6-fKG"/>
                             <constraint firstAttribute="centerY" secondItem="MhK-KR-Pjz" secondAttribute="centerY" constant="9" id="V04-X9-8dV">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-117"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="95"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="b2c-2D-QKV" secondAttribute="trailing" constant="-200" id="XTN-Wy-6vL">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-222"/>
@@ -142,7 +142,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="-222"/>
                             </constraint>
                             <constraint firstItem="bkD-LB-SRx" firstAttribute="top" secondItem="lMM-RJ-Tji" secondAttribute="bottom" constant="24" id="eoe-bz-jqI">
-                                <variation key="heightClass=regular-widthClass=compact" constant="239"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="27"/>
                             </constraint>
                             <constraint firstItem="bkD-LB-SRx" firstAttribute="top" secondItem="MhK-KR-Pjz" secondAttribute="bottom" constant="40" id="g4B-bd-Kih">
                                 <variation key="heightClass=regular-widthClass=compact" constant="233"/>
@@ -151,7 +151,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="-223"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="306" id="hqw-qz-Xr6">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-38"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-37"/>
                             </constraint>
                             <constraint firstItem="lMM-RJ-Tji" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="21" id="mdY-pq-kaj">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -160,7 +160,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="-421"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" constant="-1" id="rWw-3f-P5Q">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-0.5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-1.5"/>
                             </constraint>
                             <constraint firstItem="lMM-RJ-Tji" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="14" id="zqB-yF-Wjl">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -179,6 +179,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="label_A" destination="b2c-2D-QKV" id="1ag-oC-ajb"/>
+                        <outlet property="label_B" destination="PK2-Q3-Gck" id="L2M-9L-gfh"/>
+                        <outlet property="label_C" destination="Mtn-IC-tMm" id="bKw-e4-sk8"/>
+                        <outlet property="label_D" destination="dbC-Q9-x7T" id="Wrt-eO-3af"/>
                         <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
                         <outlet property="selectView" destination="lMM-RJ-Tji" id="z4y-wQ-jfR"/>
                     </connections>
