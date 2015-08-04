@@ -35,28 +35,22 @@ class RadicalsViewController: UIViewController {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         swiped = false
         if let touch = touches.first as? UITouch {
-            lastPoint = touch.locationInView(self.view)
+            lastPoint = touch.locationInView(selectView)
         }
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         // 1
-        UIGraphicsBeginImageContext(view.frame.size)
+        UIGraphicsBeginImageContext(selectView.frame.size)
         let context = UIGraphicsGetCurrentContext()
         
-        selectView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        selectView.image?.drawInRect(CGRect(x: 0, y: 0, width: selectView.frame.size.width, height: selectView.frame.size.height))
         //println(fromPoint.y)
         
         // 2
-        println(fromPoint.y)
-        var p1:CGPoint
-        var p2:CGPoint
-        p1 = view.convertPoint(fromPoint, toView:selectView)
-        p2 = view.convertPoint(toPoint, toView:selectView)
-        
-        CGContextMoveToPoint(context, p1.x, p1.y)
-        CGContextAddLineToPoint(context, p2.x, p2.y)
+        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
+        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
         // 3
         CGContextSetLineCap(context, kCGLineCapRound)
@@ -78,7 +72,7 @@ class RadicalsViewController: UIViewController {
         // 6
         swiped = true
         if let touch = touches.first as? UITouch {
-            let currentPoint = touch.locationInView(view)
+            let currentPoint = touch.locationInView(selectView)
             drawLineFrom(lastPoint, toPoint: currentPoint)
             
             // 7
