@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cHa-d6-lpr">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -74,35 +75,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-Q3-Gck" userLabel="CornerButtonB">
-                                <rect key="frame" x="300" y="100" width="200" height="200"/>
-                                <state key="normal" backgroundImage="b">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cornerBwasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="2po-V0-a0L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-IC-tMm" userLabel="CornerButtonC">
-                                <rect key="frame" x="300" y="300" width="200" height="200"/>
-                                <state key="normal" backgroundImage="c">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cornerCWasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="JTZ-WC-ICY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-Q9-x7T" userLabel="CornerButtonD">
-                                <rect key="frame" x="100" y="300" width="200" height="200"/>
-                                <state key="normal" backgroundImage="d">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cornerDWasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="DQG-iW-1L1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-2D-QKV" userLabel="CornerButtonA">
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-2D-QKV" userLabel="CornerButtonA">
                                 <rect key="frame" x="100" y="100" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <state key="normal" backgroundImage="a">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -110,6 +87,65 @@
                                     <action selector="cornerAwasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="xlN-o3-Q38"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-Q3-Gck" userLabel="CornerButtonB">
+                                <rect key="frame" x="300" y="100" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="b">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cornerBwasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="2po-V0-a0L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-IC-tMm" userLabel="CornerButtonC">
+                                <rect key="frame" x="300" y="300" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="c">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cornerCWasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="JTZ-WC-ICY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-Q9-x7T" userLabel="CornerButtonD">
+                                <rect key="frame" x="100" y="300" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="d">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cornerDWasTapped:" destination="DDV-3f-1AK" eventType="touchUpInside" id="DQG-iW-1L1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-IZ-fG7" userLabel="Select Draw View">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="W23-LD-cab">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="482"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="400" id="tvc-4N-wYX">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="395"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="W23-LD-cab"/>
+                                        <exclude reference="tvc-4N-wYX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="W23-LD-cab"/>
+                                        <exclude reference="tvc-4N-wYX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -119,9 +155,14 @@
                             <constraint firstItem="PK2-Q3-Gck" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-200" id="3Dc-mh-2PH">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Vyk-IZ-fG7" secondAttribute="centerX" id="9TD-eN-GaX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vyk-IZ-fG7" secondAttribute="trailing" id="Fc8-Yd-I2g">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-10"/>
+                            </constraint>
                             <constraint firstItem="J6O-pq-y9d" firstAttribute="top" secondItem="MhK-KR-Pjz" secondAttribute="bottom" constant="15" id="HU6-5T-3he">
                                 <variation key="heightClass=regular-widthClass=compact" constant="203"/>
                             </constraint>
+                            <constraint firstItem="Vyk-IZ-fG7" firstAttribute="top" secondItem="bgG-Dw-mLO" secondAttribute="bottom" constant="8" symbolic="YES" id="Hwq-sm-yAE"/>
                             <constraint firstAttribute="centerX" secondItem="MhK-KR-Pjz" secondAttribute="centerX" id="J8H-7F-pNz">
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
@@ -134,6 +175,9 @@
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="b2c-2D-QKV" secondAttribute="trailing" constant="-200" id="XTN-Wy-6vL">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
+                            </constraint>
+                            <constraint firstItem="J6O-pq-y9d" firstAttribute="top" secondItem="Vyk-IZ-fG7" secondAttribute="bottom" constant="150" id="Z8s-R1-4Ez">
+                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="b2c-2D-QKV" secondAttribute="bottom" constant="-200" id="a3Y-xs-g4L">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
@@ -159,20 +203,52 @@
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="centerX" secondItem="bkD-LB-SRx" secondAttribute="centerX" id="rWw-3f-P5Q">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-5.5"/>
                             </constraint>
+                            <constraint firstItem="Vyk-IZ-fG7" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" id="tlM-Np-IDQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-10"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Vyk-IZ-fG7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9TD-eN-GaX"/>
+                                <exclude reference="Fc8-Yd-I2g"/>
+                                <exclude reference="Hwq-sm-yAE"/>
+                                <exclude reference="tlM-Np-IDQ"/>
+                                <exclude reference="Z8s-R1-4Ez"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Vyk-IZ-fG7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9TD-eN-GaX"/>
+                                <include reference="Fc8-Yd-I2g"/>
+                                <include reference="Hwq-sm-yAE"/>
+                                <include reference="tlM-Np-IDQ"/>
+                                <include reference="Z8s-R1-4Ez"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="buttonAField" destination="b2c-2D-QKV" id="6Tr-gX-RG6"/>
                         <outlet property="buttonBField" destination="PK2-Q3-Gck" id="fMN-j7-cv6"/>
                         <outlet property="buttonCField" destination="Mtn-IC-tMm" id="MFk-zg-dKq"/>
                         <outlet property="buttonDField" destination="dbC-Q9-x7T" id="PEw-ys-V4Z"/>
+                        <outlet property="label_A" destination="b2c-2D-QKV" id="thY-he-7PN"/>
+                        <outlet property="label_B" destination="PK2-Q3-Gck" id="dqE-IW-NXE"/>
+                        <outlet property="label_C" destination="Mtn-IC-tMm" id="mBv-WG-M0a"/>
+                        <outlet property="label_D" destination="dbC-Q9-x7T" id="Y0C-qW-RFT"/>
                         <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
+                        <outlet property="selectView" destination="Vyk-IZ-fG7" id="XCG-YT-Wue"/>
                         <outlet property="wordImage" destination="MhK-KR-Pjz" id="6BB-7o-s66"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeB-1L-dfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="488"/>
+            <point key="canvasLocation" x="1849.5" y="487.5"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="INc-w5-kL7">
@@ -276,14 +352,14 @@
                                                 <exclude reference="qIn-Le-k9w"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="6K8-y0-I51"/>
-                                                <exclude reference="D2i-Bt-sUB"/>
-                                                <exclude reference="RZz-gk-CM8"/>
-                                                <exclude reference="vOQ-Rt-u0W"/>
                                                 <exclude reference="VbF-T6-d9w"/>
                                                 <exclude reference="Wrz-TC-VDy"/>
                                                 <exclude reference="xzy-sX-hC7"/>
                                                 <exclude reference="y2d-Ui-rrh"/>
+                                                <exclude reference="6K8-y0-I51"/>
+                                                <exclude reference="D2i-Bt-sUB"/>
+                                                <exclude reference="RZz-gk-CM8"/>
+                                                <exclude reference="vOQ-Rt-u0W"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -292,14 +368,14 @@
                                                 <include reference="qIn-Le-k9w"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="6K8-y0-I51"/>
-                                                <include reference="D2i-Bt-sUB"/>
-                                                <include reference="RZz-gk-CM8"/>
-                                                <include reference="vOQ-Rt-u0W"/>
                                                 <include reference="VbF-T6-d9w"/>
                                                 <include reference="Wrz-TC-VDy"/>
                                                 <include reference="xzy-sX-hC7"/>
                                                 <include reference="y2d-Ui-rrh"/>
+                                                <include reference="6K8-y0-I51"/>
+                                                <include reference="D2i-Bt-sUB"/>
+                                                <include reference="RZz-gk-CM8"/>
+                                                <include reference="vOQ-Rt-u0W"/>
                                             </mask>
                                         </variation>
                                         <connections>

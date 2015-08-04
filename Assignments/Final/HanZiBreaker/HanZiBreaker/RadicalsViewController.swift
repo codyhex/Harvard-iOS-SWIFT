@@ -44,7 +44,7 @@ class RadicalsViewController: UIViewController {
             }
         }
     }
-    
+
     @IBOutlet weak var buttonAField: UIButton!
     @IBOutlet weak var buttonBField: UIButton!
     @IBOutlet weak var buttonCField: UIButton!
@@ -138,6 +138,134 @@ class RadicalsViewController: UIViewController {
         
         encoder = Array<Character>(count: 5, repeatedValue: "-")
     }
+
+    /////////////////////////////////////////Draw Begins////////////////////////////////////
+    //for draw
+    @IBOutlet weak var selectView: UIImageView!
+    var swiped = false
+    var lastPoint = CGPoint.zeroPoint
+    var red: CGFloat = 1.0
+    var green: CGFloat = 0.0
+    var blue: CGFloat = 0.0
+    var brushWidth: CGFloat = 5.0
+    var opacity: CGFloat = 1.0
+    
+    //for label selection
+    @IBOutlet weak var label_A: UIButton!
+    @IBOutlet weak var label_B: UIButton!
+    @IBOutlet weak var label_C: UIButton!
+    @IBOutlet weak var label_D: UIButton!
+    var labels = [UIButton]()
+    var labelSelectCounts = [Int]()
+    var labelSelectThreshold = 2
+    
+    //draw
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        swiped = false
+        if let touch = touches.first as? UITouch {
+            lastPoint = touch.locationInView(selectView)
+        }
+        
+        //TO-DO: should register at init
+        labels.removeAll()
+        labels.append(label_A)
+        labels.append(label_B)
+        labels.append(label_C)
+        labels.append(label_D)
+        
+        //prepare selection
+        labelSelectCounts.removeAll()
+        for(var i=0; i<4;i++)
+        {
+            labelSelectCounts.append(0)
+            labels[i].backgroundColor = UIColor.clearColor()
+        }
+    }
+    
+    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+        
+        // 1
+        UIGraphicsBeginImageContext(selectView.frame.size)
+        let context = UIGraphicsGetCurrentContext()
+        
+        selectView.image?.drawInRect(CGRect(x: 0, y: 0, width: selectView.frame.size.width, height: selectView.frame.size.height))
+        //println(fromPoint.y)
+        
+        // 2
+        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
+        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        
+        // 3
+        CGContextSetLineCap(context, kCGLineCapRound)
+        CGContextSetLineWidth(context, brushWidth)
+        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
+        CGContextSetBlendMode(context, kCGBlendModeNormal)
+        
+        // 4
+        CGContextStrokePath(context)
+        
+        // 5 draw to
+        selectView.image = UIGraphicsGetImageFromCurrentImageContext()
+        selectView.alpha = opacity
+        UIGraphicsEndImageContext()
+        
+    }
+    
+    func isTouchInsideLabel(pt:CGPoint, labelIndex:Int, coordView:UIImageView)->Bool {
+        
+        var size: CGSize
+        size = labels[labelIndex].frame.size
+        var convertedOrigin:CGPoint
+        convertedOrigin = self.view.convertPoint(labels[labelIndex].frame.origin, toView: coordView)
+        if(pt.x > convertedOrigin.x && pt.x < convertedOrigin.x + size.width && pt.y > convertedOrigin.y && pt.y < convertedOrigin.y + size.height)
+        {
+            println("Inside")
+            labelSelectCounts[labelIndex]++
+            return true
+        }
+        return false
+    }
+    
+    func selectLabel(labelIndex: Int)->Void {
+        if(labelSelectCounts[labelIndex] > labelSelectThreshold)
+        {
+            labels[labelIndex].backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+        }
+    }
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        // 6
+        swiped = true
+        if let touch = touches.first as? UITouch {
+            let currentPoint = touch.locationInView(selectView)
+            drawLineFrom(lastPoint, toPoint: currentPoint)
+            
+            // 7
+            lastPoint = currentPoint
+            
+            //active corresponding labels if selected
+            for(var i = 0;i<4;i++)
+            {
+                isTouchInsideLabel(currentPoint, labelIndex:i, coordView:selectView)
+                selectLabel(i)
+            }
+        }
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        if !swiped {
+            
+        }
+        // clear the drawing
+        UIGraphicsBeginImageContext(selectView.frame.size)
+        selectView.image = nil
+        UIGraphicsEndImageContext()
+        
+    }
+    
+    
+    /////////////////////////////////////////Draw Ends////////////////////////////////////
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
