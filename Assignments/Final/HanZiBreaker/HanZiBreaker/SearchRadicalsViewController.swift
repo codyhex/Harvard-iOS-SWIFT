@@ -35,7 +35,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     
     @IBOutlet weak var collectionView: UICollectionView?
     
-    var userSelectedRadical: String? = "口"    /* @@HP: for test, code code here */
+    var userSelectedRadical: String?
     
     var selectedRadicalInfo: NSArray?
     
@@ -119,7 +119,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
                 cell.radicalImage.image = UIImage(named: imageName)
             }
             /* @@HP: use the chinese radical character as the label */
-            cell.radicalField.text = ("Item: " + (radicalInfo[RadicalProperties.character] as? String)!)
+            cell.radicalCharacter = (radicalInfo[RadicalProperties.character] as? String)!
         }
         /* @@HP: this action I learned from Alex coule make a customized call back function to the target from subview */
         //cell.radicalChoiceButtonField.addTarget(self, action: "handleTapped:", forControlEvents: .TouchUpInside)
@@ -148,6 +148,15 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         else {
             infoTextField.text = "Select the correct radical !"
         }
+        
+        /* @@HP: assign the value to user select key */
+        if let selectedRadical = cell.radicalCharacter {
+            userSelectedRadical = selectedRadical
+        }
+        else {
+            println("empty radical character in the cell#\(indexPath)")
+        }
+        
     }
     /* @@HP: check the cell status, there must be ONLY one select is selected at a single search ! */
     func selectOnlyOneRadical() -> Int{

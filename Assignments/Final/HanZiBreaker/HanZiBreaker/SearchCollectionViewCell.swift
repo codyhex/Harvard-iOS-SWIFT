@@ -12,6 +12,12 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     var cellIsTapped = false
     
+    var radicalCharacter: String? {
+        didSet {
+            radicalField.text = ("Item: " + radicalCharacter!)
+        }
+    }
+    
     @IBOutlet weak var radicalImage: UIImageView!
     
     
