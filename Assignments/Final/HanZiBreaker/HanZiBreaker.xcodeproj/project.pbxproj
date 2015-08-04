@@ -110,10 +110,10 @@
 		AA3A39A31B6B47A900D3CD3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AAA2C0961B6C7A9A004235C6 /* word list.plist */,
 				AA8A5AF11B6FBF6A003BC4BE /* radical FC code list.plist */,
 				AA8A5AF31B6FBFA1003BC4BE /* radical websites.plist */,
 				AA3A39A41B6B47A900D3CD3A /* Info.plist */,
-				AAA2C0961B6C7A9A004235C6 /* word list.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

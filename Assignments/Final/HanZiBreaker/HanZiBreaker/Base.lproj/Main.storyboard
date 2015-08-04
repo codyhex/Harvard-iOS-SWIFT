@@ -142,13 +142,13 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="dbC-Q9-x7T" secondAttribute="trailing" constant="-200" id="dRu-h3-Quj">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
                             <constraint firstItem="bkD-LB-SRx" firstAttribute="top" secondItem="MhK-KR-Pjz" secondAttribute="bottom" constant="40" id="g4B-bd-Kih">
                                 <variation key="heightClass=regular-widthClass=compact" constant="228"/>
                             </constraint>
                             <constraint firstItem="Mtn-IC-tMm" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-200" id="hG8-15-fVg">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-200"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="84" id="hqw-qz-Xr6">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-21"/>

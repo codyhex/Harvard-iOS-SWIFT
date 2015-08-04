@@ -46,7 +46,6 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         
         searchRadical()
         displayChoices()
-        searchWebsite()
         
         // Register cell classes
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.reuseIdentifier)
@@ -72,7 +71,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     func displayChoices() {
         if let choices = possibleRadicals {
             for item in choices {
-                println(item)
+                println("choices item passed in: \(item)")
             }
         }
         else {
@@ -174,7 +173,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         switch segue.identifier ?? "MISSING" {
         case Identifiers.radicalMeaningsSegue:
             // figure out which row of the table we're transitioning from
-            
+            searchWebsite()
             // now need to look up the RadicalsViewController instance
             if let resultVC = segue.destinationViewController as? ResultsViewController {
                 
