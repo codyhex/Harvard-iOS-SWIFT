@@ -117,7 +117,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-IC-tMm" userLabel="CornerButtonC">
-                                <rect key="frame" x="300" y="300" width="200" height="200"/>
+                                <rect key="frame" x="100" y="300" width="200" height="200"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -126,7 +126,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-Q9-x7T" userLabel="CornerButtonD">
-                                <rect key="frame" x="100" y="300" width="200" height="200"/>
+                                <rect key="frame" x="300" y="300" width="200" height="200"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -173,13 +173,13 @@
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="top" secondItem="Mtn-IC-tMm" secondAttribute="bottom" constant="-400" id="cv4-Gf-pxv">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
-                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="dbC-Q9-x7T" secondAttribute="trailing" constant="-200" id="dRu-h3-Quj">
+                            <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="dbC-Q9-x7T" secondAttribute="trailing" constant="-400" id="dRu-h3-Quj">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
                             <constraint firstItem="bkD-LB-SRx" firstAttribute="top" secondItem="MhK-KR-Pjz" secondAttribute="bottom" constant="40" id="g4B-bd-Kih">
                                 <variation key="heightClass=regular-widthClass=compact" constant="228"/>
                             </constraint>
-                            <constraint firstItem="Mtn-IC-tMm" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-200" id="hG8-15-fVg">
+                            <constraint firstItem="Mtn-IC-tMm" firstAttribute="leading" secondItem="MhK-KR-Pjz" secondAttribute="trailing" constant="-400" id="hG8-15-fVg">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-400"/>
                             </constraint>
                             <constraint firstItem="MhK-KR-Pjz" firstAttribute="leading" secondItem="auX-2q-Idp" secondAttribute="leadingMargin" constant="84" id="hqw-qz-Xr6">
