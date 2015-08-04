@@ -113,6 +113,8 @@ class IndexTableViewController: UITableViewController, UITableViewDataSource, UI
                     radicalVC.chineseName = getChineseName(indexPath)
                     radicalVC.FCCode = getFourCornerCode(indexPath)
                     radicalVC.identifier = makeSubviewName(indexPath)
+                    
+                    
                     //...in a realistic scenario, the right side is a lookup, based on
                     // the indexPath's section & row, into a substantial data model
                     

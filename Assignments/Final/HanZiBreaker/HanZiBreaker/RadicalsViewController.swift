@@ -34,6 +34,17 @@ class RadicalsViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var wordImage: UIImageView! {
+        didSet {
+            if let imageName = chineseName {
+                wordImage.image = UIImage(named: imageName)
+            }
+            else {
+                println("image name wrong \(chineseName)")
+            }
+        }
+    }
+    
     @IBOutlet weak var buttonAField: UIButton!
     @IBOutlet weak var buttonBField: UIButton!
     @IBOutlet weak var buttonCField: UIButton!
@@ -54,6 +65,7 @@ class RadicalsViewController: UIViewController {
         else {
             cornerAWasTapped = false
             encoder[CornerIndexs.A] = LINKED_CHAR
+            buttonAField.backgroundColor = UIColor.clearColor()
         }
         
         radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
@@ -73,6 +85,7 @@ class RadicalsViewController: UIViewController {
         else {
             cornerBWasTapped = false
             encoder[CornerIndexs.B] = LINKED_CHAR
+            buttonBField.backgroundColor = UIColor.clearColor()
         }
         
         radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
@@ -91,6 +104,7 @@ class RadicalsViewController: UIViewController {
         else {
             cornerCWasTapped = false
             encoder[CornerIndexs.C] = LINKED_CHAR
+            buttonCField.backgroundColor = UIColor.clearColor()
         }
         
         radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
@@ -109,6 +123,8 @@ class RadicalsViewController: UIViewController {
         else {
             cornerDWasTapped = false
             encoder[CornerIndexs.D] = LINKED_CHAR
+            buttonDField.backgroundColor = UIColor.clearColor()
+
         }
         
         radicalsTextField.text = "Selected Radical Code: \(String(encoder))"
@@ -133,7 +149,7 @@ class RadicalsViewController: UIViewController {
                         tableVC.mostRecentMoreInfo = identifier
                         searchRadicalsVC.title = "Radicals"
                         searchRadicalsVC.radicalCode = String(self.encoder)
-                        cleanCache()
+//                        cleanCache()
                     }
                     else {
                         assertionFailure("Failed to find a tableVC")

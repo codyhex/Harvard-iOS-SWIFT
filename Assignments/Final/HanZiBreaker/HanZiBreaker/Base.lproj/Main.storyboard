@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吃" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-KR-Pjz">
                                 <rect key="frame" x="100" y="100" width="400" height="400"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-LB-SRx">
@@ -167,6 +167,7 @@
                         <outlet property="buttonCField" destination="Mtn-IC-tMm" id="MFk-zg-dKq"/>
                         <outlet property="buttonDField" destination="dbC-Q9-x7T" id="PEw-ys-V4Z"/>
                         <outlet property="radicalsTextField" destination="J6O-pq-y9d" id="LU5-J9-eOs"/>
+                        <outlet property="wordImage" destination="MhK-KR-Pjz" id="6BB-7o-s66"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeB-1L-dfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,7 +313,7 @@
                                     <outlet property="delegate" destination="kiM-mY-D79" id="dHv-U8-ysp"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the correct radical " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-mW-eNE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the correct radical " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-mW-eNE">
                                 <rect key="frame" x="106" y="103" width="388" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -328,11 +329,12 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="103"/>
                             </constraint>
                             <constraint firstItem="iBY-mW-eNE" firstAttribute="leading" secondItem="Sk9-I7-AYO" secondAttribute="leadingMargin" constant="90" id="AhQ-Sp-zzn">
-                                <variation key="heightClass=regular-widthClass=compact" constant="59"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="34"/>
                             </constraint>
                             <constraint firstItem="S9D-h6-jm4" firstAttribute="top" secondItem="iBY-mW-eNE" secondAttribute="bottom" constant="40" id="EEC-fT-G14">
-                                <variation key="heightClass=regular-widthClass=compact" constant="38"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="44"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="iBY-mW-eNE" secondAttribute="centerX" id="Prp-J5-cMl"/>
                             <constraint firstItem="iBY-mW-eNE" firstAttribute="centerX" secondItem="S9D-h6-jm4" secondAttribute="centerX" id="Uv8-Z3-CHQ">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-18.5"/>
                             </constraint>
@@ -341,14 +343,26 @@
                             </constraint>
                             <constraint firstItem="dpo-0r-sfg" firstAttribute="centerX" secondItem="Sk9-I7-AYO" secondAttribute="centerX" id="bW1-GB-S5k"/>
                             <constraint firstItem="iBY-mW-eNE" firstAttribute="top" secondItem="4lc-Q9-6kl" secondAttribute="bottom" constant="39" id="iac-OQ-SiK">
-                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="29"/>
                             </constraint>
                             <constraint firstItem="S9D-h6-jm4" firstAttribute="leading" secondItem="Sk9-I7-AYO" secondAttribute="leadingMargin" id="jih-TW-EWb"/>
                             <constraint firstItem="dpo-0r-sfg" firstAttribute="top" secondItem="S9D-h6-jm4" secondAttribute="bottom" constant="50" id="vtX-ni-Z0o"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Prp-J5-cMl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Prp-J5-cMl"/>
+                                <exclude reference="Uv8-Z3-CHQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="S9D-h6-jm4" id="wXm-61-z4h"/>
+                        <outlet property="infoTextField" destination="iBY-mW-eNE" id="gjz-No-fZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTJ-RZ-1uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -377,6 +391,5 @@
         <image name="b" width="200" height="200"/>
         <image name="c" width="200" height="200"/>
         <image name="d" width="200" height="200"/>
-        <image name="吃" width="400" height="400"/>
     </resources>
 </document>

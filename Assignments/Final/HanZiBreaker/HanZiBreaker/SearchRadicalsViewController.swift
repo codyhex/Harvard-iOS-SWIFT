@@ -39,6 +39,8 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
     
     var selectedRadicalInfo: NSArray?
     
+    @IBOutlet weak var infoTextField: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -136,9 +138,30 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
             cell.cellIsTapped = false
             cell.backgroundColor = UIColor.clearColor()
         }
+        
+        if selectOnlyOneRadical() > 1 {
+            infoTextField.text = "Please select only ONE item!"
+        }
+        else if selectOnlyOneRadical() == 1 {
+            infoTextField.text = "Click on search for meanings!"
+        }
+        else {
+            infoTextField.text = "Select the correct radical !"
+        }
+    }
+    /* @@HP: check the cell status, there must be ONLY one select is selected at a single search ! */
+    func selectOnlyOneRadical() -> Int{
+        var selectItemNumber = 0
+        for cell in self.collectionView!.visibleCells() as! [SearchCollectionViewCell] {
+            if cell.cellIsTapped == true {
+                ++selectItemNumber
+            }
+        }
+        return selectItemNumber
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         switch segue.identifier ?? "MISSING" {
         case Identifiers.radicalMeaningsSegue:
             // figure out which row of the table we're transitioning from
@@ -163,6 +186,7 @@ class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource
         default:
             assertionFailure("unknown segue ID \(segue.identifier)")
         }
+        
     }
     
     
