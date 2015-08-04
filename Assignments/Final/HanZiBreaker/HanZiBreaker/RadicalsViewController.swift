@@ -14,6 +14,8 @@ class RadicalsViewController: UIViewController {
     var chineseName: String?
     var FCCode: String?
     
+    
+    /////////////////////////////////////////Draw Begins////////////////////////////////////
      //for draw
     @IBOutlet weak var selectView: UIImageView!
     var swiped = false
@@ -31,15 +33,7 @@ class RadicalsViewController: UIViewController {
     @IBOutlet weak var label_D: UIButton!
     var labels = [UIButton]()
     var labelSelectCounts = [Int]()
-    var labelSelectThreshold = 5
-    
-    
-    @IBOutlet weak var radicalsTextField: UILabel! {
-        didSet {
-            radicalsTextField.text = "Selected Radical Code: \(FCCode!)"
-        }
-    }
-    
+    var labelSelectThreshold = 2
     
     //draw
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -60,6 +54,7 @@ class RadicalsViewController: UIViewController {
         for(var i=0; i<4;i++)
         {
             labelSelectCounts.append(0)
+            labels[i].backgroundColor = UIColor.whiteColor()
         }
     }
     
@@ -136,11 +131,23 @@ class RadicalsViewController: UIViewController {
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         if !swiped {
-            // do nothing
+            
         }
+        // clear the drawing
+        UIGraphicsBeginImageContext(selectView.frame.size)
+        selectView.image = nil
+        UIGraphicsEndImageContext()
         
     }
+    
 
+    @IBOutlet weak var radicalsTextField: UILabel! {
+        didSet {
+            radicalsTextField.text = "Selected Radical Code: \(FCCode!)"
+        }
+    }
+    
+    /////////////////////////////////////////Draw Ends////////////////////////////////////
     
     
     // MARK: - Navigation
