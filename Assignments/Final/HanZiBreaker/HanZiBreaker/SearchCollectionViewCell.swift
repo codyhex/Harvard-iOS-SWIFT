@@ -10,9 +10,5 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var radicalChoiceButtonField: UIButton!
-    
-    @IBAction func radicalChoiceTapped(sender: AnyObject) {
-    }
-    
+        
 }

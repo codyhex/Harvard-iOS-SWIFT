@@ -240,37 +240,16 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di1-Fl-b4N">
-                                                    <rect key="frame" x="8" y="8" width="84" height="84"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                                    <state key="normal" title="字">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="radicalChoiceTapped:" destination="3ey-Cb-kNH" eventType="touchUpInside" id="Utk-54-ZSa"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="Di1-Fl-b4N" secondAttribute="trailing" id="QyG-Av-QJ5"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Di1-Fl-b4N" secondAttribute="bottom" id="V1M-2f-0Wp"/>
-                                            <constraint firstItem="Di1-Fl-b4N" firstAttribute="top" secondItem="3ey-Cb-kNH" secondAttribute="topMargin" id="dlO-0U-PQt"/>
-                                            <constraint firstItem="Di1-Fl-b4N" firstAttribute="leading" secondItem="3ey-Cb-kNH" secondAttribute="leadingMargin" id="wmH-NK-cOp"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="radicalChoiceButtonField" destination="Di1-Fl-b4N" id="0op-GT-QqK"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="kiM-mY-D79" id="L70-1n-94h"/>
-                                    <outlet property="delegate" destination="kiM-mY-D79" id="FDG-a7-RvZ"/>
+                                    <outlet property="dataSource" destination="kiM-mY-D79" id="Nml-6e-tNl"/>
+                                    <outlet property="delegate" destination="kiM-mY-D79" id="dHv-U8-ysp"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select the radical you want to know" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-mW-eNE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the correct radical " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-mW-eNE">
                                 <rect key="frame" x="106" y="103" width="388" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -282,17 +261,32 @@
                             <constraint firstAttribute="bottom" secondItem="dpo-0r-sfg" secondAttribute="bottom" constant="20" symbolic="YES" id="4vQ-i3-s6N">
                                 <variation key="heightClass=regular-widthClass=compact" constant="26"/>
                             </constraint>
-                            <constraint firstItem="S9D-h6-jm4" firstAttribute="top" secondItem="4lc-Q9-6kl" secondAttribute="bottom" constant="100" id="7MQ-5d-yQT"/>
-                            <constraint firstItem="iBY-mW-eNE" firstAttribute="leading" secondItem="Sk9-I7-AYO" secondAttribute="leadingMargin" constant="90" id="AhQ-Sp-zzn"/>
-                            <constraint firstItem="S9D-h6-jm4" firstAttribute="top" secondItem="iBY-mW-eNE" secondAttribute="bottom" constant="40" id="EEC-fT-G14"/>
-                            <constraint firstItem="iBY-mW-eNE" firstAttribute="centerX" secondItem="S9D-h6-jm4" secondAttribute="centerX" id="Uv8-Z3-CHQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S9D-h6-jm4" secondAttribute="trailing" id="aAi-fv-tWc"/>
+                            <constraint firstItem="S9D-h6-jm4" firstAttribute="top" secondItem="4lc-Q9-6kl" secondAttribute="bottom" constant="100" id="7MQ-5d-yQT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="103"/>
+                            </constraint>
+                            <constraint firstItem="iBY-mW-eNE" firstAttribute="leading" secondItem="Sk9-I7-AYO" secondAttribute="leadingMargin" constant="90" id="AhQ-Sp-zzn">
+                                <variation key="heightClass=regular-widthClass=compact" constant="59"/>
+                            </constraint>
+                            <constraint firstItem="S9D-h6-jm4" firstAttribute="top" secondItem="iBY-mW-eNE" secondAttribute="bottom" constant="40" id="EEC-fT-G14">
+                                <variation key="heightClass=regular-widthClass=compact" constant="38"/>
+                            </constraint>
+                            <constraint firstItem="iBY-mW-eNE" firstAttribute="centerX" secondItem="S9D-h6-jm4" secondAttribute="centerX" id="Uv8-Z3-CHQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-18.5"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="S9D-h6-jm4" secondAttribute="trailing" id="aAi-fv-tWc">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-37"/>
+                            </constraint>
                             <constraint firstItem="dpo-0r-sfg" firstAttribute="centerX" secondItem="Sk9-I7-AYO" secondAttribute="centerX" id="bW1-GB-S5k"/>
-                            <constraint firstItem="iBY-mW-eNE" firstAttribute="top" secondItem="4lc-Q9-6kl" secondAttribute="bottom" constant="39" id="iac-OQ-SiK"/>
+                            <constraint firstItem="iBY-mW-eNE" firstAttribute="top" secondItem="4lc-Q9-6kl" secondAttribute="bottom" constant="39" id="iac-OQ-SiK">
+                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                            </constraint>
                             <constraint firstItem="S9D-h6-jm4" firstAttribute="leading" secondItem="Sk9-I7-AYO" secondAttribute="leadingMargin" id="jih-TW-EWb"/>
                             <constraint firstItem="dpo-0r-sfg" firstAttribute="top" secondItem="S9D-h6-jm4" secondAttribute="bottom" constant="50" id="vtX-ni-Z0o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="S9D-h6-jm4" id="wXm-61-z4h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTJ-RZ-1uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

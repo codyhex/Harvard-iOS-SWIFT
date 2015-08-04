@@ -19,7 +19,7 @@ struct RadicalProperties {
     static let URL = 3
 }
 
-class SearchRadicalsViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class SearchRadicalsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var radicalCode: String? {
         didSet {
@@ -32,6 +32,8 @@ class SearchRadicalsViewController: UICollectionViewController, UICollectionView
     var radicalWebsites: NSDictionary! = nil
     
     var possibleRadicals: NSArray?
+    
+    @IBOutlet weak var collectionView: UICollectionView?
 
     var userSelectedRadical: String? = "口"    /* @@HP: for test, code code here */
     
@@ -45,7 +47,7 @@ class SearchRadicalsViewController: UICollectionViewController, UICollectionView
         searchWebsite()
         
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.reuseIdentifier)
+        //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.reuseIdentifier)
       }
     
     required init(coder aDecoder: NSCoder) {
@@ -87,13 +89,13 @@ class SearchRadicalsViewController: UICollectionViewController, UICollectionView
         }
     }
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
         return 1
     }
     
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
         if let count = possibleRadicals?.count {
             return count
@@ -104,16 +106,23 @@ class SearchRadicalsViewController: UICollectionViewController, UICollectionView
         }
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.reuseIdentifier, forIndexPath: indexPath) as! SearchCollectionViewCell
         
         // Configure the cell
         if let radicalInfo = selectedRadicalInfo {
-            cell.radicalChoiceButtonField.setTitle(String(radicalInfo[RadicalProperties.character] as! NSString), forState: .Normal)
+            //cell.radicalChoiceButtonField.setTitle(String(radicalInfo[RadicalProperties.character] as! NSString), forState: .Normal)
         }
-        cell.backgroundColor = UIColor.blackColor()
+//        cell.backgroundColor = UIColor.blackColor()
+        //cell.radicalChoiceButtonField.addTarget(self, action: "handleTapped:", forControlEvents: .TouchUpInside)
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
