@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0FFD91D2-09CB-4178-A194-0EEE68A86ECC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Lecture2Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>16A7DB865667C0FD015B9B01A31FAC697E684880</key>
+		<string>http://git.classyswift.com/s65student.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Lecture2Demo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>16A7DB865667C0FD015B9B01A31FAC697E684880</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://git.classyswift.com/s65student.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>16A7DB865667C0FD015B9B01A31FAC697E684880</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>16A7DB865667C0FD015B9B01A31FAC697E684880</string>
+			<key>IDESourceControlWCCName</key>
+			<string>s65student</string>
+		</dict>
+	</array>
+</dict>
+</plist>

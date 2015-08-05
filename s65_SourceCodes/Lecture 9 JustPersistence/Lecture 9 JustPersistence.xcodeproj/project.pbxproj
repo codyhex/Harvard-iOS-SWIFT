@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6573274D1B5DD4CC00927CD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573274C1B5DD4CC00927CD9 /* AppDelegate.swift */; };
+		6573274F1B5DD4CC00927CD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573274E1B5DD4CC00927CD9 /* ViewController.swift */; };
+		657327521B5DD4CC00927CD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657327501B5DD4CC00927CD9 /* Main.storyboard */; };
+		657327541B5DD4CC00927CD9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657327531B5DD4CC00927CD9 /* Images.xcassets */; };
+		657327571B5DD4CC00927CD9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657327551B5DD4CC00927CD9 /* LaunchScreen.xib */; };
+		657327631B5DD4CC00927CD9 /* Lecture_9_JustPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657327621B5DD4CC00927CD9 /* Lecture_9_JustPersistenceTests.swift */; };
+		6573276D1B5DD4DA00927CD9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573276C1B5DD4DA00927CD9 /* Persistence.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6573275D1B5DD4CC00927CD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6573273F1B5DD4CC00927CD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657327461B5DD4CC00927CD9;
+			remoteInfo = "Lecture 9 JustPersistence";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		657327471B5DD4CC00927CD9 /* Lecture 9 JustPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lecture 9 JustPersistence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6573274B1B5DD4CC00927CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6573274C1B5DD4CC00927CD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6573274E1B5DD4CC00927CD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		657327511B5DD4CC00927CD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		657327531B5DD4CC00927CD9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		657327561B5DD4CC00927CD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6573275C1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lecture 9 JustPersistenceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		657327611B5DD4CC00927CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657327621B5DD4CC00927CD9 /* Lecture_9_JustPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture_9_JustPersistenceTests.swift; sourceTree = "<group>"; };
+		6573276C1B5DD4DA00927CD9 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../Persistence.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		657327441B5DD4CC00927CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657327591B5DD4CC00927CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6573273E1B5DD4CC00927CD9 = {
+			isa = PBXGroup;
+			children = (
+				657327491B5DD4CC00927CD9 /* Lecture 9 JustPersistence */,
+				6573275F1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests */,
+				657327481B5DD4CC00927CD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		657327481B5DD4CC00927CD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				657327471B5DD4CC00927CD9 /* Lecture 9 JustPersistence.app */,
+				6573275C1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		657327491B5DD4CC00927CD9 /* Lecture 9 JustPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				6573276C1B5DD4DA00927CD9 /* Persistence.swift */,
+				6573274C1B5DD4CC00927CD9 /* AppDelegate.swift */,
+				6573274E1B5DD4CC00927CD9 /* ViewController.swift */,
+				657327501B5DD4CC00927CD9 /* Main.storyboard */,
+				657327531B5DD4CC00927CD9 /* Images.xcassets */,
+				657327551B5DD4CC00927CD9 /* LaunchScreen.xib */,
+				6573274A1B5DD4CC00927CD9 /* Supporting Files */,
+			);
+			path = "Lecture 9 JustPersistence";
+			sourceTree = "<group>";
+		};
+		6573274A1B5DD4CC00927CD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6573274B1B5DD4CC00927CD9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6573275F1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				657327621B5DD4CC00927CD9 /* Lecture_9_JustPersistenceTests.swift */,
+				657327601B5DD4CC00927CD9 /* Supporting Files */,
+			);
+			path = "Lecture 9 JustPersistenceTests";
+			sourceTree = "<group>";
+		};
+		657327601B5DD4CC00927CD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				657327611B5DD4CC00927CD9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		657327461B5DD4CC00927CD9 /* Lecture 9 JustPersistence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657327661B5DD4CC00927CD9 /* Build configuration list for PBXNativeTarget "Lecture 9 JustPersistence" */;
+			buildPhases = (
+				657327431B5DD4CC00927CD9 /* Sources */,
+				657327441B5DD4CC00927CD9 /* Frameworks */,
+				657327451B5DD4CC00927CD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lecture 9 JustPersistence";
+			productName = "Lecture 9 JustPersistence";
+			productReference = 657327471B5DD4CC00927CD9 /* Lecture 9 JustPersistence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6573275B1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657327691B5DD4CC00927CD9 /* Build configuration list for PBXNativeTarget "Lecture 9 JustPersistenceTests" */;
+			buildPhases = (
+				657327581B5DD4CC00927CD9 /* Sources */,
+				657327591B5DD4CC00927CD9 /* Frameworks */,
+				6573275A1B5DD4CC00927CD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6573275E1B5DD4CC00927CD9 /* PBXTargetDependency */,
+			);
+			name = "Lecture 9 JustPersistenceTests";
+			productName = "Lecture 9 JustPersistenceTests";
+			productReference = 6573275C1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6573273F1B5DD4CC00927CD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = S65;
+				TargetAttributes = {
+					657327461B5DD4CC00927CD9 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6573275B1B5DD4CC00927CD9 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 657327461B5DD4CC00927CD9;
+					};
+				};
+			};
+			buildConfigurationList = 657327421B5DD4CC00927CD9 /* Build configuration list for PBXProject "Lecture 9 JustPersistence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6573273E1B5DD4CC00927CD9;
+			productRefGroup = 657327481B5DD4CC00927CD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				657327461B5DD4CC00927CD9 /* Lecture 9 JustPersistence */,
+				6573275B1B5DD4CC00927CD9 /* Lecture 9 JustPersistenceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		657327451B5DD4CC00927CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657327521B5DD4CC00927CD9 /* Main.storyboard in Resources */,
+				657327571B5DD4CC00927CD9 /* LaunchScreen.xib in Resources */,
+				657327541B5DD4CC00927CD9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6573275A1B5DD4CC00927CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		657327431B5DD4CC00927CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6573276D1B5DD4DA00927CD9 /* Persistence.swift in Sources */,
+				6573274F1B5DD4CC00927CD9 /* ViewController.swift in Sources */,
+				6573274D1B5DD4CC00927CD9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657327581B5DD4CC00927CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657327631B5DD4CC00927CD9 /* Lecture_9_JustPersistenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6573275E1B5DD4CC00927CD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657327461B5DD4CC00927CD9 /* Lecture 9 JustPersistence */;
+			targetProxy = 6573275D1B5DD4CC00927CD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		657327501B5DD4CC00927CD9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				657327511B5DD4CC00927CD9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		657327551B5DD4CC00927CD9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				657327561B5DD4CC00927CD9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		657327641B5DD4CC00927CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		657327651B5DD4CC00927CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		657327671B5DD4CC00927CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lecture 9 JustPersistence/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		657327681B5DD4CC00927CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lecture 9 JustPersistence/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6573276A1B5DD4CC00927CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lecture 9 JustPersistenceTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture 9 JustPersistence.app/Lecture 9 JustPersistence";
+			};
+			name = Debug;
+		};
+		6573276B1B5DD4CC00927CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lecture 9 JustPersistenceTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture 9 JustPersistence.app/Lecture 9 JustPersistence";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		657327421B5DD4CC00927CD9 /* Build configuration list for PBXProject "Lecture 9 JustPersistence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657327641B5DD4CC00927CD9 /* Debug */,
+				657327651B5DD4CC00927CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		657327661B5DD4CC00927CD9 /* Build configuration list for PBXNativeTarget "Lecture 9 JustPersistence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657327671B5DD4CC00927CD9 /* Debug */,
+				657327681B5DD4CC00927CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		657327691B5DD4CC00927CD9 /* Build configuration list for PBXNativeTarget "Lecture 9 JustPersistenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6573276A1B5DD4CC00927CD9 /* Debug */,
+				6573276B1B5DD4CC00927CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6573273F1B5DD4CC00927CD9 /* Project object */;
+}
