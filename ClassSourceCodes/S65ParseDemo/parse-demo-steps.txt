@@ -1,0 +1,51 @@
+ParseDemo
+---------
+
+To run checked-in example, 'pod install' and open ParseDemo.xcworkspace in Xcode.
+
+QuickStart: https://parse.com/apps/quickstart#parse_data/mobile/ios/native/new
+iOS Guide: https://parse.com/docs/ios/guide
+iOS SDK Reference: https://parse.com/docs/ios/api/
+
+The steps used in the lecture demo, roughly:
+
+In Xcode:
+- create a new project in xcode called S65ParseDemo and add an objective-c file (ios/source) to create a bridging header
+- close the project
+
+At parse.com:
+- https://www.parse.com/apps -- create account and new app
+- click on Core tab and create a new class, Pets
+- add columns: name (string), type (string), url (string)
+- add a few rows of data
+
+In a terminal window:
+- install cocoapods (cocoapods.org) if you haven not: "sudo gem install cocoapods"
+- create a Podfile with "pod 'ParseUI'" and "pod install"
+- open ParseDemo.xcworkspace
+
+In Xcode:
+- add imports to bridging header:
+    #import <Parse/Parse.h>  
+    #import <ParseUI/ParseUI.h>  
+    #import <Bolts/Bolts.h>
+- go to https://parse.com/account/keys to get applicationID and clientKey
+- add this to application:didFinishLaunchingWithOptions 
+  (replacing with your app ID and key):
+
+    Parse.setApplicationId("LIl7rvHdAUjJJ8ayvi6m85vueHS93EprdJLcEfAi", 
+                           clientKey: "oRTm6tQayWSm1uY4si410rL6olMwFWTlaj8fHM2J")
+
+- create a new cocoa touch class PetsTableViewController as a subclass 
+  of PFQueryTableViewController
+- drag out a tableview controller in the storyboard and set it's class to 
+  PetsTableViewController, set the cell reuse identifier to "Pet Cell"
+- enable Refreshing in Attributes inspector
+- control drag from refresh control to PetsTableViewController.swift, creating
+  a refresh action
+
+In PetsTableViewController.swift:
+- create var pets = [PFObject]()
+- update tableview delegates
+- create function to get data from parse: create PFQuery(className:"Pets'),  query.find...
+- see project

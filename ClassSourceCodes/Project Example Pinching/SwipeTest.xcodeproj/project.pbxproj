@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6506DEA21B61367300BB43BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506DEA11B61367300BB43BE /* AppDelegate.swift */; };
+		6506DEA41B61367300BB43BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506DEA31B61367300BB43BE /* ViewController.swift */; };
+		6506DEA71B61367300BB43BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6506DEA51B61367300BB43BE /* Main.storyboard */; };
+		6506DEA91B61367300BB43BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6506DEA81B61367300BB43BE /* Images.xcassets */; };
+		6506DEAC1B61367300BB43BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6506DEAA1B61367300BB43BE /* LaunchScreen.xib */; };
+		6506DEB81B61367300BB43BE /* SwipeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506DEB71B61367300BB43BE /* SwipeTestTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6506DEB21B61367300BB43BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6506DE941B61367300BB43BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6506DE9B1B61367300BB43BE;
+			remoteInfo = SwipeTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6506DE9C1B61367300BB43BE /* SwipeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6506DEA01B61367300BB43BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6506DEA11B61367300BB43BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6506DEA31B61367300BB43BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6506DEA61B61367300BB43BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6506DEA81B61367300BB43BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6506DEAB1B61367300BB43BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6506DEB11B61367300BB43BE /* SwipeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6506DEB61B61367300BB43BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6506DEB71B61367300BB43BE /* SwipeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTestTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6506DE991B61367300BB43BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6506DEAE1B61367300BB43BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6506DE931B61367300BB43BE = {
+			isa = PBXGroup;
+			children = (
+				6506DE9E1B61367300BB43BE /* SwipeTest */,
+				6506DEB41B61367300BB43BE /* SwipeTestTests */,
+				6506DE9D1B61367300BB43BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6506DE9D1B61367300BB43BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6506DE9C1B61367300BB43BE /* SwipeTest.app */,
+				6506DEB11B61367300BB43BE /* SwipeTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6506DE9E1B61367300BB43BE /* SwipeTest */ = {
+			isa = PBXGroup;
+			children = (
+				6506DEA11B61367300BB43BE /* AppDelegate.swift */,
+				6506DEA31B61367300BB43BE /* ViewController.swift */,
+				6506DEA51B61367300BB43BE /* Main.storyboard */,
+				6506DEA81B61367300BB43BE /* Images.xcassets */,
+				6506DEAA1B61367300BB43BE /* LaunchScreen.xib */,
+				6506DE9F1B61367300BB43BE /* Supporting Files */,
+			);
+			path = SwipeTest;
+			sourceTree = "<group>";
+		};
+		6506DE9F1B61367300BB43BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6506DEA01B61367300BB43BE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6506DEB41B61367300BB43BE /* SwipeTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				6506DEB71B61367300BB43BE /* SwipeTestTests.swift */,
+				6506DEB51B61367300BB43BE /* Supporting Files */,
+			);
+			path = SwipeTestTests;
+			sourceTree = "<group>";
+		};
+		6506DEB51B61367300BB43BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6506DEB61B61367300BB43BE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6506DE9B1B61367300BB43BE /* SwipeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6506DEBB1B61367300BB43BE /* Build configuration list for PBXNativeTarget "SwipeTest" */;
+			buildPhases = (
+				6506DE981B61367300BB43BE /* Sources */,
+				6506DE991B61367300BB43BE /* Frameworks */,
+				6506DE9A1B61367300BB43BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwipeTest;
+			productName = SwipeTest;
+			productReference = 6506DE9C1B61367300BB43BE /* SwipeTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6506DEB01B61367300BB43BE /* SwipeTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6506DEBE1B61367300BB43BE /* Build configuration list for PBXNativeTarget "SwipeTestTests" */;
+			buildPhases = (
+				6506DEAD1B61367300BB43BE /* Sources */,
+				6506DEAE1B61367300BB43BE /* Frameworks */,
+				6506DEAF1B61367300BB43BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6506DEB31B61367300BB43BE /* PBXTargetDependency */,
+			);
+			name = SwipeTestTests;
+			productName = SwipeTestTests;
+			productReference = 6506DEB11B61367300BB43BE /* SwipeTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6506DE941B61367300BB43BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = S65;
+				TargetAttributes = {
+					6506DE9B1B61367300BB43BE = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6506DEB01B61367300BB43BE = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 6506DE9B1B61367300BB43BE;
+					};
+				};
+			};
+			buildConfigurationList = 6506DE971B61367300BB43BE /* Build configuration list for PBXProject "SwipeTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6506DE931B61367300BB43BE;
+			productRefGroup = 6506DE9D1B61367300BB43BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6506DE9B1B61367300BB43BE /* SwipeTest */,
+				6506DEB01B61367300BB43BE /* SwipeTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6506DE9A1B61367300BB43BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6506DEA71B61367300BB43BE /* Main.storyboard in Resources */,
+				6506DEAC1B61367300BB43BE /* LaunchScreen.xib in Resources */,
+				6506DEA91B61367300BB43BE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6506DEAF1B61367300BB43BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6506DE981B61367300BB43BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6506DEA41B61367300BB43BE /* ViewController.swift in Sources */,
+				6506DEA21B61367300BB43BE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6506DEAD1B61367300BB43BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6506DEB81B61367300BB43BE /* SwipeTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6506DEB31B61367300BB43BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6506DE9B1B61367300BB43BE /* SwipeTest */;
+			targetProxy = 6506DEB21B61367300BB43BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6506DEA51B61367300BB43BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6506DEA61B61367300BB43BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6506DEAA1B61367300BB43BE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6506DEAB1B61367300BB43BE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6506DEB91B61367300BB43BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6506DEBA1B61367300BB43BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6506DEBC1B61367300BB43BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwipeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6506DEBD1B61367300BB43BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwipeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6506DEBF1B61367300BB43BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwipeTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeTest.app/SwipeTest";
+			};
+			name = Debug;
+		};
+		6506DEC01B61367300BB43BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwipeTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeTest.app/SwipeTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6506DE971B61367300BB43BE /* Build configuration list for PBXProject "SwipeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6506DEB91B61367300BB43BE /* Debug */,
+				6506DEBA1B61367300BB43BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6506DEBB1B61367300BB43BE /* Build configuration list for PBXNativeTarget "SwipeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6506DEBC1B61367300BB43BE /* Debug */,
+				6506DEBD1B61367300BB43BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6506DEBE1B61367300BB43BE /* Build configuration list for PBXNativeTarget "SwipeTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6506DEBF1B61367300BB43BE /* Debug */,
+				6506DEC01B61367300BB43BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6506DE941B61367300BB43BE /* Project object */;
+}
